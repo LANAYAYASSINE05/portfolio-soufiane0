@@ -12,7 +12,8 @@ const Skills = () => {
   const hardSkills = [
     {
       title: "Publicité digitale",
-      description: "Meta Ads, Google Ads, TikTok Ads avec stratégies full-funnel et optimisation ROAS.",
+      description:
+        "Meta Ads (Facebook & Instagram), TikTok Ads, campagnes full-funnel, optimisation ROI.",
       icon: (
         <svg className="w-8 h-8 text-[#0180FA]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2m0 0V3a1 1 0 011 1v16a1 1 0 01-1 1H6a1 1 0 01-1-1V4a1 1 0 011-1V2m0 0h10M9 8h6m-6 4h6m-6 4h4" />
@@ -20,8 +21,9 @@ const Skills = () => {
       )
     },
     {
-      title: "Stratégie média",
-      description: "Plans médias sur mesure et allocation budgétaire optimisée.",
+      title: "Création et gestion de contenu",
+      description:
+        "Visuels, vidéos et légendes engageantes adaptées aux réseaux sociaux.",
       icon: (
         <svg className="w-8 h-8 text-[#0180FA]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
@@ -29,17 +31,9 @@ const Skills = () => {
       )
     },
     {
-      title: "Optimisation & performance",
-      description: "Analyse data-driven et maximisation du ROI.",
-      icon: (
-        <svg className="w-8 h-8 text-[#0180FA]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-        </svg>
-      )
-    },
-    {
       title: "Analyse & reporting",
-      description: "GA4, GTM, dashboards Data Studio et suivi des conversions.",
+      description:
+        "Suivi des performances via MBS (Meta Business Suite) et ajustement stratégique selon les KPIs.",
       icon: (
         <svg className="w-8 h-8 text-[#0180FA]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -47,11 +41,22 @@ const Skills = () => {
       )
     },
     {
-      title: "Gestion de budget",
-      description: "Pilotage et réallocation dynamique selon les performances.",
+      title: "Gestion de budget publicitaire",
+      description:
+        "Allocation des investissements selon l’étude et la stratégie marketing pour des campagnes performantes.",
       icon: (
         <svg className="w-8 h-8 text-[#0180FA]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      )
+    },
+    {
+      title: "Community Management",
+      description:
+        "Animation et engagement des communautés, modération, interactions et veille concurrentielle.",
+      icon: (
+        <svg className="w-8 h-8 text-[#0180FA]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z" />
         </svg>
       )
     }
@@ -59,17 +64,8 @@ const Skills = () => {
 
   const softSkills = [
     {
-      title: "Vision ROIste",
-      description: "Traduction des données en actions concrètes.",
-      icon: (
-        <svg className="w-8 h-8 text-[#0180FA]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-      )
-    },
-    {
       title: "Orientation résultats",
-      description: "Génération de valeur mesurable.",
+      description: "Atteinte des objectifs marketing et commerciaux.",
       icon: (
         <svg className="w-8 h-8 text-[#0180FA]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
@@ -77,8 +73,8 @@ const Skills = () => {
       )
     },
     {
-      title: "Esprit stratégique",
-      description: "Stratégies digitales globales intégrées.",
+      title: "Vision stratégique",
+      description: "Décisions basées sur les tendances et les contenus performants.",
       icon: (
         <svg className="w-8 h-8 text-[#0180FA]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
@@ -87,7 +83,7 @@ const Skills = () => {
     },
     {
       title: "Gestion de projet",
-      description: "Coordination entre équipes créatives et techniques.",
+      description: "Organisation selon l’objectif à atteindre et l’étude de marché.",
       icon: (
         <svg className="w-8 h-8 text-[#0180FA]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -96,7 +92,7 @@ const Skills = () => {
     },
     {
       title: "Innovation créative",
-      description: "Nouvelles approches publicitaires (UGC, storytelling).",
+      description: "Contenus visuels originaux et adaptés aux tendances.",
       icon: (
         <svg className="w-8 h-8 text-[#0180FA]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z" />
@@ -106,220 +102,168 @@ const Skills = () => {
   ]
 
   return (
-    <section id="skills" className="py-24 bg-gradient-to-br from-[#ECF6FF] via-white to-[#ECF6FF] relative overflow-hidden">
-      {/* Background Decoration */}
+    <section
+      id="skills"
+      className="relative py-20 md:py-24 bg-gradient-to-br from-[#ECF6FF] via-white to-[#ECF6FF] overflow-hidden"
+    >
+      {/* Fond décoratif */}
       <motion.div
-        className="absolute top-0 left-0 w-96 h-96 bg-[#0180FA]/5 rounded-full blur-3xl"
-        initial={{ opacity: 0, scale: 0 }}
-        whileInView={{ opacity: 1, scale: 1 }}
+        className="pointer-events-none absolute inset-0"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-      />
+      >
+        <div className="absolute -top-24 left-0 h-72 w-72 rounded-full bg-[#0180FA]/10 blur-3xl" />
+        <div className="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-[#0180FA]/5 blur-3xl" />
+      </motion.div>
 
-      <div className="container-custom px-4 sm:px-6">
-        {/* Section Title */}
+      <div className="container-custom relative px-4 sm:px-6">
+        {/* Titre section */}
         <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
+          className="mx-auto max-w-3xl text-center mb-10 md:mb-12"
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <motion.h2
-            className="text-3xl lg:text-4xl font-bold mb-6"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <span className="text-gray-800">Compétences</span>
-            <span className="block bg-gradient-to-r from-[#0180FA] to-[#0180FA] bg-clip-text text-transparent">
-              Clés
-            </span>
-          </motion.h2>
-          <motion.div
-            className="w-24 h-1 bg-gradient-to-r from-[#0180FA] to-[#0180FA] rounded-full mx-auto mb-8"
-            initial={{ width: 0 }}
-            whileInView={{ width: 96 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            viewport={{ once: true }}
-          />
+          <p className="text-xs sm:text-sm font-medium uppercase tracking-[0.25em] text-[#0180FA]">
+            COMPÉTENCES
+          </p>
+          <h2 className="mt-3 text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
+            Hard skills & Soft skills, clairement séparés
+          </h2>
+          <p className="mt-4 text-sm sm:text-base text-gray-600 leading-relaxed">
+            À gauche, les compétences techniques liées aux outils. À droite, les qualités qui
+            guident ma façon de travailler au quotidien.
+          </p>
         </motion.div>
 
-        {/* Skills Grid */}
-        <div className="mb-16">
-          {/* Titles Row */}
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 mb-8">
-            <motion.h3
-              className="text-2xl font-bold text-gray-800 flex items-center"
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <div className="w-8 h-8 bg-[#0180FA] rounded-full flex items-center justify-center mr-3">
-                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
+        {/* Deux colonnes : Hard / Soft */}
+        <div className="grid gap-8 lg:grid-cols-2">
+          {/* Colonne Hard skills avec icônes */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            viewport={{ once: true, margin: '-80px' }}
+          >
+            <div className="mb-4 flex items-center justify-between gap-3">
+              <div>
+                <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-gray-500">
+                  Hard skills
+                </p>
+                <p className="mt-1 text-sm font-semibold text-gray-900">
+                  Les leviers que j&apos;utilise
+                </p>
               </div>
-              Hard Skills
-            </motion.h3>
-            
-            <motion.h3
-              className="text-2xl font-bold text-gray-800 flex items-center"
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <div className="w-8 h-8 bg-[#0180FA] rounded-full flex items-center justify-center mr-3">
-                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
-              </div>
-              Soft Skills
-            </motion.h3>
-          </div>
-          
-          {/* Content Row */}
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
-            {/* Hard Skills */}
-            <motion.div
-              className="space-y-6"
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
+              <span className="rounded-full bg-[#ECF6FF] px-3 py-1 text-[11px] font-medium text-[#0180FA]">
+                Outils & plateformes
+              </span>
+            </div>
 
-            {hardSkills.map((skill, index) => (
-              <motion.div
-                key={skill.title}
-                className="bg-gradient-to-br from-white/90 to-[#ECF6FF]/90 backdrop-blur-sm border border-[#0180FA]/20 rounded-2xl p-6 group shadow-lg hover:shadow-xl transition-all duration-300"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ 
-                  scale: 1.02,
-                  boxShadow: "0 10px 25px rgba(1, 128, 250, 0.1)"
-                }}
-              >
-                <div className="flex items-start space-x-4">
-                  <motion.div
-                    className="text-3xl text-[#0180FA]"
-                    whileHover={{ scale: 1.2, rotate: 5 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    {skill.icon}
-                  </motion.div>
-                  <div>
-                    <h4 className="text-xl font-semibold text-gray-800 mb-2 group-hover:text-[#0180FA] transition-colors duration-300">
-                      {skill.title}
-                    </h4>
-                    <p className="text-gray-600 leading-relaxed">
-                      {skill.description}
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-
-            {/* Soft Skills */}
-            <motion.div
-              className="space-y-6"
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              {softSkills.map((skill, index) => (
+            <div className="space-y-4">
+              {hardSkills.map((skill, index) => (
                 <motion.div
                   key={skill.title}
-                  className="bg-gradient-to-br from-white/90 to-[#ECF6FF]/90 backdrop-blur-sm border border-[#0180FA]/20 rounded-2xl p-6 group shadow-lg hover:shadow-xl transition-all duration-300"
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  whileHover={{ 
-                    scale: 1.02,
-                    boxShadow: "0 10px 25px rgba(1, 128, 250, 0.1)"
-                  }}
+                  transition={{ duration: 0.45, delay: index * 0.05 }}
+                  viewport={{ once: true, margin: '-60px' }}
+                  className="rounded-2xl border border-white/70 bg-white/90 px-4 py-4 shadow-[0_10px_26px_rgba(15,23,42,0.06)] backdrop-blur group"
                 >
-                  <div className="flex items-start space-x-4">
+                  <div className="flex items-start gap-3">
                     <motion.div
-                      className="text-3xl text-[#0180FA]"
-                      whileHover={{ scale: 1.2, rotate: 5 }}
+                      className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#ECF6FF] text-[#0180FA]"
+                      whileHover={{ scale: 1.08, rotate: 3 }}
                       transition={{ duration: 0.2 }}
                     >
                       {skill.icon}
                     </motion.div>
                     <div>
-                      <h4 className="text-xl font-semibold text-gray-800 mb-2 group-hover:text-[#0180FA] transition-colors duration-300">
+                      <p className="text-sm font-semibold text-gray-900 group-hover:text-[#0180FA] transition-colors">
                         {skill.title}
-                      </h4>
-                      <p className="text-gray-600 leading-relaxed">
+                      </p>
+                      <p className="mt-1 text-[12px] text-gray-600 leading-relaxed">
                         {skill.description}
                       </p>
                     </div>
                   </div>
                 </motion.div>
               ))}
-            </motion.div>
-          </div>
+            </div>
+          </motion.div>
+
+          {/* Colonne Soft skills avec icônes */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            viewport={{ once: true, margin: '-80px' }}
+          >
+            <div className="mb-4 flex items-center justify-between gap-3">
+              <div>
+                <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-gray-500">
+                  Soft skills
+                </p>
+                <p className="mt-1 text-sm font-semibold text-gray-900">
+                  Ma manière de travailler
+                </p>
+              </div>
+              <span className="rounded-full bg-[#E0F5FF] px-3 py-1 text-[11px] font-medium text-[#0180FA]">
+                Posture & organisation
+              </span>
+            </div>
+
+            <div className="space-y-4">
+              {softSkills.map((skill, index) => (
+                <motion.div
+                  key={skill.title}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.45, delay: index * 0.05 }}
+                  viewport={{ once: true, margin: '-60px' }}
+                  className="rounded-2xl border border-white/70 bg-white/90 px-4 py-4 shadow-[0_10px_26px_rgba(15,23,42,0.06)] backdrop-blur group"
+                >
+                  <div className="flex items-start gap-3">
+                    <motion.div
+                      className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#E0F5FF] text-[#0180FA]"
+                      whileHover={{ scale: 1.08, rotate: -3 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      {skill.icon}
+                    </motion.div>
+                    <div>
+                      <p className="text-sm font-semibold text-gray-900 group-hover:text-[#0180FA] transition-colors">
+                        {skill.title}
+                      </p>
+                      <p className="mt-1 text-[12px] text-gray-600 leading-relaxed">
+                        {skill.description}
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
         </div>
 
-        {/* Summary */}
-        <motion.div
-          className="bg-gradient-to-r from-[#0180FA]/10 to-[#0180FA]/10 p-8 rounded-2xl border border-[#0180FA]/20 text-center"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <motion.p
-            className="text-gray-600 text-lg leading-relaxed max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            Mon expertise me permet de traduire les objectifs d'une entreprise en une stratégie 
-            d'acquisition concrète, de sélectionner les canaux les plus performants, et d'analyser 
-            les données pour garantir une croissance mesurable et durable.
-          </motion.p>
-        </motion.div>
+        {/* CTA */}
 
         {/* CTA */}
         <motion.div
-          className="text-center mt-12"
-          initial={{ opacity: 0, y: 20 }}
+          className="mt-10 text-center"
+          initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
           viewport={{ once: true }}
         >
-          <motion.button
-            onClick={() => scrollToSection('contact')}
-            className="px-8 py-4 bg-[#0180FA] text-white rounded-lg font-semibold hover:bg-[#0180FA]/90 transition-all duration-300 flex items-center mx-auto gap-3"
-            whileHover={{ 
-              scale: 1.05,
-              boxShadow: "0 10px 25px rgba(1, 128, 250, 0.3)"
-            }}
-            whileTap={{ scale: 0.95 }}
+          <button
+            onClick={() => scrollToSection('projects')}
+            className="inline-flex items-center justify-center rounded-full border border-[#0180FA] bg-white px-6 py-2.5 text-sm font-semibold text-[#0180FA] hover:bg-[#ECF6FF] transition-colors"
           >
-            Démarrer un projet
-            <motion.svg
-              className="w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              whileHover={{ scale: 1.1 }}
-              transition={{ duration: 0.2 }}
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </motion.svg>
-          </motion.button>
+            Voir comment ces compétences se traduisent en projets
+          </button>
         </motion.div>
       </div>
     </section>

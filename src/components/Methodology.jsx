@@ -12,8 +12,9 @@ const Methodology = () => {
   const phases = [
     {
       number: "01",
-      title: "Audit",
-      description: "Analyse complète de l'existant : positionnement, concurrence, canaux actuels et performance. Identification des opportunités d'amélioration et des leviers de croissance.",
+      title: "Analyse & création",
+      description:
+        "Analyse des tendances, étude de la concurrence et identification des contenus visuels performants pour le public cible.",
       icon: (
         <svg className="w-8 h-8 text-[#0180FA]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -23,8 +24,9 @@ const Methodology = () => {
     },
     {
       number: "02",
-      title: "Plan Média & Stratégie",
-      description: "Définition de la stratégie digitale globale, sélection des canaux pertinents, allocation budgétaire optimisée et calendrier de déploiement des campagnes.",
+      title: "Planification & publication",
+      description:
+        "Création de contenus visuels et créatifs (images, Reels, Stories, vidéos) respectant la ligne éditoriale et diffusion selon le calendrier éditorial pour maximiser l’engagement.",
       icon: (
         <svg className="w-8 h-8 text-[#0180FA]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
@@ -57,7 +59,8 @@ const Methodology = () => {
     {
       number: "05",
       title: "Reporting",
-      description: "Analyse détaillée des résultats, rapport de performance avec insights clés et recommandations stratégiques pour les prochaines actions.",
+      description:
+        "Analyse détaillée des résultats, suivi des KPIs via MBS et Ads Manager, rapport de performance avec insights clés et recommandations stratégiques pour les prochaines actions.",
       icon: (
         <svg className="w-8 h-8 text-[#0180FA]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
@@ -68,175 +71,145 @@ const Methodology = () => {
   ]
 
   return (
-    <section id="methodology" className="py-24 bg-gradient-to-br from-[#ECF6FF] via-white to-[#ECF6FF] relative overflow-hidden">
-      {/* Background Decoration */}
+    <section
+      id="methodology"
+      className="relative py-20 md:py-24 bg-gradient-to-br from-[#ECF6FF] via-white to-[#ECF6FF] overflow-hidden"
+    >
+      {/* Décor de fond */}
       <motion.div
-        className="absolute top-0 right-0 w-96 h-96 bg-[#0180FA]/5 rounded-full blur-3xl"
-        initial={{ opacity: 0, scale: 0 }}
-        whileInView={{ opacity: 1, scale: 1 }}
+        className="pointer-events-none absolute inset-0"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-      />
+      >
+        <div className="absolute -top-24 right-0 h-72 w-72 rounded-full bg-[#0180FA]/10 blur-3xl" />
+        <div className="absolute bottom-0 left-0 h-80 w-80 rounded-full bg-[#0180FA]/5 blur-3xl" />
+      </motion.div>
 
-      <div className="container-custom px-4 sm:px-6">
-        {/* Section Title */}
+      <div className="container-custom relative px-4 sm:px-6">
+        {/* Titre section */}
         <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <motion.h2
-            className="text-3xl lg:text-4xl font-bold mb-6"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <span className="text-gray-800">Méthodologie de</span>
-            <span className="block bg-gradient-to-r from-[#0180FA] to-[#0180FA] bg-clip-text text-transparent">
-              Travail
-            </span>
-          </motion.h2>
-          <motion.div
-            className="w-24 h-1 bg-gradient-to-r from-[#0180FA] to-[#0180FA] rounded-full mx-auto mb-8"
-            initial={{ width: 0 }}
-            whileInView={{ width: 96 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            viewport={{ once: true }}
-          />
-        </motion.div>
-
-        {/* Introduction */}
-        <motion.div
-          className="max-w-4xl mx-auto text-center mb-16"
+          className="mx-auto max-w-3xl text-center mb-10 md:mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <p className="text-gray-600 text-lg leading-relaxed">
-            Ma méthodologie est centrée sur la performance et repose sur une approche en cinq phases 
-            pour garantir l'efficacité de chaque projet. Chaque étape est conçue pour maximiser le 
-            retour sur investissement et assurer une croissance durable et mesurable.
+          <p className="text-xs sm:text-sm font-medium uppercase tracking-[0.25em] text-[#0180FA]">
+            MÉTHODOLOGIE
+          </p>
+          <h2 className="mt-3 text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
+            Comment je travaille, étape par étape
+          </h2>
+          <p className="mt-4 text-sm sm:text-base text-gray-600 leading-relaxed">
+            De l&apos;analyse initiale au reporting final, chaque phase a un objectif clair
+            pour transformer vos objectifs marketing en résultats concrets.
           </p>
         </motion.div>
 
-        {/* Phases */}
-        <div className="grid lg:grid-cols-5 gap-6 lg:gap-8">
-          {phases.map((phase, index) => (
-            <motion.div
-              key={phase.number}
-              className="relative"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-              viewport={{ once: true }}
-            >
-              {/* Phase Card */}
-              <motion.div
-                className="bg-gradient-to-br from-white/90 to-[#ECF6FF]/90 backdrop-blur-sm border border-[#0180FA]/20 rounded-2xl p-6 h-full shadow-lg hover:shadow-xl transition-all duration-300"
-                whileHover={{ 
-                  scale: 1.02,
-                  boxShadow: "0 20px 40px rgba(1, 128, 250, 0.1)"
-                }}
-              >
-                {/* Phase Number */}
-                <motion.div
-                  className="text-4xl font-bold mb-3"
-                  initial={{ opacity: 0, scale: 0.5 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: index * 0.2 + 0.3 }}
-                  viewport={{ once: true }}
-                >
-                  <span className="bg-gradient-to-r from-[#0180FA] to-[#0180FA] bg-clip-text text-transparent">
-                    {phase.number}
-                  </span>
-                </motion.div>
+        {/* Timeline verticale */}
+        <div className="relative max-w-4xl mx-auto">
+          {/* Ligne verticale */}
+          <div className="absolute left-4 top-0 bottom-0 w-px bg-gradient-to-b from-[#0180FA] via-[#0180FA]/40 to-transparent md:left-1/2" />
 
-                {/* Separator Line */}
+          <div className="space-y-8">
+            {phases.map((phase, index) => {
+              const isLeft = index % 2 === 0
+              return (
                 <motion.div
-                  className="w-full h-0.5 bg-gradient-to-r from-[#0180FA]/50 to-[#0180FA]/50 mb-4"
-                  initial={{ width: 0 }}
-                  whileInView={{ width: "100%" }}
-                  transition={{ duration: 0.8, delay: index * 0.2 + 0.5 }}
-                  viewport={{ once: true }}
-                />
-
-                {/* Phase Icon */}
-                <motion.div
-                  className="text-3xl mb-3 text-[#0180FA]"
-                  whileHover={{ scale: 1.2, rotate: 5 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  {phase.icon}
-                </motion.div>
-
-                {/* Phase Title */}
-                <motion.h3
-                  className="text-lg font-bold text-gray-800 mb-3"
+                  key={phase.number}
+                  className="relative md:grid md:grid-cols-2 md:gap-10"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.2 + 0.4 }}
-                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true, margin: '-80px' }}
                 >
-                  {phase.title}
-                </motion.h3>
+                  {/* Point + numéro */}
+                  <div
+                    className={`flex items-start gap-3 mb-3 md:mb-0 ${
+                      isLeft ? 'md:justify-end md:pr-6' : 'md:order-2 md:pl-6'
+                    }`}
+                  >
+                    <div className="relative flex items-center gap-3">
+                      <div className="relative z-10 flex h-9 w-9 items-center justify-center rounded-full bg-white shadow-md border border-[#0180FA]/40">
+                        <span className="text-[11px] font-semibold text-[#0180FA]">
+                          {phase.number}
+                        </span>
+                      </div>
+                      <div className="hidden md:block">
+                        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gray-500">
+                          Phase {index + 1}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
 
-                {/* Phase Description */}
-                <motion.p
-                  className="text-gray-600 leading-relaxed text-sm"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.2 + 0.6 }}
-                  viewport={{ once: true }}
-                >
-                  {phase.description}
-                </motion.p>
-              </motion.div>
-
-              {/* Connecting Line (except for last phase) */}
-              {index < phases.length - 1 && (
-                <motion.div
-                  className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gradient-to-r from-[#0180FA]/50 to-[#0180FA]/50"
-                  initial={{ width: 0 }}
-                  whileInView={{ width: 32 }}
-                  transition={{ duration: 0.8, delay: index * 0.2 + 0.8 }}
-                  viewport={{ once: true }}
-                />
-              )}
-            </motion.div>
-          ))}
+                  {/* Carte de contenu */}
+                  <div
+                    className={`md:col-span-1 ${
+                      isLeft ? 'md:order-2 md:pl-4' : 'md:order-1 md:pr-4 md:text-right'
+                    }`}
+                  >
+                    <motion.div
+                      className="rounded-2xl border border-white/70 bg-white/90 px-4 sm:px-5 py-4 shadow-[0_12px_32px_rgba(15,23,42,0.06)] backdrop-blur group"
+                      whileHover={{ y: -4 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <div className="flex items-start gap-3 mb-2">
+                        <motion.div
+                          className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#ECF6FF] text-[#0180FA]"
+                          whileHover={{ scale: 1.1, rotate: 3 }}
+                          transition={{ duration: 0.2 }}
+                        >
+                          {phase.icon}
+                        </motion.div>
+                        <div className="text-left md:text-inherit">
+                          <p className="text-sm font-semibold text-gray-900 group-hover:text-[#0180FA] transition-colors">
+                            {phase.title}
+                          </p>
+                          <p className="mt-1 text-[12px] text-gray-600 leading-relaxed">
+                            {phase.description}
+                          </p>
+                        </div>
+                      </div>
+                    </motion.div>
+                  </div>
+                </motion.div>
+              )
+            })}
+          </div>
         </div>
 
         {/* CTA */}
         <motion.div
-          className="text-center mt-16"
-          initial={{ opacity: 0, y: 20 }}
+          className="text-center mt-14"
+          initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
         >
           <motion.button
             onClick={() => scrollToSection('contact')}
-            className="px-8 py-4 bg-[#0180FA] text-white rounded-lg font-semibold hover:bg-[#0180FA]/90 transition-all duration-300 flex items-center mx-auto glow-effect"
-            whileHover={{ 
-              scale: 1.05,
-              boxShadow: "0 10px 25px rgba(1, 128, 250, 0.3)"
-            }}
-            whileTap={{ scale: 0.95 }}
+            className="inline-flex items-center justify-center rounded-full bg-[#0180FA] px-7 py-2.5 text-sm sm:text-base font-semibold text-white shadow-[0_12px_30px_rgba(1,128,250,0.3)] hover:bg-[#0170DB] transition-colors"
+            whileHover={{ scale: 1.04 }}
+            whileTap={{ scale: 0.96 }}
           >
-            Démarrer un projet
+            Discuter de la prochaine étape
             <motion.svg
-              className="ml-2 w-5 h-5"
+              className="ml-2 h-4 w-4"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
-              whileHover={{ x: 5 }}
-              transition={{ duration: 0.2 }}
+              whileHover={{ x: 1 }}
+              transition={{ duration: 0.15 }}
             >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M13 7l5 5-5 5M6 12h12"
+              />
             </motion.svg>
           </motion.button>
         </motion.div>

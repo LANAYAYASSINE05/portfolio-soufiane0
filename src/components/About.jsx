@@ -10,219 +10,197 @@ const About = () => {
   }
 
   return (
-    <section id="about" className="py-24 bg-gradient-to-br from-[#ECF6FF] via-white to-[#ECF6FF] relative overflow-hidden">
-      {/* Background Decoration */}
-      <motion.div
-        className="absolute top-0 right-0 w-96 h-96 bg-[#0180FA]/5 rounded-full blur-3xl"
-        initial={{ opacity: 0, scale: 0 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-      />
+    <section
+      id="about"
+      className="relative py-20 md:py-24 bg-white"
+    >
+      <div className="container-custom relative px-4 sm:px-6">
+        {/* Titre section */}
+        <motion.div
+          className="mx-auto max-w-3xl text-center"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+        >
+          <p className="text-xs sm:text-sm font-medium uppercase tracking-[0.25em] text-[#0180FA]">
+            À PROPOS
+          </p>
+          <h2 className="mt-3 text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
+            Qui se cache derrière le{' '}
+            <span className="bg-gradient-to-r from-[#0180FA] to-[#00B5FF] bg-clip-text text-transparent">
+              trafic
+            </span>
+            ?
+          </h2>
+          <p className="mt-4 text-sm sm:text-base text-gray-600 leading-relaxed">
+            Je suis Soufiane Bennani, Community & Traffic Manager junior, à mi-chemin entre
+            créativité de contenu et gestion data-driven des campagnes d’acquisition.
+          </p>
+        </motion.div>
 
-      <div className="container-custom px-4 sm:px-6">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left Column - Profile Picture */}
+        {/* Contenu principal */}
+        <div className="mt-12 grid gap-10 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] items-start">
+          {/* Colonne texte : parcours + façon de travailler */}
           <motion.div
-            className="order-2 lg:order-1 flex justify-center lg:justify-start"
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: '-80px' }}
           >
-            <div className="relative">
-              {/* Profile Circle */}
-              <motion.div
-                className="w-72 h-72 lg:w-80 lg:h-80 rounded-full bg-gradient-to-br from-[#0180FA]/20 to-[#0180FA]/20 border-4 border-[#0180FA]/30 flex items-center justify-center relative overflow-hidden"
-                whileHover={{ scale: 1.05, rotate: 2 }}
-                transition={{ duration: 0.3 }}
-              >
-                {/* Profile Image */}
-                <motion.img
-                  src="/assets/profil.png"
-                  alt="Rhanim Mehdi"
-                  className="w-full h-full object-cover rounded-full"
-                  initial={{ opacity: 0, scale: 0.5 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: 0.3 }}
-                  viewport={{ once: true }}
-                />
-
-                {/* Decorative Elements */}
-                <motion.div
-                  className="absolute top-8 right-8 w-4 h-4 bg-[#0180FA] rounded-full"
-                  animate={{ 
-                    scale: [1, 1.2, 1],
-                    opacity: [0.5, 1, 0.5]
-                  }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                />
-                <motion.div
-                  className="absolute bottom-8 left-8 w-6 h-6 bg-[#0180FA] rounded-full"
-                  animate={{ 
-                    scale: [1, 1.3, 1],
-                    opacity: [0.3, 0.8, 0.3]
-                  }}
-                  transition={{ duration: 3, repeat: Infinity, delay: 1 }}
-                />
-                <motion.div
-                  className="absolute top-1/2 left-4 w-3 h-3 bg-[#0180FA] rounded-full"
-                  animate={{ 
-                    scale: [1, 1.5, 1],
-                    opacity: [0.4, 1, 0.4]
-                  }}
-                  transition={{ duration: 2.5, repeat: Infinity, delay: 0.5 }}
-                />
-              </motion.div>
-
-              {/* Floating Elements */}
-              <motion.div
-                className="absolute -top-4 -right-4 w-8 h-8 bg-[#0180FA]/20 rounded-full border border-[#0180FA]/30"
-                animate={{ 
-                  y: [0, -10, 0],
-                  rotate: [0, 180, 360]
-                }}
-                transition={{ duration: 4, repeat: Infinity }}
-              />
-              <motion.div
-                className="absolute -bottom-4 -left-4 w-6 h-6 bg-[#0180FA]/20 rounded-full border border-[#0180FA]/30"
-                animate={{ 
-                  y: [0, 10, 0],
-                  rotate: [360, 180, 0]
-                }}
-                transition={{ duration: 3, repeat: Infinity, delay: 1 }}
-              />
+            {/* Bloc parcours */}
+            <div className="rounded-2xl border border-gray-100 bg-gray-50/60 px-5 sm:px-6 py-6 mb-8">
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3">
+                De la communauté aux campagnes media
+              </h3>
+              <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+                Junior en Community & Traffic Management, j’accompagne les marques sur deux
+                volets complémentaires : faire vivre leurs communautés au quotidien, et
+                piloter leurs campagnes publicitaires pour atteindre des objectifs concrets
+                (visibilité, trafic, conversions…).
+              </p>
+              <p className="mt-4 text-sm sm:text-base text-gray-600 leading-relaxed">
+                Je m’appuie autant sur la créativité (contenus, angles, formats) que sur
+                l’analyse des chiffres pour améliorer en continu les résultats et proposer
+                des actions alignées avec la stratégie globale.
+              </p>
             </div>
+
+            {/* Timeline / façon de travailler */}
+            <div className="space-y-5">
+              {[
+                {
+                  title: 'Comprendre la marque & ses objectifs',
+                  desc: "Analyse du positionnement, des audiences cibles et des objectifs business pour cadrer la stratégie social media et paid.",
+                },
+                {
+                  title: 'Construire des contenus qui engagent',
+                  desc: "Création de visuels et de messages adaptés aux plateformes, pensés pour générer des interactions et nourrir la communauté.",
+                },
+                {
+                  title: 'Piloter & optimiser les campagnes',
+                  desc: "Mise en place, suivi et ajustements des campagnes (budget, ciblages, formats) pour maximiser le ROI.",
+                },
+                {
+                  title: 'Mesurer, apprendre, recommencer',
+                  desc: "Lecture des résultats, préparation de rapports et recommandation d’actions pour la suite.",
+                },
+              ].map((step, index) => (
+                <motion.div
+                  key={step.title}
+                  className="flex gap-4"
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: 0.1 * index }}
+                  viewport={{ once: true, margin: '-60px' }}
+                >
+                  <div className="mt-1 flex flex-col items-center">
+                    <div className="flex h-7 w-7 items-center justify-center rounded-full bg-[#0180FA]/10 text-[11px] font-semibold text-[#0180FA]">
+                      {index + 1}
+                    </div>
+                    {index !== 3 && (
+                      <div className="mt-1 h-full w-px bg-gradient-to-b from-[#0180FA]/40 to-transparent" />
+                    )}
+                  </div>
+                  <div>
+                    <h4 className="text-sm sm:text-base font-semibold text-gray-900">
+                      {step.title}
+                    </h4>
+                    <p className="mt-1 text-[12px] sm:text-xs text-gray-600 leading-relaxed">
+                      {step.desc}
+                    </p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* CTA simple */}
+            <motion.div
+              className="mt-8 flex flex-wrap gap-3"
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <button
+                onClick={() => scrollToSection('projects')}
+                className="inline-flex items-center justify-center rounded-full bg-[#0180FA] px-6 py-2.5 text-sm font-semibold text-white hover:bg-[#0170DB] transition-colors"
+              >
+                Voir quelques cas concrets
+              </button>
+              <button
+                onClick={() => scrollToSection('contact')}
+                className="inline-flex items-center justify-center rounded-full border border-gray-300 px-6 py-2.5 text-sm font-semibold text-gray-800 hover:border-[#0180FA] hover:text-[#0180FA] transition-colors"
+              >
+                Échanger sur vos besoins
+              </button>
+            </motion.div>
           </motion.div>
 
-          {/* Right Column - Content */}
+          {/* Colonne droite : bloc visuel sobre avec photo + points clés */}
           <motion.div
-            className="order-1 lg:order-2 text-center lg:text-left"
-            initial={{ opacity: 0, x: 50 }}
+            className="w-full max-w-md lg:ml-auto"
+            initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: '-80px' }}
           >
-            {/* Section Title */}
-            <motion.h2
-              className="text-3xl lg:text-4xl font-bold mb-6"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <span className="text-gray-800">À propos de</span>
-              <span className="block bg-gradient-to-r from-[#0180FA] to-[#0180FA] bg-clip-text text-transparent">
-                SOUFIANE BENNANI
-              </span>
-            </motion.h2>
-
-            {/* Role */}
-            <motion.div
-              className="mb-8"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              <h3 className="text-2xl font-semibold text-[#0180FA] mb-2">Community Manager & Traffic Manager</h3>
-              <div className="w-24 h-1 bg-gradient-to-r from-[#0180FA] to-[#0180FA] rounded-full"></div>
-            </motion.div>
-
-            {/* Description */}
-            <motion.div
-              className="space-y-6 mb-8"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
-            >
-              <p className="text-gray-600 leading-relaxed text-lg">
-                Junior en Community & Traffic Management, je participe au développement de la visibilité 
-                et de la notoriété digitale des marques en transformant leurs objectifs business en actions concrètes.
-              </p>
-              
-              <p className="text-gray-600 leading-relaxed text-lg">
-                Je crée des contenus visuels pour engager les communautés, sélectionne et optimise les 
-                campagnes publicitaires selon les objectifs, et analyse les performances pour contribuer à 
-                une croissance digitale mesurable et durable.
-              </p>
-            </motion.div>
-
-            {/* Key Highlights */}
-            <motion.div
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <div className="bg-gradient-to-br from-white/90 to-[#ECF6FF]/90 backdrop-blur-sm border border-[#0180FA]/20 rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all duration-300">
-                <h4 className="text-base font-semibold text-gray-800 mb-2">Communautés</h4>
-                <p className="text-gray-600 text-xs">Création de contenus visuels et rédactionnels pour engager et développer les communautés digitales.</p>
+            <div className="rounded-3xl border border-gray-100 bg-white shadow-[0_18px_45px_rgba(15,23,42,0.06)] overflow-hidden">
+              {/* Photo */}
+              <div className="relative h-48 bg-gradient-to-br from-[#0180FA] via-[#00B5FF] to-[#7FD3FF]">
+                <div className="absolute inset-0 opacity-30">
+                  <div className="absolute -right-10 top-10 h-24 w-24 rounded-full border border-white/40" />
+                  <div className="absolute -left-6 bottom-4 h-20 w-20 rounded-full border border-white/30" />
+                </div>
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 h-24 w-24 rounded-full border-4 border-white bg-gray-100 overflow-hidden shadow-lg">
+                  <img
+                    src="/assets/profil.png"
+                    alt="Photo de Soufiane Bennani"
+                    className="h-full w-full object-cover"
+                  />
+                </div>
               </div>
-              <div className="bg-gradient-to-br from-white/90 to-[#ECF6FF]/90 backdrop-blur-sm border border-[#0180FA]/20 rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all duration-300">
-                <h4 className="text-base font-semibold text-gray-800 mb-2">Acquisition</h4>
-                <p className="text-gray-600 text-xs">Planification et optimisation des campagnes publicitaires selon les objectifs pour générer du trafic qualifié et maximiser l'impact digital.</p>
-              </div>
-              <div className="bg-gradient-to-br from-white/90 to-[#ECF6FF]/90 backdrop-blur-sm border border-[#0180FA]/20 rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all duration-300">
-                <h4 className="text-base font-semibold text-gray-800 mb-2">Croissance digitale</h4>
-                <p className="text-gray-600 text-xs">Stratégie intégrée combinant engagement des communautés et acquisition pour renforcer la visibilité et la notoriété de la marque.</p>
-              </div>
-            </motion.div>
 
-            {/* CTA Buttons */}
-            <motion.div
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <motion.button
-                onClick={() => scrollToSection('contact')}
-                className="px-8 py-4 bg-[#0180FA] text-white rounded-lg font-semibold hover:bg-[#0180FA]/90 transition-all duration-300 flex items-center justify-center gap-3"
-                whileHover={{ 
-                  scale: 1.05,
-                  boxShadow: "0 10px 25px rgba(1, 128, 250, 0.3)"
-                }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Contactez-moi
-                <motion.svg
-                  className="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  whileHover={{ scale: 1.1 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </motion.svg>
-              </motion.button>
+              {/* Infos */}
+              <div className="px-6 pt-10 pb-6">
+                <div className="text-center">
+                  <p className="text-[11px] uppercase tracking-[0.25em] text-gray-400">
+                    Community & Traffic Manager
+                  </p>
+                  <p className="mt-2 text-lg font-semibold text-gray-900">
+                    Soufiane Bennani
+                  </p>
+                  <p className="mt-1 text-xs text-gray-500">
+                    Social Media · Paid Media · Reporting
+                  </p>
+                </div>
 
-              <motion.button
-                onClick={() => scrollToSection('projects')}
-                className="px-8 py-4 border border-gray-600 text-gray-600 rounded-lg font-semibold hover:border-[#0180FA] hover:text-[#0180FA] hover:bg-[#0180FA]/10 transition-all duration-300 flex items-center justify-center gap-3"
-                whileHover={{ 
-                  scale: 1.05,
-                  borderColor: "#0180FA"
-                }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Voir mes projets
-                <motion.svg
-                  className="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  whileHover={{ scale: 1.1 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                </motion.svg>
-              </motion.button>
-            </motion.div>
+                {/* Points clés */}
+                <div className="mt-6 grid grid-cols-1 gap-3 text-sm">
+                  <div className="flex items-start gap-3 rounded-2xl bg-gray-50 px-4 py-3">
+                    <span className="mt-1 h-2 w-2 rounded-full bg-[#0180FA]" />
+                    <p className="text-[12px] text-gray-600">
+                      À l’aise autant dans la création de contenus que dans les plateformes
+                      publicitaires (Meta, Google Ads).
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-3 rounded-2xl bg-gray-50 px-4 py-3">
+                    <span className="mt-1 h-2 w-2 rounded-full bg-[#0180FA]" />
+                    <p className="text:[12px] text-gray-600">
+                      Habitué à suivre les indicateurs clés (CPC, CPM, CTR, taux de
+                      conversion…) pour optimiser progressivement les campagnes.
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-3 rounded-2xl bg-gray-50 px-4 py-3">
+                    <span className="mt-1 h-2 w-2 rounded-full bg-[#0180FA]" />
+                    <p className="text-[12px] text-gray-600">
+                      Envie d’apprendre en continu et de contribuer à des projets où
+                      engagement communautaire et performance media avancent ensemble.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </motion.div>
         </div>
       </div>

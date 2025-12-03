@@ -14,73 +14,54 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "Haier Maroc : Sponsoring Stratégique avec la FRMF",
-      category: "brand",
-      description: "Accroître la notoriété de la marque Haier et renforcer son image au Maroc à travers une alliance stratégique avec la Fédération Royale Marocaine de Football (FRMF).",
-      context: "Objectif : Accroître la notoriété de la marque Haier et renforcer son image au Maroc à travers une alliance stratégique avec la Fédération Royale Marocaine de Football (FRMF).",
-      strategy: "En tant que Community Manager, Traffic Manager, j'ai géré des campagnes de sponsoring axées sur les interactions et la notoriété, en utilisant les plateformes Instagram et Facebook pour maximiser l'engagement et la portée.",
+      title: "Don Lucas : Campagne Social Media pour un Restaurant Espagnol",
+      category: "consideration",
+      description: "Mettre en place une campagne social media 360° (Instagram, Facebook, TikTok) pour faire de Don Lucas une référence locale, avec plus de 1,5 M de vues cumulées, 266 403 interactions et un coût par engagement d’environ 0,001 $.",
+      context: "Objectif : Asseoir la notoriété de Don Lucas à Casablanca, amplifier la visibilité du restaurant et transformer l’audience touchée en communauté active (visites profil, abonnements, réservations).",
+      strategy: "En tant que Social Media Manager & Traffic Manager, j’ai structuré un écosystème complet de campagnes Meta Ads (notoriété, interactions, visites de profil) complété par un calendrier éditorial organique. L’algorithme a été nourri en continu via des contenus axés sur l’ambiance et les plats signature, tandis que les audiences chaudes (engagers, visiteurs de profil, vues vidéo) étaient retravaillées en retargeting pour maximiser les conversions sociales.",
       results: [
-        { metric: "18.6M", label: "Vues Cumulées", description: "Visibilité Exceptionnelle : Le partenariat a généré plus de 18,6 millions de vues cumulées." },
-        { metric: "11.3%", label: "Taux d'Engagement Instagram", description: "Engagement Profond sur Instagram : Le taux d'interaction sur Instagram a atteint environ 11,3 %, démontrant une forte capacité à générer un engagement qualifié." },
-        { metric: "0.0004$ - 0.01$", label: "Coût par Résultat", description: "Coût par Résultat Ultra-Compétitif : Une campagne d'interactions a été menée avec un coût par résultat extrêmement bas, oscillant entre 0,0004 $ et 0,01 $." },
-        { metric: "926 876", label: "Personnes Uniques", description: "Portée Massive : La campagne a atteint plus de 926 876 personnes uniques." },
-        { metric: "17 353", label: "Nouveaux Abonnés Instagram", description: "Création de Communauté : Le travail a permis de transformer l'intérêt en adhésion durable, avec 17 353 nouveaux abonnés sur Instagram et 15 700 suivis sur Facebook, renforçant la communauté Haier." }
+        { metric: "912 842", label: "Vues Instagram", description: "Un volume de vues très élevé sur Instagram, avec plusieurs pics autour du 17, 21 et 30 juillet, signe d’une visibilité soutenue tout au long du mois." },
+        { metric: "12 956", label: "Interactions IG", description: "Plus de 12 900 interactions sur Instagram en un mois, soit une progression de plus de +2,0 K % par rapport à la période précédente." },
+        { metric: "624 718", label: "Vues Facebook", description: "Plus de 624 000 vues sur Facebook, avec des pics marqués de visibilité autour du 17, 22 et 30 juillet." },
+        { metric: "266 403", label: "Interactions Campagnes", description: "Au total, 266 403 interactions générées sur les campagnes payantes, pour un coût moyen par engagement d’environ 0,001 $, reflétant une efficacité publicitaire exceptionnelle." },
+        { metric: "1 124", label: "Nouveaux abonnés IG", description: "1 124 nouveaux abonnés Instagram en un mois, consolidant durablement la communauté autour du restaurant et préparant les futures actions business (réservations, événements…)." }
       ],
-      technologies: ["Meta Ads", "Facebook", "Instagram", "Sponsoring", "FRMF"],
-      image: "/assets/haier img.jpg",
+      technologies: ["Meta Ads", "Instagram", "Facebook", "Restaurant Marketing", "Traffic Management"],
+      image: "/assets/Don-lucas-restaurant-miniature.jpg",
       link: "#"
     },
     {
       id: 2,
-      title: "Les Résidences du Golf à Saïdia : Génération de Leads Qualifiés",
-      category: "lead",
-      description: "Générer des leads qualifiés auprès des MRE intéressés par l'immobilier à Saïdia, grâce à une stratégie mixte Meta Ads & Google Ads.",
-      context: "Objectif : Générer des leads qualifiés auprès des MRE intéressés par l'immobilier à Saïdia, grâce à une stratégie mixte Meta Ads & Google Ads.",
-      strategy: "En tant que Community Manager, Traffic Manager, j'ai conçu et déployé le plan média (Google & Meta), paramétré les campagnes, ciblé les MRE avec précision, optimisé en continu (A/B tests, enchères) et assuré le tracking avancé pour garantir des leads qualifiés et performants.",
+      title: "Triangle Vert : Mise en Avant des Produits Frais & de Saison",
+      category: "brand",
+      description: "Mettre en avant les produits frais et de saison de Triangle Vert via une stratégie social media orientée notoriété et engagement, afin d’ancrer l’enseigne comme réflexe du quotidien.",
+      context: "Objectif : Positionner Triangle Vert comme la référence locale pour les produits frais, en travaillant la mémorisation de la promesse « des produits frais et de saison, tous les jours » auprès d’une audience large et qualifiée.",
+      strategy: "J’ai mis en place un dispositif d’achat média Meta Ads axé sur la notoriété et les interactions, avec des visuels créatifs autour des produits (fruits, légumes, viandes, poissons), un ciblage géolocalisé et affinitaire, et une optimisation continue des campagnes (analyse des pics de vues, couverture et interactions) pour maximiser la visibilité au meilleur CPM.",
       results: [
-        { metric: "933", label: "Leads Totaux", description: "Résultats combinés : 933 leads au total, dont 606 qualifiés avec un CPL global de 18,3 MAD." },
-        { metric: "412", label: "Leads Meta Ads", description: "Meta Ads (Budget 8 000 MAD) : 412 leads collectés via formulaires et WhatsApp, 67% qualifiés (≈276 prospects sérieux)." },
-        { metric: "19.4 MAD", label: "CPL Meta Ads", description: "CPL compétitif à 19,4 MAD avec CTR moyen 3,9%, supérieur au benchmark immobilier (~2,5%)." },
-        { metric: "521", label: "Leads Google Ads", description: "Google Ads (Budget 9 000 MAD) : 5 480 clics qualifiés, CTR 6,2%, 521 prospects générés via site et WhatsApp." },
-        { metric: "17.3 MAD", label: "CPL Google Ads", description: "CPL moyen de 17,3 MAD, inférieur à la moyenne du marché (20-25 MAD). Optimisation des enchères → réduction CPC de 4,1 à 3,4 MAD (-17%)." }
+        { metric: "355 129", label: "Personnes Couvertes IG", description: "Plus de 355 000 personnes atteintes sur Instagram, avec une progression de couverture de plus de +3,1 K % sur la période." },
+        { metric: "912 842", label: "Vues Totales IG", description: "Une forte dynamique de vues avec plusieurs pics en milieu et fin de mois, traduisant une excellente visibilité des créations Triangle Vert." },
+        { metric: "+2,0 K %", label: "Progression Interactions IG", description: "Une hausse spectaculaire des interactions sur Instagram, confirmant l’attractivité des visuels et des messages axés sur la fraîcheur des produits." },
+        { metric: "CPM Bas", label: "Coût par Résultat", description: "Un coût par mille très compétitif, permettant de maximiser la notoriété tout en maîtrisant le budget média." }
       ],
-      technologies: ["Google Ads", "Meta Ads", "A/B Testing", "Tracking", "WhatsApp"],
-      image: "/assets/residences du golf.jpeg.jpg",
+      technologies: ["Meta Ads", "Brand Awareness", "Retail", "Facebook", "Instagram"],
+      image: "/assets/Triangle-vert-miniature.jpg",
       link: "#"
     },
     {
       id: 3,
-      title: "Medina Mall Saïdia : Lancement & Revitalisation d'un Projet d'État",
-      category: "brand",
-      description: "Promouvoir l'ouverture d'un espace culturel, familial et touristique au centre de Saïdia et renforcer sa visibilité auprès d'une audience locale, nationale et MRE à travers une stratégie digitale multi-plateformes.",
-      context: "Objectif : Promouvoir l'ouverture d'un espace culturel, familial et touristique au centre de Saïdia et renforcer sa visibilité auprès d'une audience locale, nationale et MRE à travers une stratégie digitale multi-plateformes.",
-      strategy: "En tant que Community Manager, Traffic Manager, j'ai conçu et piloté un dispositif média digital basé sur Meta Ads (Facebook & Instagram), combinant campagnes de notoriété, interactions et trafic Instagram. L'approche a reposé sur un ciblage large (familles, jeunes, MRE) et des optimisations continues (A/B tests, ajustement de budgets et créatifs) pour maximiser la visibilité et l'engagement autour de l'événement d'ouverture.",
+      title: "Chez Casawi : Lancement d’une Adresse Marocaine en France",
+      category: "lead",
+      description: "Accompagner le lancement et la croissance de Chez Casawi, nouvelle adresse marocaine à Tarbes, grâce à une stratégie social media qui combine notoriété, engagement et génération de commandes.",
+      context: "Objectif : Faire connaître Chez Casawi auprès d’une audience locale en quête de cuisine marocaine authentique, développer une communauté engagée et transformer cette audience en clients (sur place et en livraison).",
+      strategy: "J’ai déployé un dispositif Meta Ads (notoriété, interactions, trafic vers le profil et la page) couplé à un planning éditorial gourmand : visuels de tajines, couscous et spécialités marocaines, mise en avant des avis clients et des offres. Les campagnes ont été optimisées autour des signaux d’engagement (sauvegardes, partages, clics) pour faire progresser les visites de profil, les abonnements et les commandes.",
       results: [
-        { metric: "1.65M", label: "Personnes Uniques", description: "Visibilité Exceptionnelle : Plus de 1,65M personnes uniques touchées et 1,7M impressions délivrées, consolidant la notoriété du projet dès son lancement." },
-        { metric: "151 656", label: "Interactions", description: "Engagement Record : Plus de 151 656 interactions générées avec un coût par interaction ultra-compétitif de 0,002 $." },
-        { metric: "3 100", label: "Visites Profil Instagram", description: "Trafic Qualifié : Plus de 3 100 visites de profil Instagram pour un CPC moyen de 0,05 $, validant l'intérêt fort de l'audience." },
-        { metric: "459", label: "Nouveaux Abonnés", description: "Croissance Communautaire : +459 abonnés Instagram et +91 Facebook en un seul mois, créant une base digitale solide pour la suite." },
-        { metric: "6.2M", label: "Vues Cumulées", description: "Puissance Vidéo : Plus de 6,2M vues cumulées (4,4M sur Facebook et 1,8M sur Instagram), avec des pics dépassant 1M de vues par jour lors de l'ouverture." }
+        { metric: "Multi-plateformes", label: "Présence digitale", description: "Construction d’un écosystème cohérent sur Instagram et Facebook, soutenu par des campagnes payantes ciblées et un contenu de marque chaleureux." },
+        { metric: "Hausse marquée", label: "Interactions & engagement", description: "Progression forte des likes, commentaires, partages et sauvegardes, portée par des visuels appétissants et des messages centrés sur l’authenticité marocaine." },
+        { metric: "Trafic local", label: "Visites profil & page", description: "Augmentation régulière des visites de profil et des vues de page, signe d’un intérêt croissant pour l’adresse et son offre culinaire." },
+        { metric: "Commandes", label: "Impact business", description: "Contribution directe aux commandes en livraison et aux visites en restaurant, grâce aux campagnes, aux promotions mises en avant et à la preuve sociale." }
       ],
-      technologies: ["Meta Ads", "Facebook", "Instagram", "A/B Testing", "Video Marketing"],
-      image: "/assets/Medina Mall Saidia.jpg",
-      link: "#"
-    },
-    {
-      id: 4,
-      title: "Ariston : Accélération de la Notoriété en Ligne",
-      category: "consideration",
-      description: "Développer la notoriété d'Ariston, promouvoir les différentes gammes de produits et augmenter la communauté en ligne sur les plateformes sociales, tout en maintenant une identité visuelle cohérente et attrayante.",
-      context: "Objectif : Développer la notoriété d'Ariston, promouvoir les différentes gammes de produits et augmenter la communauté en ligne sur les plateformes sociales, tout en maintenant une identité visuelle cohérente et attrayante.",
-      strategy: "En tant que Social Media Manager, j'ai élaboré et mis en œuvre une stratégie de contenu et publicitaire pour le mois d'août. L'objectif principal de mes campagnes publicitaires était la consideration : générer de l'engagement qualifié, augmenter les visites de profil Instagram et développer la notoriété de la marque. L'approche a été axée sur la maximisation de l'engagement et des interactions, avec une analyse approfondie des performances sur Facebook, Instagram et TikTok pour optimiser la présence de la marque.",
-      results: [
-        { metric: "7 519", label: "Interactions Combinées", description: "Engagement Combiné : Au total, 7 519 interactions ont été enregistrées sur Facebook et Instagram, démontrant la pertinence du contenu et une forte capacité à engager l'audience." },
-        { metric: "10 000+", label: "Visites de Profil", description: "Trafic & Conversions : La stratégie a généré plus de 10 000 visites de profil et de page ainsi que plus de 1 900 clics sur des liens, transformant l'intérêt en actions concrètes et qualifiées." },
-        { metric: "1 900+", label: "Clics sur Liens", description: "Conversion Qualifiée : Plus de 1 900 clics sur des liens, démontrant un intérêt concret et qualifié de l'audience." },
-        { metric: "400", label: "Nouveaux Abonnés", description: "Croissance de la Communauté : En un seul mois, une augmentation de près de 400 nouveaux abonnés a été enregistrée sur les deux plateformes, avec une croissance particulièrement notable de +30,3% sur Instagram." }
-      ],
-      technologies: ["Social Media Management", "Facebook", "Instagram", "TikTok", "Content Strategy"],
-      image: "/assets/Ariston.jpg",
+      technologies: ["Meta Ads", "Restaurant Marketing", "Content Strategy", "Branding", "Social Media"],
+      image: "/assets/Chez-casawi-miniature.jpg",
       link: "#"
     }
   ]
@@ -129,71 +110,59 @@ const Projects = () => {
     : projects.filter(project => project.category === activeFilter)
 
   return (
-    <section id="projects" className="py-24 bg-gradient-to-br from-[#ECF6FF] via-white to-[#ECF6FF] relative overflow-hidden">
-      {/* Background Decoration */}
+    <section
+      id="projects"
+      className="relative py-20 md:py-24 bg-gradient-to-br from-[#ECF6FF] via-white to-[#ECF6FF] overflow-hidden"
+    >
+      {/* Décor de fond */}
       <motion.div
-        className="absolute top-0 right-0 w-96 h-96 bg-[#0180FA]/5 rounded-full blur-3xl"
-        initial={{ opacity: 0, scale: 0 }}
-        whileInView={{ opacity: 1, scale: 1 }}
+        className="pointer-events-none absolute inset-0"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-      />
+      >
+        <div className="absolute -top-24 right-0 h-72 w-72 rounded-full bg-[#0180FA]/10 blur-3xl" />
+        <div className="absolute bottom-0 left-0 h-80 w-80 rounded-full bg-[#0180FA]/5 blur-3xl" />
+      </motion.div>
 
-      <div className="container-custom px-4 sm:px-6">
-        {/* Section Title */}
+      <div className="container-custom relative px-4 sm:px-6">
+        {/* Titre section */}
         <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <motion.h2
-            className="text-3xl lg:text-4xl font-bold mb-6"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <span className="text-gray-800">Mes</span>
-            <span className="block bg-gradient-to-r from-[#0180FA] to-[#0180FA] bg-clip-text text-transparent">
-              Projets
-            </span>
-          </motion.h2>
-          <motion.p
-            className="text-gray-600 text-lg max-w-3xl mx-auto mb-8"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            Découvrez mes cas clients et les résultats obtenus pour mes clients dans différents secteurs
-          </motion.p>
-          <motion.div
-            className="w-24 h-1 bg-gradient-to-r from-[#0180FA] to-[#0180FA] rounded-full mx-auto"
-            initial={{ width: 0 }}
-            whileInView={{ width: 96 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            viewport={{ once: true }}
-          />
-        </motion.div>
-
-        {/* Filter Buttons */}
-        <motion.div
-          className="flex flex-wrap justify-center gap-4 mb-12"
+          className="mx-auto max-w-3xl text-center mb-10 md:mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <p className="text-xs sm:text-sm font-medium uppercase tracking-[0.25em] text-[#0180FA]">
+            PROJETS
+          </p>
+          <h2 className="mt-3 text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
+            Quelques cas concrets
+          </h2>
+          <p className="mt-4 text-sm sm:text-base text-gray-600 leading-relaxed">
+            Des projets réels menés pour des restaurants et enseignes de retail, avec des
+            résultats mesurables en portée, engagement et business.
+          </p>
+        </motion.div>
+
+        {/* Filtres */}
+        <motion.div
+          className="mb-8 flex flex-wrap justify-center gap-3"
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
           viewport={{ once: true }}
         >
           {filters.map((filter) => (
             <motion.button
               key={filter.key}
               onClick={() => setActiveFilter(filter.key)}
-              className={`px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center ${
+              className={`inline-flex items-center gap-2 rounded-full border px-4 py-2 text-xs sm:text-sm font-medium transition-colors ${
                 activeFilter === filter.key
-                  ? 'bg-[#0180FA] text-white'
-                  : 'bg-[#ECF6FF] text-[#0180FA] hover:bg-[#0180FA]/10 border border-[#0180FA]/20'
+                  ? 'border-[#0180FA] bg-[#0180FA] text-white'
+                  : 'border-gray-200 bg-white text-gray-700 hover:border-[#0180FA] hover:text-[#0180FA]'
               }`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -204,274 +173,167 @@ const Projects = () => {
           ))}
         </motion.div>
 
-        {/* Project Counter */}
+        {/* Compteur */}
         <motion.div
-          className="text-center mb-12"
-          initial={{ opacity: 0, y: 20 }}
+          className="mb-8 text-center text-xs sm:text-sm text-gray-500"
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
+          transition={{ duration: 0.5, delay: 0.15 }}
           viewport={{ once: true }}
         >
-          <span className="text-gray-600">
-            {filteredProjects.length} projet{filteredProjects.length > 1 ? 's' : ''} 
-            {activeFilter !== 'all' && ` en ${filters.find(f => f.key === activeFilter)?.label.toLowerCase()}`}
-          </span>
+          {filteredProjects.length} projet{filteredProjects.length > 1 ? 's' : ''} affiché
+          {filteredProjects.length > 1 ? 's' : ''}{' '}
+          {activeFilter !== 'all' &&
+            `• focus ${filters.find((f) => f.key === activeFilter)?.label.toLowerCase()}`}
         </motion.div>
 
-        {/* Projects Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
+        {/* Liste de projets en layout horizontal */}
+        <div className="space-y-8">
           {filteredProjects.map((project, index) => (
-            <motion.div
+            <motion.article
               key={project.id}
-              className="bg-gradient-to-br from-white/90 to-[#ECF6FF]/90 backdrop-blur-sm border border-[#0180FA]/20 rounded-2xl p-0 overflow-hidden group shadow-lg hover:shadow-xl transition-all duration-300"
-              initial={{ opacity: 0, y: 50 }}
+              className="rounded-3xl border border-white/70 bg-white/95 shadow-[0_18px_45px_rgba(15,23,42,0.08)] backdrop-blur overflow-hidden"
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              whileHover={{ 
-                scale: 1.02,
-                boxShadow: "0 20px 40px rgba(1, 128, 250, 0.1)"
-              }}
+              transition={{ duration: 0.7, delay: index * 0.1 }}
+              viewport={{ once: true, margin: '-80px' }}
             >
-              {/* Project Image */}
-              <div className={`h-48 sm:h-64 lg:h-80 flex items-center justify-center relative overflow-hidden group ${
-                project.id === 1 
-                  ? 'bg-black' 
-                  : project.id === 2
-                  ? 'bg-[#1a3a2e]'
-                  : project.id === 3
-                  ? 'bg-[#DEDFE4]'
-                  : project.id === 4
-                  ? 'bg-[#CDC6B3]'
-                  : 'bg-gradient-to-br from-[#0180FA]/20 to-[#0180FA]/20'
-              }`}>
-                <motion.img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
-                  whileHover={{ scale: 1.02 }}
-                  transition={{ duration: 0.3 }}
-                  loading="lazy"
-                />
-                
-                {/* Overlay Gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                
-                {/* Project Category Badge */}
-                <div className="absolute top-4 left-4">
-                  <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                    project.category === 'brand' 
-                      ? 'bg-[#0180FA]/90 text-white glow-effect' 
-                      : project.category === 'lead'
-                      ? 'bg-[#0180FA]/90 text-white glow-effect-accent'
-                      : 'bg-[#0180FA]/90 text-white glow-effect-green'
-                  }`}>
-                    {project.category === 'brand' ? 'Brand Awareness' : 
-                     project.category === 'lead' ? 'Lead Generation' : 
-                     'Consideration'}
-                  </span>
-                </div>
-                
-                {/* Floating Elements */}
-                {[...Array(3)].map((_, i) => (
-                  <motion.div
-                    key={i}
-                    className={`absolute w-2 h-2 rounded-full ${
-                      i % 2 === 0 ? 'bg-[#0180FA]' : 'bg-[#0180FA]'
+              <div className="flex flex-col lg:flex-row">
+                {/* Image colonne gauche */}
+                <div className="relative w-full lg:w-2/5 h-52 sm:h-64 lg:h-auto overflow-hidden">
+                  <div
+                    className={`absolute inset-0 ${
+                      project.id === 1
+                        ? 'bg-[#f5f0eb]'
+                        : project.id === 2
+                        ? 'bg-[#2e4941]'
+                        : 'bg-[#f7f4ef]'
                     }`}
-                    style={{
-                      left: `${20 + i * 30}%`,
-                      top: `${30 + (i % 2) * 40}%`
-                    }}
-                    animate={{
-                      y: [0, -15, 0],
-                      opacity: [0.5, 1, 0.5]
-                    }}
-                    transition={{
-                      duration: 2 + i * 0.5,
-                      repeat: Infinity,
-                      delay: i * 0.3
-                    }}
                   />
-                ))}
-              </div>
+                  <motion.img
+                    src={project.image}
+                    alt={project.title}
+                    className="relative z-10 h-full w-full object-contain p-4"
+                    whileHover={{ scale: 1.03 }}
+                    transition={{ duration: 0.3 }}
+                    loading="lazy"
+                  />
+                  {/* Badge catégorie */}
+                  <div className="absolute left-4 top-4 z-20">
+                    <span className="rounded-full bg-[#0180FA]/90 px-3 py-1 text-[11px] font-semibold text-white">
+                      {project.category === 'brand'
+                        ? 'Brand Awareness'
+                        : project.category === 'lead'
+                        ? 'Lead Generation'
+                        : 'Consideration'}
+                    </span>
+                  </div>
+                </div>
 
-              {/* Project Content */}
-              <div className="p-4 sm:p-6 lg:p-8">
-                {/* Project Title */}
-                <motion.h3
-                  className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-800 mb-3 sm:mb-4 group-hover:text-[#0180FA] transition-colors duration-300"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6 }}
-                  viewport={{ once: true }}
-                >
-                  {project.title}
-                </motion.h3>
+                {/* Contenu droite */}
+                <div className="w-full lg:w-3/5 p-5 sm:p-6 lg:p-7">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">
+                    {project.title}
+                  </h3>
+                  <p className="text-xs uppercase tracking-[0.2em] text-gray-400 mb-3">
+                    Cas client {index + 1}
+                  </p>
 
-                {/* Project Description */}
-                <motion.p
-                  className="text-gray-600 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  {project.description}
-                </motion.p>
+                  <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-3">
+                    {project.description}
+                  </p>
 
+                  <p className="text-[12px] sm:text-sm text-gray-600 leading-relaxed mb-4">
+                    {project.strategy}
+                  </p>
 
-                {/* Strategy */}
-                <motion.div
-                  className="mb-4 sm:mb-6"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.3 }}
-                  viewport={{ once: true }}
-                >
-                  <h4 className="text-base sm:text-lg font-semibold text-gray-800 mb-2">Stratégie</h4>
-                  <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">{project.strategy}</p>
-                </motion.div>
-
-                {/* Key Results */}
-                <motion.div
-                  className="mb-4 sm:mb-6"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.4 }}
-                  viewport={{ once: true }}
-                >
-                  <h4 className="text-base sm:text-lg font-semibold text-gray-800 mb-2 sm:mb-3">Résultats Clés</h4>
-                  <div className="space-y-1 sm:space-y-2">
-                    {project.results.map((result, resultIndex) => (
-                      <div key={resultIndex} className="flex items-start space-x-2 sm:space-x-3">
-                        <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-[#0180FA] rounded-full mt-1.5 sm:mt-2 flex-shrink-0"></div>
-                        <div>
-                          <span className="text-[#0180FA] font-semibold text-sm sm:text-base">{result.metric}</span>
-                          <span className="text-gray-600 text-xs sm:text-sm ml-1 sm:ml-2">{result.label}</span>
-                          <p className="text-gray-600 text-xs mt-1">{result.description}</p>
+                  {/* Résultats clés */}
+                  <div className="mb-4">
+                    <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-gray-500">
+                      Résultats clés
+                    </p>
+                    <div className="grid gap-2 sm:grid-cols-2">
+                      {project.results.slice(0, 3).map((result, i) => (
+                        <div
+                          key={i}
+                          className="rounded-2xl bg-gray-50 px-3 py-2 text-left"
+                        >
+                          <p className="text-sm font-semibold text-[#0180FA]">
+                            {result.metric}{' '}
+                            <span className="text-[11px] text-gray-600">
+                              {result.label}
+                            </span>
+                          </p>
+                          <p className="mt-1 text-[11px] text-gray-600 leading-relaxed">
+                            {result.description}
+                          </p>
                         </div>
-                      </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Technologies */}
+                  <div className="mb-4 flex flex-wrap gap-1.5">
+                    {project.technologies.map((tech, i) => (
+                      <span
+                        key={i}
+                        className="rounded-full border border-[#0180FA]/20 bg-[#ECF6FF] px-2.5 py-1 text-[11px] text-[#0180FA]"
+                      >
+                        {tech}
+                      </span>
                     ))}
                   </div>
-                </motion.div>
 
-                {/* Technologies */}
-                <motion.div
-                  className="flex flex-wrap gap-1.5 sm:gap-2 mb-4 sm:mb-6"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.5 }}
-                  viewport={{ once: true }}
-                >
-                  {project.technologies.map((tech, techIndex) => (
-                    <span
-                      key={techIndex}
-                      className="px-2 sm:px-3 py-0.5 sm:py-1 bg-[#0180FA]/10 text-[#0180FA] text-xs rounded-full border border-[#0180FA]/20"
+                  {/* Boutons */}
+                  <div className="mt-2 flex flex-wrap gap-3">
+                    <motion.a
+                      href={
+                        project.id === 1
+                          ? encodeURI('/uploads/Rapport sponsoring Don lucas - Juillet .pdf')
+                          : project.id === 2
+                          ? encodeURI('/uploads/Rapport Achat Media - TRIANGLE VERT .pdf')
+                          : project.id === 3
+                          ? encodeURI('/uploads/Rapport Chez casawi Juillet à October.pdf')
+                          : '#'
+                      }
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center rounded-full bg-[#0180FA] px-5 py-2 text-xs sm:text-sm font-semibold text-white shadow-[0_10px_25px_rgba(1,128,250,0.3)] hover:bg-[#0170DB] transition-colors"
+                      whileHover={{ scale: 1.03 }}
+                      whileTap={{ scale: 0.97 }}
                     >
-                      {tech}
-                    </span>
-                  ))}
-                </motion.div>
-
-                {/* Action Buttons */}
-                <motion.div
-                  className="flex flex-col sm:flex-row gap-2 sm:gap-4"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.6 }}
-                  viewport={{ once: true }}
-                >
-                  <motion.a
-                    href={
-                      project.id === 1 ? encodeURI("/uploads/Rapport sponsoring Don lucas - Juillet .pdf") :
-                      project.id === 2 ? encodeURI("/uploads/Rapport Achat Media - TRIANGLE VERT .pdf") :
-                      project.id === 3 ? encodeURI("/uploads/Rapport Chez casawi Juillet à October.pdf") :
-                      project.id === 4 ? encodeURI("/uploads/Rapport Chez casawi Juillet à October.pdf") :
-                      "#"
-                    }
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 px-4 sm:px-6 py-2 sm:py-3 bg-[#0180FA] text-white rounded-lg font-semibold hover:bg-[#0180FA]/90 transition-all duration-300 flex items-center justify-center glow-effect text-sm sm:text-base"
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                  >
-                    Voir le projet
-                    <motion.svg
-                      className="ml-2 w-4 h-4"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      whileHover={{ scale: 1.1 }}
-                      transition={{ duration: 0.2 }}
+                      Voir le rapport détaillé
+                    </motion.a>
+                    <motion.button
+                      onClick={() => scrollToSection('contact')}
+                      className="inline-flex items-center justify-center rounded-full border border-gray-300 bg-white px-5 py-2 text-xs sm:text-sm font-semibold text-gray-700 hover:border-[#0180FA] hover:text-[#0180FA] transition-colors"
+                      whileHover={{ scale: 1.03 }}
+                      whileTap={{ scale: 0.97 }}
                     >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                    </motion.svg>
-                  </motion.a>
-                  <motion.a
-                    href={
-                      project.id === 1 ? encodeURI("/uploads/Rapport sponsoring Don lucas - Juillet .pdf") :
-                      project.id === 2 ? encodeURI("/uploads/Rapport Achat Media - TRIANGLE VERT .pdf") :
-                      project.id === 3 ? encodeURI("/uploads/Rapport Chez casawi Juillet à October.pdf") :
-                      project.id === 4 ? encodeURI("/uploads/Rapport Chez casawi Juillet à October.pdf") :
-                      "#"
-                    }
-                    download={
-                      project.id === 1 ? "Rapport_sponsoring_Don_lucas_Juillet.pdf" :
-                      project.id === 2 ? "Rapport_Achat_Media_TRIANGLE_VERT.pdf" :
-                      project.id === 3 ? "Rapport_Chez_casawi_Juillet_October.pdf" :
-                      project.id === 4 ? "Rapport_Chez_casawi_Juillet_October.pdf" :
-                      "projet.pdf"
-                    }
-                    className="px-4 sm:px-6 py-2 sm:py-3 border border-gray-400 text-gray-600 rounded-lg font-semibold hover:border-[#0180FA] hover:text-[#0180FA] transition-all duration-300 flex items-center justify-center text-sm sm:text-base"
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                  >
-                    <motion.svg
-                      className="w-4 h-4"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      whileHover={{ scale: 1.1 }}
-                      transition={{ duration: 0.2 }}
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                    </motion.svg>
-                  </motion.a>
-                </motion.div>
+                      Discuter d&apos;un projet similaire
+                    </motion.button>
+                  </div>
+                </div>
               </div>
-            </motion.div>
+            </motion.article>
           ))}
         </div>
 
-        {/* CTA */}
+        {/* CTA globale */}
         <motion.div
-          className="text-center mt-16"
-          initial={{ opacity: 0, y: 20 }}
+          className="mt-14 text-center"
+          initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
         >
           <motion.button
             onClick={() => scrollToSection('contact')}
-            className="px-8 py-4 bg-[#0180FA] text-white rounded-lg font-semibold hover:bg-[#0180FA]/90 transition-all duration-300 flex items-center mx-auto"
-            whileHover={{ 
-              scale: 1.05,
-              boxShadow: "0 10px 25px rgba(1, 128, 250, 0.3)"
-            }}
-            whileTap={{ scale: 0.95 }}
+            className="inline-flex items-center justify-center rounded-full bg-[#0180FA] px-7 py-2.5 text-sm sm:text-base font-semibold text-white shadow-[0_12px_30px_rgba(1,128,250,0.3)] hover:bg-[#0170DB] transition-colors"
+            whileHover={{ scale: 1.04 }}
+            whileTap={{ scale: 0.96 }}
           >
-            Démarrer un projet
-            <motion.svg
-              className="ml-2 w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              whileHover={{ scale: 1.1 }}
-              transition={{ duration: 0.2 }}
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </motion.svg>
+            Me parler de votre prochain projet
           </motion.button>
         </motion.div>
       </div>

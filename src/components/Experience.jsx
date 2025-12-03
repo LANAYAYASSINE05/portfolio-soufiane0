@@ -1,9 +1,7 @@
-import React, { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import React from 'react'
+import { motion } from 'framer-motion'
 
 const Experience = () => {
-  const [activeTab, setActiveTab] = useState(0)
-
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId)
     if (element) {
@@ -14,38 +12,41 @@ const Experience = () => {
   const experiences = [
     {
       id: 1,
-      title: "COMMUNITY MANAGER - META",
-      company: "Meta",
-      period: "à présent",
+      title: "COMMUNITY MANAGER - SOCIAL MEDIA MANAGER",
+      company: "Social Media",
+      period: "Actuellement",
       duration: "En cours",
       location: "Casablanca",
-      description: "Gestion, optimisation et programmation des campagnes Meta Ads (CBO & ABO). Création et gestion d'audiences personnalisées et similaires. Suivi et analyse des performances (KPIs) et recommandations stratégiques.",
+      description:
+        "Gestion quotidienne de la communauté, création de contenus, optimisation de l’engagement et analyse des KPIs pour améliorer la performance globale sur les réseaux sociaux.",
       achievements: [
-        "Gestion, optimisation et programmation des campagnes Meta Ads (CBO & ABO)",
-        "Création et gestion d'audiences personnalisées et similaires",
-        "Suivi et analyse des performances (KPIs) et recommandations stratégiques",
-        "Collaboration avec des créateurs pour développer des visuels performants",
-        "Reporting régulier des résultats et recommandations stratégiques"
+        "Création, planification et publication de contenus engageants sur les réseaux sociaux.",
+        "Rédaction de légendes percutantes et adaptées à chaque plateforme.Création de contenus adaptés aux plateformes (visuels, textes, formats courts)",
+        "Interaction avec la communauté : réponses aux messages et commentaires, modération des échanges.",
+        "Veille des tendances social media et suivi des bonnes pratiques du secteur.",
+        "Analyse des performances : suivi des statistiques, KPIs et rapports réguliers pour optimiser les contenus et les campagnes."
       ],
-      technologies: ["Meta Ads", "CBO", "ABO", "Audiences", "KPIs", "Reporting"],
+      technologies: ["Social Media", "Community Management", "Contenu", "Engagement", "KPIs", "Reporting"],
       type: "Temps plein",
       color: "from-[#0180FA] to-[#0180FA]/80"
     },
     {
       id: 2,
-      title: "TRAFFIC MANAGER - E-COMMERCE MANAGER",
-      company: "E-commerce",
+      title: "TRAFFIC MANAGER - FREELANCE",
+      company: "Freelance",
       period: "Octobre 2024 - Septembre 2025",
       duration: "1 an",
       location: "Casablanca",
-      description: "Conception et gestion de campagnes publicitaires pour Facebook & Instagram. Analyse des performances et ajustement des stratégies pour maximiser le ROI. Gestion des budgets publicitaires, segmentation et retargeting avancés.",
+      description:
+        "Pilotage et optimisation des campagnes Meta Ads. Gestion des audiences, analyse des KPIs, rapports réguliers et recommandations stratégiques pour maximiser la performance.",
       achievements: [
-        "Conception et gestion de campagnes publicitaires pour Facebook & Instagram",
-        "Analyse des performances et ajustement des stratégies pour maximiser le ROI",
-        "Gestion des budgets publicitaires, segmentation et retargeting avancés",
-        "Suivi des budgets publicitaires et reporting régulier des résultats"
+        "Gestion, optimisation et programmation des campagnes Meta Ads (CBO & ABO)",
+        "Segmentation des audiences, retargeting et tests d’angles créatifs",
+        "Analyse régulière des KPIs (CPC, CPM, CTR, conversions…) et optimisations",
+        "Élaboration de rapports de performance et recommandations stratégiques",
+        "Ajustement des budgets en fonction des objectifs et des résultats"
       ],
-      technologies: ["Facebook Ads", "Instagram Ads", "ROI", "Segmentation", "Retargeting", "E-commerce"],
+      technologies: ["Meta Ads", "Acquisition", "Prospection", "Segmentation", "Retargeting", "KPIs", "Optimisation"],
       type: "Temps plein",
       color: "from-[#0180FA] to-[#0180FA]/80"
     },
@@ -62,275 +63,154 @@ const Experience = () => {
         "Réception des marchandises avec les fournisseurs",
         "Inventaires et gestion du stock",
         "Renfort sur divers postes selon les besoins du magasin",
-        "Participation à l'ouverture du magasin"
+        "Suivi administratif dans le système interne du magasin"
       ],
-      technologies: ["Caisse", "Gestion Stock", "Relation Client", "Inventaires", "Logistique"],
+      technologies: ["Caisse", "Gestion Stock", "Relation Client", "Inventaires"],
       type: "Temps plein",
       color: "from-[#0180FA] to-[#0180FA]/80"
     }
   ]
 
-  const tabs = [
-    { id: 0, label: "Toutes", count: experiences.length },
-    { id: 1, label: "Marketing Digital", count: experiences.filter(exp => exp.technologies.some(tech => tech.includes("Meta") || tech.includes("Facebook") || tech.includes("Instagram") || tech.includes("Ads"))).length },
-    { id: 2, label: "E-commerce", count: experiences.filter(exp => exp.technologies.some(tech => tech.includes("E-commerce") || tech.includes("ROI") || tech.includes("Retargeting"))).length },
-    { id: 3, label: "Gestion Client", count: experiences.filter(exp => exp.technologies.some(tech => tech.includes("Client") || tech.includes("Caisse") || tech.includes("Relation"))).length }
-  ]
-
-  const filteredExperiences = activeTab === 0 
-    ? experiences 
-    : experiences.filter(exp => {
-        if (activeTab === 1) return exp.technologies.some(tech => tech.includes("Meta") || tech.includes("Facebook") || tech.includes("Instagram") || tech.includes("Ads"))
-        if (activeTab === 2) return exp.technologies.some(tech => tech.includes("E-commerce") || tech.includes("ROI") || tech.includes("Retargeting"))
-        if (activeTab === 3) return exp.technologies.some(tech => tech.includes("Client") || tech.includes("Caisse") || tech.includes("Relation"))
-        return true
-      })
-
   return (
-    <section id="experience" className="py-24 bg-gradient-to-br from-[#ECF6FF] via-white to-[#ECF6FF] relative overflow-hidden">
-      {/* Background Elements */}
+    <section
+      id="experience"
+      className="relative py-20 md:py-24 bg-gradient-to-br from-[#ECF6FF] via-white to-[#ECF6FF] overflow-hidden"
+    >
+      {/* Background soft shapes */}
       <motion.div
-        className="absolute top-20 right-10 w-72 h-72 bg-[#0180FA]/5 rounded-full blur-3xl"
-        initial={{ opacity: 0, scale: 0 }}
-        whileInView={{ opacity: 1, scale: 1 }}
+        className="pointer-events-none absolute inset-0"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-      />
-      <motion.div
-        className="absolute bottom-20 left-10 w-96 h-96 bg-[#0180FA]/5 rounded-full blur-3xl"
-        initial={{ opacity: 0, scale: 0 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8, delay: 0.3 }}
-        viewport={{ once: true }}
-      />
+      >
+        <div className="absolute -top-24 right-0 h-72 w-72 rounded-full bg-[#0180FA]/10 blur-3xl" />
+        <div className="absolute bottom-0 -left-24 h-80 w-80 rounded-full bg-[#0180FA]/5 blur-3xl" />
+      </motion.div>
 
-      <div className="container-custom px-4 sm:px-6 relative z-10">
-        {/* Section Header */}
+      <div className="container-custom relative z-10 px-4 sm:px-6">
+        {/* Header */}
         <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <motion.h2
-            className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <span className="text-gray-800">Expérience</span>
-            <span className="block bg-gradient-to-r from-[#0180FA] to-[#0180FA] bg-clip-text text-transparent">
-              Professionnelle
-            </span>
-          </motion.h2>
-          <motion.p
-            className="text-gray-600 text-lg max-w-2xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            Un parcours riche en expériences variées dans le marketing digital et la gestion de projets
-          </motion.p>
-        </motion.div>
-
-        {/* Filter Tabs */}
-        <motion.div
-          className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-12"
+          className="mx-auto max-w-3xl text-center mb-10 md:mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          {tabs.map((tab) => (
-            <motion.button
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                activeTab === tab.id
-                  ? 'bg-[#0180FA] text-white shadow-lg'
-                  : 'bg-[#ECF6FF] text-[#0180FA] hover:bg-[#0180FA]/10 hover:text-[#0180FA]'
-              }`}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              {tab.label}
-              <span className="ml-2 px-2 py-0.5 bg-white/20 rounded-full text-xs">
-                {tab.count}
-              </span>
-            </motion.button>
-          ))}
+          <p className="text-xs sm:text-sm font-medium uppercase tracking-[0.25em] text-[#0180FA]">
+            EXPÉRIENCES
+          </p>
+          <h2 className="mt-3 text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
+            Mon parcours{' '}
+            <span className="bg-gradient-to-r from-[#0180FA] to-[#00B5FF] bg-clip-text text-transparent">
+              en quelques étapes
+            </span>
+          </h2>
+          <p className="mt-4 text-sm sm:text-base text-gray-600 leading-relaxed">
+            De la gestion de communauté aux campagnes Meta Ads, voici comment je développe
+            à la fois la présence organique et le trafic payant.
+          </p>
         </motion.div>
 
-        {/* Experience Cards */}
-        <div className="space-y-8">
-          <AnimatePresence mode="wait">
-            {filteredExperiences.map((exp, index) => (
-              <motion.div
-                key={exp.id}
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -50 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group"
-              >
-                <div className="relative">
-                  {/* Card */}
-                  <motion.div
-                    className="bg-gradient-to-br from-white/90 to-[#ECF6FF]/90 backdrop-blur-sm border border-[#0180FA]/20 rounded-2xl p-6 sm:p-8 hover:border-[#0180FA]/30 transition-all duration-500 shadow-lg"
-                    whileHover={{ 
-                      scale: 1.02,
-                      boxShadow: "0 20px 40px rgba(1, 128, 250, 0.1)"
-                    }}
-                  >
-                    {/* Header */}
-                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-6">
-                      <div className="flex-1">
-                        {/* Period & Type Badge */}
-                        <div className="flex flex-wrap gap-2 mb-4">
-                          <motion.span
-                            className="px-3 py-1 bg-[#0180FA]/10 text-[#0180FA] text-xs font-semibold rounded-full border border-[#0180FA]/20"
-                            whileHover={{ scale: 1.05 }}
-                          >
-                            {exp.period}
-                          </motion.span>
-                          <motion.span
-                            className="px-3 py-1 bg-[#0180FA]/10 text-[#0180FA] text-xs font-semibold rounded-full border border-[#0180FA]/20"
-                            whileHover={{ scale: 1.05 }}
-                          >
-                            {exp.type}
-                          </motion.span>
-                        </div>
+        {/* Layout type CV : colonne temps + colonne contenu */}
+        <div className="mx-auto max-w-5xl">
+          {experiences.map((exp, index) => (
+            <motion.div
+              key={exp.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.45, delay: index * 0.05 }}
+              viewport={{ once: true, margin: '-60px' }}
+              className="grid gap-4 sm:grid-cols-[minmax(0,0.9fr)_minmax(0,2.1fr)] items-start mb-6"
+            >
+              {/* Colonne temps / lieu */}
+              <div className="flex sm:flex-col sm:items-end gap-2 sm:gap-3 text-xs text-gray-500">
+                <div className="inline-flex items-center gap-2 rounded-full bg-white/80 px-3 py-1 shadow-sm">
+                  <span className="h-2 w-2 rounded-full bg-[#0180FA]" />
+                  {exp.period}
+                </div>
+                <div className="hidden sm:block h-10 w-px bg-gradient-to-b from-[#0180FA]/40 to-transparent" />
+                <div className="flex flex-col sm:items-end">
+                  <span className="font-medium text-gray-700">{exp.location}</span>
+                  <span className="text-[11px] text-gray-500">
+                    {exp.type} • {exp.duration}
+                  </span>
+                </div>
+              </div>
 
-                        {/* Title & Company */}
-                        <motion.h3
-                          className="text-xl sm:text-2xl font-bold text-gray-800 mb-2 group-hover:text-[#0180FA] transition-colors duration-300"
-                          whileHover={{ x: 5 }}
+              {/* Colonne contenu */}
+              <article className="rounded-2xl border border-white/70 bg-white/90 shadow-[0_10px_30px_rgba(15,23,42,0.06)] backdrop-blur px-5 sm:px-6 py-4 sm:py-5">
+                <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
+                  <div>
+                    <h3 className="text-sm sm:text-base font-semibold text-gray-900">
+                      {exp.title}
+                    </h3>
+                    <p className="mt-0.5 text-[11px] text-[#0180FA] font-medium">
+                      {exp.company}
+                    </p>
+                  </div>
+                  <span className="rounded-full bg-gray-50 px-3 py-1 text-[11px] text-gray-500">
+                    Expérience {index + 1}
+                  </span>
+                </div>
+
+                <p className="mt-2 text-sm text-gray-700 leading-relaxed">
+                  {exp.description}
+                </p>
+
+                <div className="mt-3 flex flex-col gap-3 sm:flex-row">
+                  <div className="sm:w-2/3">
+                    <p className="mb-1 text-[11px] font-semibold uppercase tracking-wide text-gray-500">
+                      Ce que j&apos;ai fait
+                    </p>
+                    <ul className="space-y-1.5">
+                      {exp.achievements.slice(0, 5).map((achievement, achIndex) => (
+                        <li
+                          key={achIndex}
+                          className="flex items-start gap-2 text-[12px] text-gray-700"
                         >
-                          {exp.title}
-                        </motion.h3>
-                        <motion.h4
-                          className="text-lg sm:text-xl text-[#0180FA] mb-2"
-                          whileHover={{ x: 5 }}
-                        >
-                          {exp.company}
-                        </motion.h4>
-                        <motion.p
-                          className="text-gray-500 text-sm flex items-center"
-                          whileHover={{ x: 5 }}
-                        >
-                          📍 {exp.location} • {exp.duration}
-                        </motion.p>
-                      </div>
+                          <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[#0180FA]" />
+                          <span>{achievement}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
 
-                      {/* Gradient Accent */}
-                      <motion.div
-                        className={`w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br ${exp.color} rounded-2xl opacity-20 group-hover:opacity-30 transition-opacity duration-300`}
-                        whileHover={{ rotate: 5, scale: 1.1 }}
-                      />
-                    </div>
-
-                    {/* Description */}
-                    <motion.p
-                      className="text-gray-700 mb-6 leading-relaxed"
-                      initial={{ opacity: 0 }}
-                      whileInView={{ opacity: 1 }}
-                      transition={{ duration: 0.6 }}
-                      viewport={{ once: true }}
-                    >
-                      {exp.description}
-                    </motion.p>
-
-                    {/* Achievements */}
-                    <motion.div
-                      className="mb-6"
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: 0.2 }}
-                      viewport={{ once: true }}
-                    >
-                      <h5 className="text-gray-800 font-semibold mb-4 flex items-center">
-                        <span className="w-2 h-2 bg-[#0180FA] rounded-full mr-2"></span>
-                        Réalisations clés
-                      </h5>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                        {exp.achievements.map((achievement, achIndex) => (
-                          <motion.div
-                            key={achIndex}
-                            className="flex items-start space-x-3 p-3 bg-[#ECF6FF] rounded-lg border border-[#0180FA]/20 hover:border-[#0180FA]/30 transition-colors duration-300"
-                            initial={{ opacity: 0, x: -20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.4, delay: achIndex * 0.1 }}
-                            viewport={{ once: true }}
-                            whileHover={{ x: 5 }}
-                          >
-                            <div className="w-1.5 h-1.5 bg-[#0180FA] rounded-full mt-2 flex-shrink-0"></div>
-                            <span className="text-gray-700 text-sm">{achievement}</span>
-                          </motion.div>
-                        ))}
-                      </div>
-                    </motion.div>
-
-                    {/* Technologies */}
-                    <motion.div
-                      className="flex flex-wrap gap-2"
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: 0.4 }}
-                      viewport={{ once: true }}
-                    >
-                      {exp.technologies.map((tech, techIndex) => (
-                        <motion.span
+                  <div className="sm:w-1/3">
+                    <p className="mb-1 text-[11px] font-semibold uppercase tracking-wide text-gray-500">
+                      Compétences clés
+                    </p>
+                    <div className="flex flex-wrap gap-1.5">
+                      {exp.technologies.slice(0, 5).map((tech, techIndex) => (
+                        <span
                           key={techIndex}
-                          className="px-3 py-1.5 bg-[#0180FA]/10 text-[#0180FA] text-xs rounded-full border border-[#0180FA]/20 hover:bg-[#0180FA]/20 hover:scale-105 transition-all duration-300"
-                          whileHover={{ scale: 1.05, y: -2 }}
-                          initial={{ opacity: 0, scale: 0.8 }}
-                          whileInView={{ opacity: 1, scale: 1 }}
-                          transition={{ duration: 0.3, delay: techIndex * 0.05 }}
-                          viewport={{ once: true }}
+                          className="rounded-full border border-gray-200 bg-gray-50 px-2.5 py-1 text-[10px] text-gray-700"
                         >
                           {tech}
-                        </motion.span>
+                        </span>
                       ))}
-                    </motion.div>
-                  </motion.div>
+                    </div>
+                  </div>
                 </div>
-              </motion.div>
-            ))}
-          </AnimatePresence>
+              </article>
+            </motion.div>
+          ))}
         </div>
 
-        {/* CTA */}
+        {/* CTA bas de section */}
         <motion.div
-          className="text-center mt-16"
-          initial={{ opacity: 0, y: 20 }}
+          className="mt-14 text-center"
+          initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          transition={{ duration: 0.6, delay: 0.15 }}
           viewport={{ once: true }}
         >
-          <motion.button
-            onClick={() => scrollToSection('contact')}
-            className="px-8 py-4 bg-gradient-to-r from-[#0180FA] to-[#0180FA] text-white rounded-xl font-semibold hover:from-[#0180FA]/90 hover:to-[#0180FA]/90 transition-all duration-300 flex items-center mx-auto shadow-lg hover:shadow-xl"
-            whileHover={{ 
-              scale: 1.05,
-              boxShadow: "0 20px 40px rgba(1, 128, 250, 0.3)"
-            }}
-            whileTap={{ scale: 0.95 }}
+          <button
+            onClick={() => scrollToSection('projects')}
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-[#0180FA] px-7 py-2.5 text-sm font-semibold text-white shadow-[0_14px_35px_rgba(1,128,250,0.3)] hover:bg-[#0170DB] transition-colors"
           >
-            Discutons de votre projet
-            <motion.svg
-              className="ml-2 w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              whileHover={{ x: 5 }}
-              transition={{ duration: 0.2 }}
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </motion.svg>
-          </motion.button>
+            Découvrir les projets liés à ces expériences
+          </button>
         </motion.div>
       </div>
     </section>
