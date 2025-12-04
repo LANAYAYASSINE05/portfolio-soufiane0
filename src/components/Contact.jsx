@@ -129,7 +129,7 @@ const Contact = () => {
   }
 
   return (
-    <section id="contact" className="py-24 bg-gradient-to-br from-[#ECF6FF] via-white to-[#ECF6FF] relative overflow-hidden">
+    <section id="contact" className="py-20 md:py-24 bg-gradient-to-br from-[#ECF6FF] via-white to-[#ECF6FF] relative overflow-hidden">
       {/* Background Decoration */}
       <motion.div
         className="absolute top-0 left-0 w-96 h-96 bg-[#0180FA]/5 rounded-full blur-3xl"
@@ -179,7 +179,7 @@ const Contact = () => {
           />
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 lg:gap-16">
           {/* Left Column - Contact Info */}
           <motion.div
             className="space-y-8"

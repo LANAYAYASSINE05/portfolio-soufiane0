@@ -1,6 +1,8 @@
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 
 const Technologies = () => {
+  const [activeCategoryIndex, setActiveCategoryIndex] = useState(0)
   const renderIcon = (iconName, color) => {
     const iconProps = { width: 32, height: 32 }
     
@@ -168,105 +170,119 @@ const Technologies = () => {
   ]
 
   return (
-    <section id="technologies" className="py-24 bg-gradient-to-br from-[#ECF6FF] via-white to-[#ECF6FF] relative overflow-hidden">
-      <div className="container mx-auto px-4">
+    <section
+      id="technologies"
+      className="relative py-20 md:py-24 bg-gradient-to-br from-[#ECF6FF] via-white to-[#ECF6FF] overflow-hidden"
+    >
+      <div className="container-custom px-4 sm:px-6 relative">
+        {/* Titre section */}
         <motion.div
-          className="text-center mb-16"
+          className="mx-auto max-w-3xl text-center mb-10 md:mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <motion.h2 
-            className="text-3xl lg:text-4xl font-bold mb-6"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            <span className="text-gray-800">Technologies et Outils</span>
-            <span className="block bg-gradient-to-r from-[#0180FA] to-[#0180FA] bg-clip-text text-transparent">
-              Maîtrisés
-            </span>
-          </motion.h2>
-          <motion.p 
-            className="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            viewport={{ once: true }}
-          >
-            Une maîtrise complète des outils essentiels pour optimiser vos campagnes publicitaires 
-            et développer votre présence digitale.
-          </motion.p>
+          <p className="text-xs sm:text-sm font-medium uppercase tracking-[0.25em] text-[#0180FA]">
+            OUTILS & PLATEFORMES
+          </p>
+          <h2 className="mt-3 text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
+            Mon stack pour piloter vos campagnes
+          </h2>
+          <p className="mt-4 text-sm sm:text-base text-gray-600 leading-relaxed">
+            Un ensemble d&apos;outils cohérents, de la diffusion des campagnes à l&apos;analyse
+            des résultats, en passant par la création des visuels.
+          </p>
         </motion.div>
 
-        <div className="space-y-12">
-          {technologies.map((category, categoryIndex) => (
-            <motion.div
-              key={category.category}
-              className="text-center"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
-              viewport={{ once: true }}
-            >
-              <motion.h3 
-                className="text-2xl font-semibold text-gray-800 mb-8 relative inline-block"
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-              >
-                {category.category}
-                <motion.div 
-                  className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-[#0180FA] to-[#0180FA] rounded-full"
-                  initial={{ scaleX: 0 }}
-                  whileInView={{ scaleX: 1 }}
-                  transition={{ duration: 0.8, delay: 0.3 }}
-                  viewport={{ once: true }}
-                  style={{ originX: 0 }}
-                />
-              </motion.h3>
-              
-              <div className="flex flex-wrap justify-center gap-3 sm:gap-4 lg:gap-6">
-                {category.items.map((tech, index) => (
-                  <motion.div
-                    key={tech.name}
-                    className="bg-gradient-to-br from-white/90 to-[#ECF6FF]/90 backdrop-blur-sm border border-[#0180FA]/20 rounded-2xl p-4 text-center group w-28 sm:w-32 lg:w-36 flex-shrink-0 relative overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
-                    whileHover={{ 
-                      scale: 1.05,
-                      y: -8,
-                      boxShadow: "0 20px 40px rgba(1, 128, 250, 0.2)"
-                    }}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4, delay: (categoryIndex * 0.1) + (index * 0.05) }}
-                    viewport={{ once: true }}
-                  >
-                    {/* Glow effect background */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#0180FA]/5 to-[#0180FA]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
-                    
-                    {/* Content */}
-                    <div className="relative z-10 p-2 sm:p-3 lg:p-4">
-                      <div className="flex justify-center mb-2 sm:mb-3 lg:mb-4 group-hover:scale-110 transition-transform duration-300">
-                        {renderIcon(tech.icon, tech.color)}
-                      </div>
-                      <h4 className="text-xs sm:text-sm font-semibold text-gray-800 mb-1 sm:mb-2 group-hover:text-[#0180FA] transition-colors duration-300">
-                        {tech.name}
-                      </h4>
-                      <p className="text-xs text-gray-600 group-hover:text-gray-800 transition-colors duration-300 leading-relaxed">
-                        {tech.description}
+        {/* Onglets catégories + contenu */}
+        <div className="grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.6fr)] items-start">
+          {/* Colonne onglets */}
+          <motion.div
+            className="space-y-3"
+            initial={{ opacity: 0, x: -15 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: '-60px' }}
+          >
+            {technologies.map((category, index) => {
+              const isActive = index === activeCategoryIndex
+              return (
+                <button
+                  key={category.category}
+                  onClick={() => setActiveCategoryIndex(index)}
+                  className={`w-full rounded-2xl border px-4 py-3 text-left text-sm font-semibold transition-colors ${
+                    isActive
+                      ? 'border-[#0180FA] bg-white text-[#0180FA] shadow-[0_10px_26px_rgba(1,128,250,0.2)]'
+                      : 'border-gray-200 bg-white/80 text-gray-700 hover:border-[#0180FA]/40 hover:text-[#0180FA]'
+                  }`}
+                >
+                  {category.category}
+                  <span className="ml-2 text-[11px] font-normal text-gray-400">
+                    ({category.items.length})
+                  </span>
+                </button>
+              )
+            })}
+          </motion.div>
+
+          {/* Colonne détails pour la catégorie active */}
+          <motion.div
+            className="rounded-3xl border border-white/70 bg-white/95 shadow-[0_18px_45px_rgba(15,23,42,0.06)] backdrop-blur px-4 sm:px-6 py-5 sm:py-6"
+            initial={{ opacity: 0, x: 15 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: '-60px' }}
+          >
+            {(() => {
+              const activeCategory = technologies[activeCategoryIndex]
+              return (
+                <>
+                  <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
+                    <div>
+                      <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-gray-500">
+                        Catégorie sélectionnée
                       </p>
+                      <h3 className="mt-1 text-lg sm:text-xl font-semibold text-gray-900">
+                        {activeCategory.category}
+                      </h3>
                     </div>
-                    
-                    {/* Bottom accent line */}
-                    <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#0180FA] to-[#0180FA] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          ))}
+                    <span className="rounded-full bg-[#ECF6FF] px-3 py-1 text-[11px] font-medium text-[#0180FA]">
+                      {activeCategory.items.length} outil
+                      {activeCategory.items.length > 1 ? 's' : ''} maîtrisé
+                    </span>
+                  </div>
+
+                  <div className="grid gap-4 sm:grid-cols-2">
+                    {activeCategory.items.map((tech) => (
+                      <motion.div
+                        key={tech.name}
+                        className="flex items-start gap-3 rounded-2xl border border-gray-100 bg-gray-50 px-3 py-3 sm:px-4 sm:py-4"
+                        whileHover={{ y: -2 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        <motion.div
+                          className="flex h-9 w-9 items-center justify-center rounded-xl bg-white shadow-sm border border-gray-100"
+                          whileHover={{ scale: 1.08, rotate: 3 }}
+                          transition={{ duration: 0.2 }}
+                        >
+                          {renderIcon(tech.icon, tech.color)}
+                        </motion.div>
+                        <div>
+                          <p className="text-sm font-semibold text-gray-900">
+                            {tech.name}
+                          </p>
+                          <p className="mt-1 text-[12px] text-gray-600 leading-relaxed">
+                            {tech.description}
+                          </p>
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
+                </>
+              )
+            })()}
+          </motion.div>
         </div>
       </div>
     </section>

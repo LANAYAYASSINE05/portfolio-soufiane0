@@ -26,7 +26,7 @@ const Hero = () => {
       </motion.div>
 
       <div className="container-custom relative z-10 px-4 sm:px-6 py-16 lg:py-24">
-        <div className="grid lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] gap-10 lg:gap-16 items-center">
+        <div className="grid md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] gap-10 lg:gap-16 items-center">
           {/* LEFT : Texte */}
           <div className="max-w-xl mx-auto lg:mx-0 text-center lg:text-left">
             {/* Badge dispo */}
@@ -181,8 +181,8 @@ const Hero = () => {
             </motion.div>
           </div>
 
-          {/* RIGHT : Carte profil + stats */}
-          <div className="relative hidden lg:block">
+          {/* RIGHT : Carte profil + stats (affichée dès tablette) */}
+          <div className="relative hidden md:block">
             <motion.div
               className="relative mx-auto w-full max-w-sm"
               initial={{ opacity: 0, x: 40 }}

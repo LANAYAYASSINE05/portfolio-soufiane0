@@ -53,7 +53,7 @@ const Education = () => {
   ]
 
   return (
-    <section id="education" className="py-24 bg-gradient-to-br from-[#ECF6FF] via-white to-[#ECF6FF] relative overflow-hidden">
+    <section id="education" className="py-20 md:py-24 bg-gradient-to-br from-[#ECF6FF] via-white to-[#ECF6FF] relative overflow-hidden">
       {/* Background Decoration */}
       <motion.div
         className="absolute top-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"

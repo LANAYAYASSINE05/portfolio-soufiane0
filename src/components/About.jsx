@@ -40,7 +40,7 @@ const About = () => {
         </motion.div>
 
         {/* Contenu principal */}
-        <div className="mt-12 grid gap-10 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] items-start">
+        <div className="mt-12 grid gap-10 md:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] items-start">
           {/* Colonne texte : parcours + façon de travailler */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}

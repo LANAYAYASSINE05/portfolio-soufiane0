@@ -140,7 +140,7 @@ const Skills = () => {
         </motion.div>
 
         {/* Deux colonnes : Hard / Soft */}
-        <div className="grid gap-8 lg:grid-cols-2">
+        <div className="grid gap-8 md:grid-cols-2">
           {/* Colonne Hard skills avec icônes */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
