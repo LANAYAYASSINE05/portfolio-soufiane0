@@ -12,9 +12,9 @@ import Footer from './components/Footer'
 
 function App() {
   return (
-    <div className="min-h-screen bg-background text-text">
+    <div className="min-h-screen bg-[#F5F7FA] text-gray-900">
       <Header />
-      <main>
+      <main className="pt-16 md:pt-20">
         <Hero />
         <About />
         <Experience />
