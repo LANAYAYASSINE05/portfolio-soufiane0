@@ -8,19 +8,19 @@ export default {
     extend: {
         colors: {
           // Brand colors
-          'brand-blue': '#0180FA',        // Bleu vif/bleu azur saturé - Boutons d'action, liens, éléments interactifs
-          'brand-light': '#ECF6FF',       // Bleu très clair/pastel - Fond de page, arrière-plan de cartes ou sections
+          'brand-blue': '#0077B6',        // Blue Petrol - Accent color
+          'brand-light': '#ECF6FF',       // Light blue - Background accents
           
           // Theme colors
-          'primary': '#0180FA',           // Main brand color
-          'accent': '#00B4D8',            // Accent color
-          'background': '#0A0A0A',        // Background
-          'text': '#FFFFFF',              // Primary text
-          'text-light': '#B0B0B0',        // Light text
-          'text-muted': '#808080',        // Muted text
+          'primary': '#0077B6',           // Main brand color (Blue Petrol)
+          'accent': '#0077B6',            // Accent color (Blue Petrol)
+          'background': '#FFFFFF',        // Background (White)
+          'text': '#333333',              // Primary text (Dark Gray)
+          'text-light': '#666666',        // Light text
+          'text-muted': '#999999',        // Muted text
           
           // Additional colors
-          'accent-blue': '#0180FA',
+          'accent-blue': '#0077B6',
           'accent-orange': '#00B4D8',
           'secondary': '#E5E5E5',
         },
@@ -49,20 +49,20 @@ export default {
         },
         pulseNeon: {
           '0%, 100%': { 
-            boxShadow: '0 0 5px #0180FA, 0 0 10px #0180FA, 0 0 15px #0180FA',
+            boxShadow: '0 0 5px #0077B6, 0 0 10px #0077B6, 0 0 15px #0077B6',
             opacity: '1'
           },
           '50%': { 
-            boxShadow: '0 0 10px #0180FA, 0 0 20px #0180FA, 0 0 30px #0180FA',
+            boxShadow: '0 0 10px #0077B6, 0 0 20px #0077B6, 0 0 30px #0077B6',
             opacity: '0.8'
           },
         },
         glow: {
           '0%': { 
-            boxShadow: '0 0 5px #60A5FA, 0 0 10px #60A5FA, 0 0 15px #60A5FA',
+            boxShadow: '0 0 5px #0077B6, 0 0 10px #0077B6, 0 0 15px #0077B6',
           },
           '100%': { 
-            boxShadow: '0 0 10px #60A5FA, 0 0 20px #60A5FA, 0 0 30px #60A5FA',
+            boxShadow: '0 0 10px #0077B6, 0 0 20px #0077B6, 0 0 30px #0077B6',
           },
         },
       },

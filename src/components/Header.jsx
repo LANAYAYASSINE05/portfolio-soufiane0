@@ -36,11 +36,28 @@ const Header = () => {
 
   return (
     <motion.header 
-      className="fixed top-0 left-0 right-0 z-50 bg-[#ECF6FF]/95 backdrop-blur-md border-b border-[#0180FA]/20"
+      className="fixed top-0 left-0 right-0 z-50 bg-[#ECF6FF]/95 backdrop-blur-md border-b border-[#0077B6]/20 relative overflow-hidden"
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
+      {/* Creative Background Elements */}
+      <motion.div
+        className="pointer-events-none absolute inset-0"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <motion.div
+          className="absolute top-1/2 right-10 w-16 h-16 border border-[#0077B6]/10 rounded-full"
+          animate={{ 
+            rotate: 360,
+            scale: [1, 1.1, 1],
+            opacity: [0.2, 0.4, 0.2]
+          }}
+          transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+        />
+      </motion.div>
       <div className="container-custom px-4 sm:px-6">
         <div className="flex items-center justify-between h-16 px-6 lg:px-8">
           {/* Brand */}
@@ -51,7 +68,7 @@ const Header = () => {
           >
             <button 
               onClick={() => scrollToSection('hero')}
-              className="text-xl font-bold text-[#0180FA] hover:text-[#0180FA]/80 transition-colors duration-300 whitespace-nowrap"
+              className="text-xl font-bold text-[#0077B6] hover:text-[#0077B6]/80 transition-colors duration-300 whitespace-nowrap"
             >
               SOUFIANE BENNANI
             </button>
@@ -63,13 +80,28 @@ const Header = () => {
               <motion.button
                 key={item.name}
                 onClick={() => scrollToSection(item.id)}
-                className="text-gray-600 hover:text-[#0180FA] transition-colors duration-300 font-medium text-sm whitespace-nowrap"
+                className="relative text-gray-600 hover:text-[#0077B6] transition-colors duration-300 font-medium text-sm whitespace-nowrap group"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                whileHover={{ y: -2 }}
+                transition={{ 
+                  duration: 0.6,
+                  delay: index * 0.08,
+                  type: "spring",
+                  stiffness: 150
+                }}
+                whileHover={{ 
+                  y: -3,
+                  scale: 1.05
+                }}
               >
                 {item.name}
+                {/* Animated underline */}
+                <motion.div
+                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#0077B6] origin-left"
+                  initial={{ scaleX: 0 }}
+                  whileHover={{ scaleX: 1 }}
+                  transition={{ duration: 0.3 }}
+                />
               </motion.button>
             ))}
           </nav>
@@ -83,20 +115,38 @@ const Header = () => {
           >
             <motion.button
               onClick={handleDownloadCV}
-              className="px-4 py-2 border border-[#0180FA] text-[#0180FA] hover:bg-[#0180FA] hover:text-white transition-all duration-300 rounded-md font-semibold text-sm whitespace-nowrap"
+              className="relative px-4 py-2 border border-[#0077B6] text-[#0077B6] hover:bg-[#0077B6] hover:text-white transition-all duration-300 rounded-md font-semibold text-sm whitespace-nowrap overflow-hidden group"
               whileHover={{ 
-                scale: 1.05,
-                boxShadow: "0 10px 25px rgba(1, 128, 250, 0.3)"
+                scale: 1.08,
+                y: -2,
+                boxShadow: "0 15px 35px rgba(0, 119, 182, 0.4)"
               }}
-              whileTap={{ scale: 0.95 }}
+              whileTap={{ scale: 0.92 }}
+              animate={{ 
+                boxShadow: [
+                  "0 0 0px rgba(0, 119, 182, 0)",
+                  "0 5px 15px rgba(0, 119, 182, 0.2)",
+                  "0 0 0px rgba(0, 119, 182, 0)"
+                ]
+              }}
+              transition={{ 
+                boxShadow: { duration: 2, repeat: Infinity }
+              }}
             >
-              Télécharger le CV
+              {/* Shimmer effect */}
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
+                initial={{ x: '-100%' }}
+                whileHover={{ x: '200%' }}
+                transition={{ duration: 0.6 }}
+              />
+              <span className="relative z-10">Télécharger le CV</span>
             </motion.button>
           </motion.div>
 
           {/* Mobile Menu Button */}
           <motion.button
-                className="lg:hidden text-gray-600 hover:text-[#0180FA] p-2"
+                className="lg:hidden text-gray-600 hover:text-[#0077B6] p-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             whileTap={{ scale: 0.95 }}
             initial={{ opacity: 0 }}
@@ -125,13 +175,13 @@ const Header = () => {
           }}
           transition={{ duration: 0.3, ease: "easeInOut" }}
         >
-          <div className="py-4 space-y-4 border-t border-[#0180FA]/20">
+          <div className="py-4 space-y-4 border-t border-[#0077B6]/20">
             {/* Mobile Navigation Links */}
             {navItems.map((item, index) => (
               <motion.button
                 key={item.name}
                 onClick={() => scrollToSection(item.id)}
-                className="block w-full text-left px-4 py-2 text-gray-600 hover:text-[#0180FA] hover:bg-[#0180FA]/10 transition-colors duration-300 rounded-lg"
+                className="block w-full text-left px-4 py-2 text-gray-600 hover:text-[#0077B6] hover:bg-[#0077B6]/10 transition-colors duration-300 rounded-lg"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ 
                   opacity: isMobileMenuOpen ? 1 : 0,
@@ -155,7 +205,7 @@ const Header = () => {
             >
               <motion.button
                 onClick={handleDownloadCV}
-                className="w-full px-4 py-2 border border-[#0180FA] text-[#0180FA] hover:bg-[#0180FA] hover:text-white transition-all duration-300 rounded-md font-semibold text-sm"
+                className="w-full px-4 py-2 border border-[#0077B6] text-[#0077B6] hover:bg-[#0077B6] hover:text-white transition-all duration-300 rounded-md font-semibold text-sm"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >

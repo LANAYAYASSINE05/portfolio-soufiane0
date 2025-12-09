@@ -1,8 +1,6 @@
-import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 
 const Technologies = () => {
-  const [activeCategoryIndex, setActiveCategoryIndex] = useState(0)
   const renderIcon = (iconName, color) => {
     const iconProps = { width: 32, height: 32 }
     
@@ -111,7 +109,7 @@ const Technologies = () => {
           />
         )
       default:
-        return <div className="w-8 h-8 bg-[#0180FA] rounded-full flex items-center justify-center text-white text-sm font-bold">?</div>
+        return <div className="w-8 h-8 bg-[#0077B6] rounded-full flex items-center justify-center text-white text-sm font-bold">?</div>
     }
   }
 
@@ -170,119 +168,278 @@ const Technologies = () => {
   ]
 
   return (
-    <section
-      id="technologies"
-      className="relative py-20 md:py-24 bg-gradient-to-br from-[#ECF6FF] via-white to-[#ECF6FF] overflow-hidden"
-    >
-      <div className="container-custom px-4 sm:px-6 relative">
-        {/* Titre section */}
+    <section id="technologies" className="relative py-16 sm:py-20 bg-white overflow-hidden">
+      {/* Creative Background with Geometric Shapes */}
+      <motion.div
+        className="pointer-events-none absolute inset-0"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+      >
+        {/* Animated geometric shapes */}
         <motion.div
-          className="mx-auto max-w-3xl text-center mb-10 md:mb-12"
+          className="absolute top-20 right-10 w-32 h-32 border-2 border-[#0077B6]/20 rounded-full"
+          animate={{ 
+            rotate: 360,
+            scale: [1, 1.2, 1],
+            opacity: [0.3, 0.5, 0.3]
+          }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+        />
+        <motion.div
+          className="absolute bottom-20 left-10 w-24 h-24 border-2 border-[#0099CC]/20 rotate-45"
+          animate={{ 
+            rotate: [45, 405],
+            scale: [1, 1.3, 1],
+            opacity: [0.3, 0.5, 0.3]
+          }}
+          transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+        />
+        <motion.div
+          className="absolute top-1/2 left-1/4 w-16 h-16 bg-[#0077B6]/10 rounded-full blur-xl"
+          animate={{ 
+            x: [0, 50, 0],
+            y: [0, -30, 0],
+            scale: [1, 1.5, 1]
+          }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+        />
+      </motion.div>
+
+      <div className="container-custom relative z-10 px-4 sm:px-6">
+        {/* Creative Header */}
+        <motion.div
+          className="text-center mb-12 sm:mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.6, type: "spring" }}
           viewport={{ once: true }}
         >
-          <p className="text-xs sm:text-sm font-medium uppercase tracking-[0.25em] text-[#0180FA]">
-            OUTILS & PLATEFORMES
-          </p>
-          <h2 className="mt-3 text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
-            Mon stack pour piloter vos campagnes
-          </h2>
-          <p className="mt-4 text-sm sm:text-base text-gray-600 leading-relaxed">
-            Un ensemble d&apos;outils cohérents, de la diffusion des campagnes à l&apos;analyse
-            des résultats, en passant par la création des visuels.
-          </p>
+          <motion.span
+            className="inline-block text-xs font-bold uppercase tracking-[0.3em] text-[#0077B6] mb-3"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            TECHNOLOGIES & OUTILS
+          </motion.span>
+          <motion.h2
+            className="text-3xl sm:text-4xl md:text-5xl font-black text-[#333333] leading-tight"
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, type: "spring" }}
+            viewport={{ once: true }}
+          >
+            Technologies{' '}
+            <span className="relative inline-block">
+              <span className="bg-gradient-to-r from-[#0077B6] via-[#0099CC] to-[#0077B6] bg-clip-text text-transparent">
+                maîtrisées
+              </span>
+              <motion.div
+                className="absolute -bottom-1 left-0 right-0 h-2 bg-[#0077B6]/20 -z-10"
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+                viewport={{ once: true }}
+              />
+            </span>
+          </motion.h2>
         </motion.div>
 
-        {/* Onglets catégories + contenu */}
-        <div className="grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.6fr)] items-start">
-          {/* Colonne onglets */}
-          <motion.div
-            className="space-y-3"
-            initial={{ opacity: 0, x: -15 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true, margin: '-60px' }}
-          >
-            {technologies.map((category, index) => {
-              const isActive = index === activeCategoryIndex
-              return (
-                <button
-                  key={category.category}
-                  onClick={() => setActiveCategoryIndex(index)}
-                  className={`w-full rounded-2xl border px-4 py-3 text-left text-sm font-semibold transition-colors ${
-                    isActive
-                      ? 'border-[#0180FA] bg-white text-[#0180FA] shadow-[0_10px_26px_rgba(1,128,250,0.2)]'
-                      : 'border-gray-200 bg-white/80 text-gray-700 hover:border-[#0180FA]/40 hover:text-[#0180FA]'
-                  }`}
+        {/* Creative Technologies Layout - Asymmetric Design */}
+        <div className="max-w-7xl mx-auto space-y-8 sm:space-y-12">
+          {technologies.map((category, categoryIndex) => (
+            <motion.div
+              key={category.category}
+              className="relative"
+              initial={{ opacity: 0, y: 50, rotateX: -10 }}
+              whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+              transition={{ 
+                duration: 0.8,
+                delay: categoryIndex * 0.2,
+                type: "spring",
+                stiffness: 150
+              }}
+              viewport={{ once: true, margin: '-100px' }}
+              style={{ perspective: 1000 }}
+            >
+              {/* Category Header with Creative Design */}
+              <div className="relative mb-6 sm:mb-8">
+                <motion.div
+                  className="flex items-center gap-4"
+                  initial={{ opacity: 0, x: categoryIndex % 2 === 0 ? -50 : 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  viewport={{ once: true }}
                 >
-                  {category.category}
-                  <span className="ml-2 text-[11px] font-normal text-gray-400">
-                    ({category.items.length})
-                  </span>
-                </button>
-              )
-            })}
-          </motion.div>
-
-          {/* Colonne détails pour la catégorie active */}
-          <motion.div
-            className="rounded-3xl border border-white/70 bg-white/95 shadow-[0_18px_45px_rgba(15,23,42,0.06)] backdrop-blur px-4 sm:px-6 py-5 sm:py-6"
-            initial={{ opacity: 0, x: 15 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true, margin: '-60px' }}
-          >
-            {(() => {
-              const activeCategory = technologies[activeCategoryIndex]
-              return (
-                <>
-                  <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
-                    <div>
-                      <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-gray-500">
-                        Catégorie sélectionnée
-                      </p>
-                      <h3 className="mt-1 text-lg sm:text-xl font-semibold text-gray-900">
-                        {activeCategory.category}
-                      </h3>
-                    </div>
-                    <span className="rounded-full bg-[#ECF6FF] px-3 py-1 text-[11px] font-medium text-[#0180FA]">
-                      {activeCategory.items.length} outil
-                      {activeCategory.items.length > 1 ? 's' : ''} maîtrisé
-                    </span>
-                  </div>
-
-                  <div className="grid gap-4 sm:grid-cols-2">
-                    {activeCategory.items.map((tech) => (
+                  {/* Decorative shape */}
+                  <motion.div
+                    className="relative"
+                    whileHover={{ scale: 1.1, rotate: 360 }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#0077B6] to-[#0099CC] flex items-center justify-center shadow-2xl relative overflow-hidden">
+                      {/* Animated background */}
                       <motion.div
-                        key={tech.name}
-                        className="flex items-start gap-3 rounded-2xl border border-gray-100 bg-gray-50 px-3 py-3 sm:px-4 sm:py-4"
-                        whileHover={{ y: -2 }}
-                        transition={{ duration: 0.2 }}
-                      >
-                        <motion.div
-                          className="flex h-9 w-9 items-center justify-center rounded-xl bg-white shadow-sm border border-gray-100"
-                          whileHover={{ scale: 1.08, rotate: 3 }}
-                          transition={{ duration: 0.2 }}
-                        >
-                          {renderIcon(tech.icon, tech.color)}
-                        </motion.div>
-                        <div>
-                          <p className="text-sm font-semibold text-gray-900">
-                            {tech.name}
-                          </p>
-                          <p className="mt-1 text-[12px] text-gray-600 leading-relaxed">
-                            {tech.description}
-                          </p>
-                        </div>
-                      </motion.div>
-                    ))}
+                        className="absolute inset-0 bg-gradient-to-r from-white/30 to-transparent"
+                        animate={{ x: ['-100%', '200%'] }}
+                        transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                      />
+                      <svg className="w-7 h-7 text-white relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                      </svg>
+                    </div>
+                    {/* Glow effect */}
+                    <motion.div
+                      className="absolute -inset-3 rounded-2xl bg-[#0077B6] blur-2xl opacity-0 group-hover:opacity-40"
+                      animate={{ scale: [1, 1.3, 1] }}
+                      transition={{ duration: 2, repeat: Infinity }}
+                    />
+                  </motion.div>
+                  
+                  {/* Title with decorative line */}
+                  <div className="flex-1">
+                    <motion.h3
+                      className="text-xl sm:text-2xl font-black text-[#333333] mb-2"
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      transition={{ delay: 0.3 }}
+                      viewport={{ once: true }}
+                    >
+                      {category.category}
+                    </motion.h3>
+                    <motion.div
+                      className="h-1 bg-gradient-to-r from-[#0077B6] to-[#0099CC] rounded-full"
+                      initial={{ width: 0 }}
+                      whileInView={{ width: '100%' }}
+                      transition={{ duration: 0.8, delay: 0.4 }}
+                      viewport={{ once: true }}
+                    />
                   </div>
-                </>
-              )
-            })()}
-          </motion.div>
+                </motion.div>
+              </div>
+
+              {/* Technologies in Creative Grid - Staggered Layout */}
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6">
+                {category.items.map((tech, index) => (
+                  <motion.div
+                    key={tech.name}
+                    className="group/tech relative"
+                    initial={{ 
+                      opacity: 0, 
+                      y: 50,
+                      rotateY: categoryIndex % 2 === 0 ? -15 : 15,
+                      scale: 0.8
+                    }}
+                    whileInView={{ 
+                      opacity: 1, 
+                      y: 0,
+                      rotateY: 0,
+                      scale: 1
+                    }}
+                    transition={{ 
+                      duration: 0.8,
+                      delay: (categoryIndex * 0.1) + (index * 0.08),
+                      type: "spring",
+                      stiffness: 150
+                    }}
+                    viewport={{ once: true, margin: '-50px' }}
+                    style={{ transformStyle: "preserve-3d" }}
+                    whileHover={{ 
+                      y: -10,
+                      rotateY: categoryIndex % 2 === 0 ? 5 : -5,
+                      scale: 1.05,
+                      z: 50
+                    }}
+                  >
+                    {/* Card with 3D effect */}
+                    <div className="relative h-full rounded-2xl bg-gradient-to-br from-white via-[#ECF6FF]/30 to-white border-2 border-[#0077B6]/10 p-4 sm:p-5 shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden">
+                      {/* Animated corner decoration */}
+                      <motion.div
+                        className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#0077B6]/20 to-transparent rounded-bl-full"
+                        animate={{ 
+                          scale: [1, 1.2, 1],
+                          opacity: [0.3, 0.6, 0.3]
+                        }}
+                        transition={{ duration: 3, repeat: Infinity }}
+                      />
+                      
+                      {/* Top border with gradient */}
+                      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#0077B6] via-[#0099CC] to-[#0077B6]" />
+                      
+                      {/* Hover glow effect */}
+                      <motion.div
+                        className="absolute inset-0 bg-gradient-to-br from-[#0077B6]/10 via-[#0099CC]/5 to-transparent opacity-0 group-hover/tech:opacity-100 transition-opacity"
+                        initial={{ scale: 0.8, rotate: -45 }}
+                        whileHover={{ scale: 1.2, rotate: 45 }}
+                        transition={{ duration: 0.5 }}
+                      />
+
+                      <div className="relative z-10 text-center">
+                        {/* Icon with floating animation */}
+                        <motion.div
+                          className="flex justify-center mb-3 sm:mb-4"
+                          animate={{ 
+                            y: [0, -8, 0],
+                            rotate: [0, 5, -5, 0]
+                          }}
+                          transition={{ 
+                            duration: 4,
+                            repeat: Infinity,
+                            ease: "easeInOut"
+                          }}
+                          whileHover={{ 
+                            scale: 1.3,
+                            rotate: [0, 15, -15, 0],
+                            y: -5
+                          }}
+                        >
+                          <motion.div
+                            className="relative"
+                            whileHover={{ scale: 1.2 }}
+                            transition={{ duration: 0.3 }}
+                          >
+                            {renderIcon(tech.icon, tech.color)}
+                            {/* Pulsing ring */}
+                            <motion.div
+                              className="absolute inset-0 rounded-full border-2 border-[#0077B6] opacity-0 group-hover/tech:opacity-50"
+                              animate={{ 
+                                scale: [1, 1.5, 1],
+                                opacity: [0, 0.5, 0]
+                              }}
+                              transition={{ duration: 2, repeat: Infinity }}
+                            />
+                          </motion.div>
+                        </motion.div>
+
+                        {/* Content */}
+                        <motion.h4
+                          className="text-xs sm:text-sm font-black text-[#333333] mb-1.5 group-hover/tech:text-[#0077B6] transition-colors"
+                          whileHover={{ scale: 1.1 }}
+                        >
+                          {tech.name}
+                        </motion.h4>
+                        <p className="text-[10px] sm:text-xs text-[#666666] leading-relaxed">
+                          {tech.description}
+                        </p>
+                      </div>
+
+                      {/* Bottom accent on hover */}
+                      <motion.div
+                        className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-[#0077B6] to-[#0099CC]"
+                        initial={{ scaleX: 0 }}
+                        whileHover={{ scaleX: 1 }}
+                        transition={{ duration: 0.3 }}
+                        style={{ originX: 0 }}
+                      />
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
