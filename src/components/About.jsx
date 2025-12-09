@@ -143,6 +143,8 @@ const About = () => {
                 <img
                   src="/assets/profil.png"
                   alt="Soufiane Bennani"
+                  width="192"
+                  height="192"
                   className="w-full h-full object-cover"
                 />
               </motion.div>

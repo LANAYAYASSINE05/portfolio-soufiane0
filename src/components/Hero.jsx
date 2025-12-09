@@ -138,6 +138,8 @@ const Hero = () => {
                     <img
                       src="/assets/profil.png"
                       alt="Soufiane Bennani"
+                      width="400"
+                      height="400"
                       className="w-full h-auto object-cover relative z-10"
                     />
                     {/* Gradient overlay with animation */}

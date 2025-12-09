@@ -298,7 +298,7 @@ const Experience = () => {
                             Réalisations
                           </motion.p>
                           <ul className="space-y-2">
-                            {exp.achievements.slice(0, 3).map((achievement, achIndex) => (
+                            {exp.achievements.slice(0, 5 ).map((achievement, achIndex) => (
                               <motion.li
                                 key={achIndex}
                                 className="flex items-start gap-2 text-xs text-[#333333]"

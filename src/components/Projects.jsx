@@ -332,6 +332,8 @@ const Projects = () => {
                     <motion.img
                       src={project.image}
                       alt={project.title}
+                      width="600"
+                      height="400"
                       className="relative z-10 w-full h-full object-contain p-6 sm:p-8 lg:p-10"
                       whileHover={{ scale: 1.1, rotate: [0, 2, -2, 0] }}
                       transition={{ 

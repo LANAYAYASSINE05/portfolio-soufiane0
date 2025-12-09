@@ -74,6 +74,12 @@
 }
 
 @layer utilities {
+  /* Performance optimizations */
+  .gpu-accelerated {
+    will-change: transform, opacity;
+    transform: translateZ(0);
+  }
+
   /* Custom animations */
   @keyframes fadeInUp {
     from {
