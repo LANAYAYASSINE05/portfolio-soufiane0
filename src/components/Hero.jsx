@@ -1,7 +1,17 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 
 const Hero = () => {
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId)
     if (element) {
@@ -24,52 +34,56 @@ const Hero = () => {
         {/* Diagonal gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#0077B6]/5 via-transparent to-[#0077B6]/10" />
         
-        {/* Animated geometric shapes */}
-        <motion.div
-          className="absolute top-20 right-10 w-32 h-32 border-2 border-[#0077B6]/20 rounded-full"
-          animate={{ 
-            rotate: 360,
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.5, 0.3]
-          }}
-          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-        />
-        <motion.div
-          className="absolute bottom-20 left-10 w-24 h-24 border-2 border-[#0099CC]/20 rotate-45"
-          animate={{ 
-            rotate: [45, 405],
-            scale: [1, 1.3, 1],
-            opacity: [0.3, 0.5, 0.3]
-          }}
-          transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-        />
-        <motion.div
-          className="absolute top-1/2 left-1/4 w-16 h-16 bg-[#0077B6]/10 rounded-full blur-xl"
-          animate={{ 
-            x: [0, 50, 0],
-            y: [0, -30, 0],
-            scale: [1, 1.5, 1]
-          }}
-          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-        />
-        
-        {/* Floating shapes - responsive sizes */}
-        <motion.div
-          className="absolute top-1/4 right-1/4 w-32 h-32 sm:w-48 sm:h-48 lg:w-64 lg:h-64 bg-[#0077B6]/8 rounded-full blur-3xl"
-          animate={{ 
-            scale: [1, 1.4, 1],
-            rotate: [0, 180, 360]
-          }}
-          transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-        />
-        <motion.div
-          className="absolute bottom-1/4 left-1/4 w-40 h-40 sm:w-60 sm:h-60 lg:w-80 lg:h-80 bg-[#0099CC]/6 rounded-full blur-3xl"
-          animate={{ 
-            scale: [1, 1.3, 1],
-            rotate: [360, 180, 0]
-          }}
-          transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-        />
+        {/* Animated geometric shapes - reduced on mobile */}
+        {!isMobile && (
+          <>
+            <motion.div
+              className="absolute top-20 right-10 w-32 h-32 border-2 border-[#0077B6]/20 rounded-full"
+              animate={{ 
+                rotate: 360,
+                scale: [1, 1.2, 1],
+                opacity: [0.3, 0.5, 0.3]
+              }}
+              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+            />
+            <motion.div
+              className="absolute bottom-20 left-10 w-24 h-24 border-2 border-[#0099CC]/20 rotate-45"
+              animate={{ 
+                rotate: [45, 405],
+                scale: [1, 1.3, 1],
+                opacity: [0.3, 0.5, 0.3]
+              }}
+              transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+            />
+            <motion.div
+              className="absolute top-1/2 left-1/4 w-16 h-16 bg-[#0077B6]/10 rounded-full blur-xl"
+              animate={{ 
+                x: [0, 50, 0],
+                y: [0, -30, 0],
+                scale: [1, 1.5, 1]
+              }}
+              transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+            />
+            
+            {/* Floating shapes - responsive sizes */}
+            <motion.div
+              className="absolute top-1/4 right-1/4 w-32 h-32 sm:w-48 sm:h-48 lg:w-64 lg:h-64 bg-[#0077B6]/8 rounded-full blur-3xl"
+              animate={{ 
+                scale: [1, 1.4, 1],
+                rotate: [0, 180, 360]
+              }}
+              transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+            />
+            <motion.div
+              className="absolute bottom-1/4 left-1/4 w-40 h-40 sm:w-60 sm:h-60 lg:w-80 lg:h-80 bg-[#0099CC]/6 rounded-full blur-3xl"
+              animate={{ 
+                scale: [1, 1.3, 1],
+                rotate: [360, 180, 0]
+              }}
+              transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+            />
+          </>
+        )}
       </motion.div>
 
       <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-24">
@@ -89,22 +103,26 @@ const Hero = () => {
           >
             <div className="relative">
               {/* Decorative elements - hidden on mobile with animation */}
-              <motion.div
-                className="hidden sm:block absolute -top-4 sm:-top-6 -left-4 sm:-left-6 w-16 sm:w-20 lg:w-24 h-16 sm:h-20 lg:h-24 bg-[#0077B6]/20 rounded-2xl rotate-12 blur-sm"
-                animate={{ 
-                  rotate: [12, 18, 12],
-                  scale: [1, 1.1, 1]
-                }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              />
-              <motion.div
-                className="hidden sm:block absolute -bottom-4 sm:-bottom-6 -right-4 sm:-right-6 w-24 sm:w-28 lg:w-32 h-24 sm:h-28 lg:h-32 bg-[#0099CC]/15 rounded-full blur-xl"
-                animate={{ 
-                  scale: [1, 1.2, 1],
-                  opacity: [0.6, 0.8, 0.6]
-                }}
-                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-              />
+              {!isMobile && (
+                <>
+                  <motion.div
+                    className="hidden sm:block absolute -top-4 sm:-top-6 -left-4 sm:-left-6 w-16 sm:w-20 lg:w-24 h-16 sm:h-20 lg:h-24 bg-[#0077B6]/20 rounded-2xl rotate-12 blur-sm"
+                    animate={{ 
+                      rotate: [12, 18, 12],
+                      scale: [1, 1.1, 1]
+                    }}
+                    transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                  />
+                  <motion.div
+                    className="hidden sm:block absolute -bottom-4 sm:-bottom-6 -right-4 sm:-right-6 w-24 sm:w-28 lg:w-32 h-24 sm:h-28 lg:h-32 bg-[#0099CC]/15 rounded-full blur-xl"
+                    animate={{ 
+                      scale: [1, 1.2, 1],
+                      opacity: [0.6, 0.8, 0.6]
+                    }}
+                    transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                  />
+                </>
+              )}
               
               {/* Main image container */}
               <div className="relative z-10">
@@ -126,28 +144,36 @@ const Hero = () => {
                     }}
                     style={{ transformStyle: "preserve-3d", perspective: 1000 }}
                   >
-                    {/* Animated corner decoration */}
-                    <motion.div
-                      className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#0077B6]/20 to-transparent rounded-bl-full"
-                      animate={{ 
-                        scale: [1, 1.2, 1],
-                        opacity: [0.3, 0.6, 0.3]
-                      }}
-                      transition={{ duration: 3, repeat: Infinity }}
-                    />
+                    {/* Animated corner decoration - reduced on mobile */}
+                    {!isMobile && (
+                      <motion.div
+                        className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#0077B6]/20 to-transparent rounded-bl-full"
+                        animate={{ 
+                          scale: [1, 1.2, 1],
+                          opacity: [0.3, 0.6, 0.3]
+                        }}
+                        transition={{ duration: 3, repeat: Infinity }}
+                      />
+                    )}
                     <img
                       src="/assets/profil.png"
                       alt="Soufiane Bennani"
                       width="400"
                       height="400"
                       className="w-full h-auto object-cover relative z-10"
+                      fetchPriority="high"
+                      decoding="async"
                     />
-                    {/* Gradient overlay with animation */}
-                    <motion.div
-                      className="absolute inset-0 bg-gradient-to-t from-[#0077B6]/20 via-transparent to-transparent z-20"
-                      animate={{ opacity: [0.2, 0.3, 0.2] }}
-                      transition={{ duration: 3, repeat: Infinity }}
-                    />
+                    {/* Gradient overlay - static on mobile */}
+                    {!isMobile ? (
+                      <motion.div
+                        className="absolute inset-0 bg-gradient-to-t from-[#0077B6]/20 via-transparent to-transparent z-20"
+                        animate={{ opacity: [0.2, 0.3, 0.2] }}
+                        transition={{ duration: 3, repeat: Infinity }}
+                      />
+                    ) : (
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#0077B6]/20 via-transparent to-transparent z-20" />
+                    )}
                   </motion.div>
                   
                   {/* Floating stats badges - enhanced animations */}
