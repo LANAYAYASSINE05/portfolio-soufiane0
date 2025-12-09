@@ -146,6 +146,8 @@ const About = () => {
                   width="192"
                   height="192"
                   className="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
               </motion.div>
             </motion.div>

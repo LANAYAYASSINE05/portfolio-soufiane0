@@ -341,6 +341,7 @@ const Projects = () => {
                         rotate: { duration: 0.5 }
                       }}
                       loading="lazy"
+                      decoding="async"
                       style={{ maxHeight: '100%', maxWidth: '100%' }}
                     />
                     {/* Badge catégorie with glow */}

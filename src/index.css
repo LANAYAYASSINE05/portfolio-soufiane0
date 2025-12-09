@@ -17,6 +17,17 @@
   html {
     scroll-padding-top: 80px;
   }
+
+  /* Font display optimization */
+  @font-face {
+    font-family: 'Inter';
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-display: swap;
+  }
 }
 
 @layer components {

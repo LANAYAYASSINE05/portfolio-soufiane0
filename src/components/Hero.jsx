@@ -163,6 +163,7 @@ const Hero = () => {
                       className="w-full h-auto object-cover relative z-10"
                       fetchPriority="high"
                       decoding="async"
+                      loading="eager"
                     />
                     {/* Gradient overlay - static on mobile */}
                     {!isMobile ? (

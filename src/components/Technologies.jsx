@@ -13,6 +13,8 @@ const Technologies = () => {
             width={iconProps.width} 
             height={iconProps.height}
             className="w-8 h-8 object-contain"
+            loading="lazy"
+            decoding="async"
           />
         )
       case 'google':
@@ -29,7 +31,11 @@ const Technologies = () => {
           <img 
             src="/assets/tiktok.png" 
             alt="TikTok" 
+            width="28"
+            height="28"
             className="w-7 h-7 object-contain"
+            loading="lazy"
+            decoding="async"
           />
         )
       case 'linkedin':
@@ -43,7 +49,11 @@ const Technologies = () => {
           <img 
             src="/assets/canva.png" 
             alt="Canva" 
+            width="28"
+            height="28"
             className="w-7 h-7 object-contain"
+            loading="lazy"
+            decoding="async"
           />
         )
       case 'capcut':
@@ -51,7 +61,11 @@ const Technologies = () => {
           <img 
             src="/assets/capcut.png" 
             alt="CapCut" 
+            width="28"
+            height="28"
             className="w-7 h-7 object-contain"
+            loading="lazy"
+            decoding="async"
           />
         )
       case 'photoshop':
@@ -59,7 +73,11 @@ const Technologies = () => {
           <img 
             src="/assets/photoshop.png" 
             alt="Photoshop" 
+            width="28"
+            height="28"
             className="w-7 h-7 object-contain"
+            loading="lazy"
+            decoding="async"
           />
         )
       case 'pinterest':
@@ -73,7 +91,11 @@ const Technologies = () => {
           <img 
             src="/assets/elemenator.png" 
             alt="Elementor" 
+            width="28"
+            height="28"
             className="w-7 h-7 object-contain"
+            loading="lazy"
+            decoding="async"
           />
         )
       case 'office':
@@ -81,7 +103,11 @@ const Technologies = () => {
           <img 
             src="/assets/office.png" 
             alt="Microsoft Office" 
+            width="28"
+            height="28"
             className="w-7 h-7 object-contain"
+            loading="lazy"
+            decoding="async"
           />
         )
       case 'chatgpt':
@@ -89,7 +115,11 @@ const Technologies = () => {
           <img 
             src="/assets/chatgpt.png" 
             alt="ChatGPT" 
+            width="28"
+            height="28"
             className="w-7 h-7 object-contain"
+            loading="lazy"
+            decoding="async"
           />
         )
       case 'gemini':
@@ -97,7 +127,11 @@ const Technologies = () => {
           <img 
             src="/assets/gemini.png" 
             alt="Gemini" 
+            width="28"
+            height="28"
             className="w-7 h-7 object-contain"
+            loading="lazy"
+            decoding="async"
           />
         )
       case 'midjourney':
@@ -105,7 +139,11 @@ const Technologies = () => {
           <img 
             src="/assets/midjourney.png" 
             alt="Midjourney" 
+            width="28"
+            height="28"
             className="w-7 h-7 object-contain"
+            loading="lazy"
+            decoding="async"
           />
         )
       default:
