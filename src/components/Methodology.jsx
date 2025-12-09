@@ -90,22 +90,53 @@ const Methodology = () => {
       <div className="container-custom relative px-4 sm:px-6">
         {/* Titre section */}
         <motion.div
-          className="mx-auto max-w-3xl text-center mb-10 md:mb-12"
+          className="text-center mb-12 sm:mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.6, type: "spring" }}
           viewport={{ once: true }}
         >
-          <p className="text-xs sm:text-sm font-medium uppercase tracking-[0.25em] text-brand-blue">
+          <motion.span
+            className="inline-block text-xs font-bold uppercase tracking-[0.3em] text-[#0077B6] mb-3"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+            viewport={{ once: true }}
+          >
             MÉTHODOLOGIE
-          </p>
-          <h2 className="mt-3 text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
-            Comment je travaille, étape par étape
-          </h2>
-          <p className="mt-4 text-sm sm:text-base text-gray-600 leading-relaxed">
+          </motion.span>
+          <motion.h2
+            className="text-3xl sm:text-4xl md:text-5xl font-black text-[#333333] leading-tight"
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, type: "spring" }}
+            viewport={{ once: true }}
+          >
+            Comment je{' '}
+            <span className="relative inline-block">
+              <span className="bg-gradient-to-r from-[#0077B6] via-[#0099CC] to-[#0077B6] bg-clip-text text-transparent">
+                travaille
+              </span>
+              <motion.div
+                className="absolute -bottom-1 left-0 right-0 h-2 bg-[#0077B6]/20 -z-10"
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+                viewport={{ once: true }}
+              />
+            </span>
+            , étape par étape
+          </motion.h2>
+          <motion.p
+            className="mt-4 text-sm sm:text-base text-[#666666] leading-relaxed max-w-2xl mx-auto"
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, type: "spring" }}
+            viewport={{ once: true }}
+          >
             De l&apos;analyse initiale au reporting final, chaque phase a un objectif clair
             pour transformer vos objectifs marketing en résultats concrets.
-          </p>
+          </motion.p>
         </motion.div>
 
         {/* Timeline verticale */}

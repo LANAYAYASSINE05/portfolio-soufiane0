@@ -14,9 +14,9 @@ const Contact = () => {
   const [submitStatus, setSubmitStatus] = useState(null)
   const [submitMessage, setSubmitMessage] = useState('')
 
-  const EMAILJS_SERVICE_ID = 'service_r5lauqc'
-  const EMAILJS_TEMPLATE_ID = 'template_pjsolml'
-  const EMAILJS_PUBLIC_KEY = 'XlqUieuQhZo090v1f'
+  const EMAILJS_SERVICE_ID = 'service_8r72a6i'
+  const EMAILJS_TEMPLATE_ID = 'template_s6z9dvr'
+  const EMAILJS_PUBLIC_KEY = 'J8hIL0fEZYKzvUf1K'
 
   const handleChange = (e) => {
     setFormData({
@@ -384,7 +384,7 @@ const Contact = () => {
             >
               <h4 className="text-sm font-black text-[#333333] mb-4">Réseau social</h4>
               <motion.a
-                href="https://linkedin.com/in/mehdi-rhanim"
+                href="https://www.linkedin.com/in/soufiane-bennani-393172245"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Visiter mon profil LinkedIn"

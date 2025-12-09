@@ -12,45 +12,31 @@ const Education = () => {
   const education = [
     {
       id: 1,
-      title: "Master en Marketing et Action Commerciale",
-      institution: "ENCG Casablanca",
-      period: "2017 - 2022",
-      location: "Casablanca, Maroc",
-      description: "Formation approfondie en marketing, stratégies commerciales et gestion d'entreprise. Spécialisation en marketing digital et techniques de vente.",
-      highlights: [
-        "Formation complète en marketing stratégique et opérationnel",
-        "Maîtrise des techniques de vente et de négociation",
-        "Projets pratiques en marketing digital et communication",
-        "Préparation aux défis du marché marocain et international"
-      ],
-      grade: "Mention Bien"
+      title: "License en économie et gestion",
+      institution: "Faculté de Sciences Juridiques, Economique et Sociales, Mohammédia",
+      period: "2019 - 2025",
+      location: "Mohammédia, Maroc",
+      grade: "Mention Assez Bien"
     },
     {
       id: 2,
-      title: "Baccalauréat Sciences Physique",
-      institution: "Groupe Scolaire Berrada",
-      period: "2017",
+      title: "Baccalauréat Sciences de la Vie et de la Terre",
+      institution: "Lycée Mohamed VI",
+      period: "2018 - 2019",
       location: "Casablanca, Maroc",
-      description: "Formation scientifique de base avec orientation vers les sciences physiques et les mathématiques appliquées.",
-      highlights: [
-        "Formation rigoureuse en sciences physiques",
-        "Développement de l'esprit analytique et logique",
-        "Préparation aux études supérieures en commerce",
-        "Excellence académique reconnue"
-      ],
-      grade: "Mention Très Bien"
+      grade: "Mention Assez Bien"
     }
   ]
 
-  const certifications = [
-    {
-      name: "Le marketing des réseaux sociaux",
-      issuer: "HubSpot Academy",
-      year: "2025",
-      description: "Certification HubSpot en marketing des réseaux sociaux - Émise en avril 2025, expire en mai 2027",
-      id: "839fbd3931ea45a493346c694563c14a"
-    }
-  ]
+  // const certifications = [
+  //   {
+  //     name: "Le marketing des réseaux sociaux",
+  //     issuer: "HubSpot Academy",
+  //     year: "2025",
+  //     description: "Certification HubSpot en marketing des réseaux sociaux - Émise en avril 2025, expire en mai 2027",
+  //     id: "839fbd3931ea45a493346c694563c14a"
+  //   }
+  // ]
 
   return (
     <section
@@ -194,34 +180,9 @@ const Education = () => {
                     </div>
 
                     {/* Description */}
-                    <p className="text-sm text-[#666666] leading-relaxed mb-4 line-clamp-2">
+                    <p className="text-sm text-[#666666] leading-relaxed mb-4">
                       {edu.description}
                     </p>
-
-                    {/* Compact Highlights */}
-                    <div className="space-y-2">
-                      {edu.highlights.slice(0, 3).map((highlight, achIndex) => (
-                        <motion.div
-                          key={achIndex}
-                          className="flex items-start gap-2 text-xs text-[#333333]"
-                          initial={{ opacity: 0, x: -10 }}
-                          whileInView={{ opacity: 1, x: 0 }}
-                          transition={{ delay: 0.4 + achIndex * 0.05 }}
-                          viewport={{ once: true }}
-                        >
-                          <motion.div
-                            className="flex-shrink-0 w-5 h-5 rounded-md bg-gradient-to-br from-[#0077B6] to-[#0099CC] flex items-center justify-center mt-0.5"
-                            whileHover={{ rotate: 180 }}
-                            transition={{ duration: 0.3 }}
-                          >
-                            <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                            </svg>
-                          </motion.div>
-                          <span className="leading-relaxed">{highlight}</span>
-                        </motion.div>
-                      ))}
-                    </div>
                   </div>
                 </div>
               </motion.div>
@@ -230,7 +191,7 @@ const Education = () => {
         </div>
 
         {/* Compact Certifications */}
-        <div className="max-w-5xl mx-auto mb-12">
+        {/* <div className="max-w-5xl mx-auto mb-12">
           <motion.div
             className="mb-6"
             initial={{ opacity: 0, y: 20 }}
@@ -259,7 +220,6 @@ const Education = () => {
                 viewport={{ once: true }}
                 whileHover={{ y: -4, scale: 1.01 }}
               >
-                {/* Animated corner decoration */}
                 <motion.div
                   className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#0077B6]/20 to-transparent rounded-bl-full"
                   animate={{ 
@@ -268,11 +228,9 @@ const Education = () => {
                   }}
                   transition={{ duration: 3, repeat: Infinity }}
                 />
-                {/* Accent bar */}
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#0077B6] to-[#0099CC]" />
                 
                 <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-start">
-                  {/* Icon */}
                   <motion.div
                     className="flex-shrink-0 w-14 h-14 rounded-xl bg-gradient-to-br from-[#0077B6] to-[#0099CC] flex items-center justify-center shadow-lg"
                     whileHover={{ rotate: [0, 15, -15, 0], scale: 1.1 }}
@@ -283,7 +241,6 @@ const Education = () => {
                     </svg>
                   </motion.div>
 
-                  {/* Content */}
                   <div className="flex-1 min-w-0">
                     <div className="flex flex-wrap items-start justify-between gap-3 mb-2">
                       <div className="flex-1">
@@ -324,7 +281,7 @@ const Education = () => {
               </motion.div>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Compact CTA */}
         <motion.div
