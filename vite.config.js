@@ -24,8 +24,7 @@ export default defineConfig({
     },
   },
   optimizeDeps: {
-    include: ['react', 'react-dom'],
-    exclude: ['framer-motion'],
+    include: ['react', 'react-dom', 'framer-motion'],
   },
   // Performance optimizations
   server: {

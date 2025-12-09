@@ -260,7 +260,7 @@ const Projects = () => {
         {/* Projects in Staggered Layout - Adapted for Image Sizes */}
         <div className="space-y-8 sm:space-y-12">
           {filteredProjects.map((project, index) => (
-            <article
+            <motion.article
               key={project.id}
               className="group relative"
             >

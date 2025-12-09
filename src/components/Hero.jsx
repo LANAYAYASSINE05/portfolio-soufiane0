@@ -495,8 +495,8 @@ const Hero = () => {
               <motion.button
                 onClick={() => {
                   const link = document.createElement('a')
-                  link.href = '/uploads/RHANIM MEHDI CV.pdf'
-                  link.download = 'RHANIM_MEHDI_CV.pdf'
+                  link.href = '/uploads/Soufiane Bennani Cv.pdf'
+                  link.download = 'SOUFIANE_BENNANI_CV.pdf'
                   document.body.appendChild(link)
                   link.click()
                   document.body.removeChild(link)
