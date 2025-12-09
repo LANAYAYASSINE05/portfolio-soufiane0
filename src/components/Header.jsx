@@ -1,8 +1,16 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768)
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId)
@@ -37,27 +45,29 @@ const Header = () => {
   return (
     <motion.header 
       className="fixed top-0 left-0 right-0 z-50 bg-[#ECF6FF]/95 backdrop-blur-md border-b border-[#0077B6]/20 relative overflow-hidden"
-      initial={{ y: -100, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
+      initial={isMobile ? false : { y: -100, opacity: 0 }}
+      animate={isMobile ? false : { y: 0, opacity: 1 }}
+      transition={isMobile ? {} : { duration: 0.6, ease: "easeOut" }}
     >
       {/* Creative Background Elements */}
-      <motion.div
-        className="pointer-events-none absolute inset-0"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-      >
+      {!isMobile && (
         <motion.div
-          className="absolute top-1/2 right-10 w-16 h-16 border border-[#0077B6]/10 rounded-full"
-          animate={{ 
-            rotate: 360,
-            scale: [1, 1.1, 1],
-            opacity: [0.2, 0.4, 0.2]
-          }}
-          transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-        />
-      </motion.div>
+          className="pointer-events-none absolute inset-0"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          <motion.div
+            className="absolute top-1/2 right-10 w-16 h-16 border border-[#0077B6]/10 rounded-full"
+            animate={{ 
+              rotate: 360,
+              scale: [1, 1.1, 1],
+              opacity: [0.2, 0.4, 0.2]
+            }}
+            transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+          />
+        </motion.div>
+      )}
       <div className="container-custom px-4 sm:px-6">
         <div className="flex items-center justify-between h-16 px-6 lg:px-8">
           {/* Brand */}

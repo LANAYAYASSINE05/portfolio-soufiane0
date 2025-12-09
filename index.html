@@ -10,17 +10,29 @@
     <meta name="format-detection" content="telephone=no" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="/assets/profil.png" as="image" type="image/png" fetchpriority="high">
+    <link rel="preload" href="/assets/profil.png" as="image" type="image/png" fetchpriority="high" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <style>
       /* Critical CSS for initial render */
-      body { margin: 0; font-family: system-ui, -apple-system, sans-serif; }
+      * { box-sizing: border-box; }
+      body { 
+        margin: 0; 
+        font-family: system-ui, -apple-system, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
       #root { min-height: 100vh; }
       /* Prevent layout shift */
-      img { max-width: 100%; height: auto; }
+      img { max-width: 100%; height: auto; display: block; }
+      /* Optimize rendering */
+      [data-section] { content-visibility: auto; contain-intrinsic-size: auto 500px; }
+      /* Reduce animations on mobile */
+      @media (max-width: 768px) {
+        *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+      }
     </style>
   </head>
   <body>

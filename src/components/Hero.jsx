@@ -91,9 +91,9 @@ const Hero = () => {
           {/* LEFT: Large Profile Image with Stats */}
           <motion.div
             className="relative order-2 lg:order-1"
-            initial={{ opacity: 0, x: -50, scale: 0.95 }}
-            animate={{ opacity: 1, x: 0, scale: 1 }}
-            transition={{ 
+            initial={isMobile ? false : { opacity: 0, x: -50, scale: 0.95 }}
+            animate={isMobile ? false : { opacity: 1, x: 0, scale: 1 }}
+            transition={isMobile ? {} : { 
               duration: 0.8, 
               delay: 0.2,
               type: "spring",
@@ -134,15 +134,15 @@ const Hero = () => {
                   {/* Image with border - responsive and 3D effect */}
                   <motion.div
                     className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl sm:shadow-2xl border-4 sm:border-6 lg:border-8 border-white"
-                    initial={{ opacity: 0, scale: 0.9, rotateY: -15 }}
-                    animate={{ opacity: 1, scale: 1, rotateY: 0 }}
-                    transition={{ delay: 0.5, duration: 0.6, type: "spring" }}
-                    whileHover={{ 
+                    initial={isMobile ? false : { opacity: 0, scale: 0.9, rotateY: -15 }}
+                    animate={isMobile ? false : { opacity: 1, scale: 1, rotateY: 0 }}
+                    transition={isMobile ? {} : { delay: 0.5, duration: 0.6, type: "spring" }}
+                    whileHover={isMobile ? {} : { 
                       rotateY: [0, 5, -5, 0],
                       scale: 1.05,
                       z: 50
                     }}
-                    style={{ transformStyle: "preserve-3d", perspective: 1000 }}
+                    style={isMobile ? {} : { transformStyle: "preserve-3d", perspective: 1000 }}
                   >
                     {/* Animated corner decoration - reduced on mobile */}
                     {!isMobile && (
@@ -162,8 +162,9 @@ const Hero = () => {
                       height="400"
                       className="w-full h-auto object-cover relative z-10"
                       fetchPriority="high"
-                      decoding="async"
+                      decoding="sync"
                       loading="eager"
+                      style={{ contentVisibility: 'auto' }}
                     />
                     {/* Gradient overlay - static on mobile */}
                     {!isMobile ? (
@@ -253,22 +254,22 @@ const Hero = () => {
           {/* RIGHT: Content */}
           <motion.div
             className="relative order-1 lg:order-2 space-y-4 sm:space-y-5 md:space-y-6 lg:space-y-8 text-center lg:text-left"
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial={isMobile ? false : { opacity: 0, x: 50 }}
+            animate={isMobile ? false : { opacity: 1, x: 0 }}
+            transition={isMobile ? {} : { duration: 0.8, delay: 0.4 }}
           >
             {/* Badge Status */}
             <motion.div
               className="inline-flex items-center gap-2 rounded-full bg-white/90 backdrop-blur-sm border border-[#0077B6]/30 px-3 sm:px-4 py-1.5 sm:py-2 shadow-lg"
-              initial={{ opacity: 0, y: -20, scale: 0.8 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{ 
+              initial={isMobile ? false : { opacity: 0, y: -20, scale: 0.8 }}
+              animate={isMobile ? false : { opacity: 1, y: 0, scale: 1 }}
+              transition={isMobile ? {} : { 
                 delay: 0.6,
                 type: "spring",
                 stiffness: 200,
                 damping: 15
               }}
-              whileHover={{ scale: 1.05, y: -2 }}
+              whileHover={isMobile ? {} : { scale: 1.05, y: -2 }}
             >
               <motion.span
                 className="h-1.5 sm:h-2 w-1.5 sm:w-2 rounded-full bg-[#00D26A]"
@@ -297,9 +298,9 @@ const Hero = () => {
               </motion.p>
               <motion.h1
                 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-[1.1]"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ 
+                initial={isMobile ? false : { opacity: 0, y: 30 }}
+                animate={isMobile ? false : { opacity: 1, y: 0 }}
+                transition={isMobile ? {} : { 
                   delay: 0.8,
                   type: "spring",
                   stiffness: 100,
