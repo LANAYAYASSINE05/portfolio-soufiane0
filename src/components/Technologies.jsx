@@ -96,6 +96,7 @@ const Technologies = () => {
             className="w-7 h-7 object-contain"
             loading="lazy"
             decoding="async"
+            fetchPriority="low"
           />
         )
       case 'office':
@@ -108,6 +109,7 @@ const Technologies = () => {
             className="w-7 h-7 object-contain"
             loading="lazy"
             decoding="async"
+            fetchPriority="low"
           />
         )
       case 'chatgpt':

@@ -315,11 +315,7 @@ const Projects = () => {
 
                 <div className="relative z-10 flex flex-col lg:flex-row">
                   {/* Image Section - Adapted Size */}
-                  <motion.div
-                    className="relative w-full lg:w-1/3 xl:w-2/5 h-64 sm:h-72 lg:h-auto lg:min-h-[400px] overflow-hidden flex items-center justify-center"
-                    whileHover={{ scale: 1.02 }}
-                    transition={{ duration: 0.4 }}
-                  >
+                  <div className="relative w-full lg:w-1/3 xl:w-2/5 h-64 sm:h-72 lg:h-auto lg:min-h-[400px] overflow-hidden flex items-center justify-center">
                     <div
                       className={`absolute inset-0 ${
                         project.id === 1
@@ -329,75 +325,39 @@ const Projects = () => {
                           : 'bg-[#f7f4ef]'
                       }`}
                     />
-                    <motion.img
+                    <img
                       src={project.image}
                       alt={project.title}
                       width="600"
                       height="400"
                       className="relative z-10 w-full h-full object-contain p-6 sm:p-8 lg:p-10"
-                      whileHover={{ scale: 1.1, rotate: [0, 2, -2, 0] }}
-                      transition={{ 
-                        scale: { duration: 0.3 },
-                        rotate: { duration: 0.5 }
-                      }}
                       loading="lazy"
                       decoding="async"
-                      style={{ maxHeight: '100%', maxWidth: '100%' }}
+                      fetchPriority="low"
+                      style={{ maxHeight: '100%', maxWidth: '100%', willChange: 'auto' }}
                     />
-                    {/* Badge catégorie with glow */}
-                    <motion.div
-                      className="absolute left-4 top-4 z-20"
-                      initial={{ scale: 0, rotate: -10 }}
-                      whileInView={{ scale: 1, rotate: 0 }}
-                      transition={{ delay: index * 0.2 + 0.3, type: "spring" }}
-                      viewport={{ once: true }}
-                      whileHover={{ scale: 1.15, rotate: 5 }}
-                    >
-                      <motion.div
-                        className="rounded-full bg-gradient-to-r from-[#0077B6] to-[#0099CC] px-4 py-1.5 text-xs font-bold text-white shadow-lg relative overflow-hidden"
-                        animate={{ 
-                          boxShadow: [
-                            "0 10px 30px rgba(0, 119, 182, 0.3)",
-                            "0 15px 40px rgba(0, 119, 182, 0.4)",
-                            "0 10px 30px rgba(0, 119, 182, 0.3)"
-                          ]
-                        }}
-                        transition={{ duration: 2, repeat: Infinity }}
-                      >
-                        {/* Shimmer effect */}
-                        <motion.div
-                          className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
-                          animate={{ x: ['-100%', '200%'] }}
-                          transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
-                        />
-                        <span className="relative z-10">
+                    {/* Badge catégorie */}
+                    <div className="absolute left-4 top-4 z-20">
+                      <div className="rounded-full bg-gradient-to-r from-[#0077B6] to-[#0099CC] px-4 py-1.5 text-xs font-bold text-white shadow-lg relative overflow-hidden">
+                        <span>
                           {project.category === 'brand'
                             ? 'Brand Awareness'
                             : project.category === 'lead'
                             ? 'Lead Generation'
                             : 'Consideration'}
                         </span>
-                      </motion.div>
-                    </motion.div>
-                  </motion.div>
+                      </div>
+                    </div>
+                  </div>
 
                   {/* Content Section */}
                   <div className="w-full lg:w-2/3 xl:w-3/5 p-5 sm:p-6 lg:p-8">
-                    <motion.h3
-                      className="text-xl sm:text-2xl font-black text-[#333333] mb-2 group-hover:text-[#0077B6] transition-colors"
-                      whileHover={{ scale: 1.02 }}
-                    >
+                    <h3 className="text-xl sm:text-2xl font-black text-[#333333] mb-2 group-hover:text-[#0077B6] transition-colors">
                       {project.title}
-                    </motion.h3>
-                    <motion.p
-                      className="text-xs uppercase tracking-[0.2em] text-[#0077B6] font-bold mb-4"
-                      initial={{ opacity: 0 }}
-                      whileInView={{ opacity: 1 }}
-                      transition={{ delay: 0.3 }}
-                      viewport={{ once: true }}
-                    >
+                    </h3>
+                    <p className="text-xs uppercase tracking-[0.2em] text-[#0077B6] font-bold mb-4">
                       Cas client {index + 1}
-                    </motion.p>
+                    </p>
 
                     <p className="text-sm sm:text-base text-[#666666] leading-relaxed mb-4">
                       {project.description}
@@ -438,26 +398,9 @@ const Projects = () => {
                             }}
                             style={{ transformStyle: "preserve-3d" }}
                           >
-                            {/* Animated corner decoration */}
-                            <motion.div
-                              className="absolute top-0 right-0 w-12 h-12 bg-gradient-to-br from-[#0077B6]/10 to-transparent rounded-bl-full"
-                              animate={{ 
-                                scale: [1, 1.1, 1],
-                                opacity: [0.3, 0.5, 0.3]
-                              }}
-                              transition={{ duration: 3, repeat: Infinity }}
-                            />
-                            <motion.p
-                              className="text-base sm:text-lg font-black text-[#0077B6] mb-1 relative z-10"
-                              animate={{ scale: [1, 1.05, 1] }}
-                              transition={{ 
-                                duration: 2,
-                                repeat: Infinity,
-                                delay: i * 0.3
-                              }}
-                            >
+                            <p className="text-base sm:text-lg font-black text-[#0077B6] mb-1 relative z-10">
                               {result.metric}
-                            </motion.p>
+                            </p>
                             <p className="text-xs font-bold text-[#333333] mb-2 relative z-10">
                               {result.label}
                             </p>
@@ -471,36 +414,18 @@ const Projects = () => {
 
                     {/* Technologies - Creative Tags */}
                     <div className="mb-6">
-                      <motion.p
-                        className="mb-3 text-xs font-black uppercase tracking-wide text-[#0077B6] flex items-center gap-2"
-                        initial={{ opacity: 0, x: -10 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ delay: 0.5 }}
-                        viewport={{ once: true }}
-                      >
+                      <p className="mb-3 text-xs font-black uppercase tracking-wide text-[#0077B6] flex items-center gap-2">
                         <span className="w-6 h-0.5 bg-[#0077B6]" />
                         Technologies
-                      </motion.p>
+                      </p>
                       <div className="flex flex-wrap gap-2">
                         {project.technologies.map((tech, i) => (
-                          <motion.span
+                          <span
                             key={i}
                             className="group/tag relative rounded-lg border-2 border-[#0077B6]/20 bg-gradient-to-br from-white to-[#ECF6FF]/50 px-3 py-1.5 text-xs font-bold text-[#0077B6] hover:border-[#0077B6] hover:bg-[#0077B6] hover:text-white transition-all duration-300 cursor-default overflow-hidden"
-                            initial={{ opacity: 0, scale: 0.8 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            transition={{ delay: 0.6 + i * 0.05, type: "spring" }}
-                            viewport={{ once: true }}
-                            whileHover={{ scale: 1.1, y: -2 }}
                           >
-                            {/* Hover gradient */}
-                            <motion.div
-                              className="absolute inset-0 bg-gradient-to-r from-[#0077B6] to-[#0099CC] opacity-0 group-hover/tag:opacity-100 transition-opacity"
-                              initial={{ x: '-100%' }}
-                              whileHover={{ x: '100%' }}
-                              transition={{ duration: 0.5 }}
-                            />
                             <span className="relative z-10">{tech}</span>
-                          </motion.span>
+                          </span>
                         ))}
                       </div>
                     </div>
