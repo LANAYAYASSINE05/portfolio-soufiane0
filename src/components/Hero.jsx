@@ -178,74 +178,92 @@ const Hero = () => {
                     )}
                   </motion.div>
                   
-                  {/* Floating stats badges - enhanced animations */}
-                  <motion.div
-                    className="absolute -top-2 sm:-top-4 -right-2 sm:-right-4 bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-2 sm:p-3 lg:p-4 border border-[#0077B6]/20"
-                    initial={{ scale: 0, rotate: -20, opacity: 0 }}
-                    animate={{ 
-                      scale: 1, 
-                      rotate: 0,
-                      opacity: 1,
-                      y: [0, -5, 0]
-                    }}
-                    transition={{ 
-                      delay: 0.8, 
-                      type: "spring",
-                      stiffness: 200,
-                      damping: 15,
-                      y: { duration: 2, repeat: Infinity, ease: "easeInOut" }
-                    }}
-                    whileHover={{ 
-                      scale: 1.15, 
-                      rotate: 8,
-                      boxShadow: "0 20px 40px rgba(0, 119, 182, 0.3)"
-                    }}
-                  >
-                    <div className="text-center">
-                      <motion.p
-                        className="text-lg sm:text-xl lg:text-2xl font-black text-[#0077B6]"
-                        animate={{ scale: [1, 1.1, 1] }}
-                        transition={{ duration: 2, repeat: Infinity }}
+                  {/* Floating stats badges - static on mobile */}
+                  {isMobile ? (
+                    <>
+                      <div className="absolute -top-2 sm:-top-4 -right-2 sm:-right-4 bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-2 sm:p-3 lg:p-4 border border-[#0077B6]/20">
+                        <div className="text-center">
+                          <p className="text-lg sm:text-xl lg:text-2xl font-black text-[#0077B6]">+120%</p>
+                          <p className="text-[8px] sm:text-[9px] lg:text-[10px] text-[#666666] font-semibold">Croissance</p>
+                        </div>
+                      </div>
+                      <div className="absolute -bottom-2 sm:-bottom-4 -left-2 sm:-left-4 bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-2 sm:p-3 lg:p-4 border border-[#0077B6]/20">
+                        <div className="text-center">
+                          <p className="text-lg sm:text-xl lg:text-2xl font-black text-[#0077B6]">+50</p>
+                          <p className="text-[8px] sm:text-[9px] lg:text-[10px] text-[#666666] font-semibold">Campagnes</p>
+                        </div>
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <motion.div
+                        className="absolute -top-2 sm:-top-4 -right-2 sm:-right-4 bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-2 sm:p-3 lg:p-4 border border-[#0077B6]/20"
+                        initial={{ scale: 0, rotate: -20, opacity: 0 }}
+                        animate={{ 
+                          scale: 1, 
+                          rotate: 0,
+                          opacity: 1,
+                          y: [0, -5, 0]
+                        }}
+                        transition={{ 
+                          delay: 0.8, 
+                          type: "spring",
+                          stiffness: 200,
+                          damping: 15,
+                          y: { duration: 2, repeat: Infinity, ease: "easeInOut" }
+                        }}
+                        whileHover={{ 
+                          scale: 1.15, 
+                          rotate: 8,
+                          boxShadow: "0 20px 40px rgba(0, 119, 182, 0.3)"
+                        }}
                       >
-                        +120%
-                      </motion.p>
-                      <p className="text-[8px] sm:text-[9px] lg:text-[10px] text-[#666666] font-semibold">Croissance</p>
-                    </div>
-                  </motion.div>
-                  
-                  <motion.div
-                    className="absolute -bottom-2 sm:-bottom-4 -left-2 sm:-left-4 bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-2 sm:p-3 lg:p-4 border border-[#0077B6]/20"
-                    initial={{ scale: 0, rotate: 20, opacity: 0 }}
-                    animate={{ 
-                      scale: 1, 
-                      rotate: 0,
-                      opacity: 1,
-                      y: [0, 5, 0]
-                    }}
-                    transition={{ 
-                      delay: 1, 
-                      type: "spring",
-                      stiffness: 200,
-                      damping: 15,
-                      y: { duration: 2.5, repeat: Infinity, ease: "easeInOut" }
-                    }}
-                    whileHover={{ 
-                      scale: 1.15, 
-                      rotate: -8,
-                      boxShadow: "0 20px 40px rgba(0, 119, 182, 0.3)"
-                    }}
-                  >
-                    <div className="text-center">
-                      <motion.p
-                        className="text-lg sm:text-xl lg:text-2xl font-black text-[#0077B6]"
-                        animate={{ scale: [1, 1.1, 1] }}
-                        transition={{ duration: 2.2, repeat: Infinity }}
+                        <div className="text-center">
+                          <motion.p
+                            className="text-lg sm:text-xl lg:text-2xl font-black text-[#0077B6]"
+                            animate={{ scale: [1, 1.1, 1] }}
+                            transition={{ duration: 2, repeat: Infinity }}
+                          >
+                            +120%
+                          </motion.p>
+                          <p className="text-[8px] sm:text-[9px] lg:text-[10px] text-[#666666] font-semibold">Croissance</p>
+                        </div>
+                      </motion.div>
+                      <motion.div
+                        className="absolute -bottom-2 sm:-bottom-4 -left-2 sm:-left-4 bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-2 sm:p-3 lg:p-4 border border-[#0077B6]/20"
+                        initial={{ scale: 0, rotate: 20, opacity: 0 }}
+                        animate={{ 
+                          scale: 1, 
+                          rotate: 0,
+                          opacity: 1,
+                          y: [0, 5, 0]
+                        }}
+                        transition={{ 
+                          delay: 1, 
+                          type: "spring",
+                          stiffness: 200,
+                          damping: 15,
+                          y: { duration: 2.5, repeat: Infinity, ease: "easeInOut" }
+                        }}
+                        whileHover={{ 
+                          scale: 1.15, 
+                          rotate: -8,
+                          boxShadow: "0 20px 40px rgba(0, 119, 182, 0.3)"
+                        }}
                       >
-                        +50
-                      </motion.p>
-                      <p className="text-[8px] sm:text-[9px] lg:text-[10px] text-[#666666] font-semibold">Campagnes</p>
-                    </div>
-                  </motion.div>
+                        <div className="text-center">
+                          <motion.p
+                            className="text-lg sm:text-xl lg:text-2xl font-black text-[#0077B6]"
+                            animate={{ scale: [1, 1.1, 1] }}
+                            transition={{ duration: 2.2, repeat: Infinity }}
+                          >
+                            +50
+                          </motion.p>
+                          <p className="text-[8px] sm:text-[9px] lg:text-[10px] text-[#666666] font-semibold">Campagnes</p>
+                        </div>
+                      </motion.div>
+                    </>
+                  )}
                 </motion.div>
               </div>
             </div>

@@ -260,35 +260,9 @@ const Projects = () => {
         {/* Projects in Staggered Layout - Adapted for Image Sizes */}
         <div className="space-y-8 sm:space-y-12">
           {filteredProjects.map((project, index) => (
-            <motion.article
+            <article
               key={project.id}
               className="group relative"
-              initial={{ 
-                opacity: 0, 
-                y: 50,
-                rotateY: index % 2 === 0 ? -15 : 15,
-                scale: 0.9
-              }}
-              whileInView={{ 
-                opacity: 1, 
-                y: 0,
-                rotateY: 0,
-                scale: 1
-              }}
-              transition={{ 
-                duration: 0.8,
-                delay: index * 0.2,
-                type: "spring",
-                stiffness: 150
-              }}
-              viewport={{ once: true, margin: '-50px' }}
-              style={{ transformStyle: "preserve-3d", perspective: 1000 }}
-              whileHover={{ 
-                y: -10,
-                rotateY: index % 2 === 0 ? 5 : -5,
-                scale: 1.02,
-                z: 50
-              }}
             >
               {/* Card with 3D effect */}
               <div className="relative rounded-2xl bg-gradient-to-br from-white via-[#ECF6FF]/30 to-white border-2 border-[#0077B6]/10 shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden">
@@ -305,13 +279,6 @@ const Projects = () => {
                 {/* Top border with gradient */}
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#0077B6] via-[#0099CC] to-[#0077B6]" />
                 
-                {/* Hover glow effect */}
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-br from-[#0077B6]/10 via-[#0099CC]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
-                  initial={{ scale: 0.8, rotate: -45 }}
-                  whileHover={{ scale: 1.2, rotate: 45 }}
-                  transition={{ duration: 0.5 }}
-                />
 
                 <div className="relative z-10 flex flex-col lg:flex-row">
                   {/* Image Section - Adapted Size */}
@@ -381,22 +348,9 @@ const Projects = () => {
                       </motion.p>
                       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
                         {project.results.slice(0, 5).map((result, i) => (
-                          <motion.div
+                          <div
                             key={i}
                             className="group/result relative rounded-xl bg-gradient-to-br from-white to-[#ECF6FF]/50 border border-[#0077B6]/10 p-4 shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden"
-                            initial={{ opacity: 0, scale: 0.9, y: 20 }}
-                            whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                            transition={{ 
-                              delay: index * 0.1 + i * 0.1,
-                              type: "spring"
-                            }}
-                            viewport={{ once: true }}
-                            whileHover={{ 
-                              scale: 1.05,
-                              y: -5,
-                              rotateY: 2
-                            }}
-                            style={{ transformStyle: "preserve-3d" }}
                           >
                             <p className="text-base sm:text-lg font-black text-[#0077B6] mb-1 relative z-10">
                               {result.metric}
@@ -407,7 +361,7 @@ const Projects = () => {
                             <p className="text-[11px] text-[#666666] leading-relaxed relative z-10 line-clamp-2">
                               {result.description}
                             </p>
-                          </motion.div>
+                          </div>
                         ))}
                       </div>
                     </div>
@@ -432,7 +386,7 @@ const Projects = () => {
 
                     {/* Boutons */}
                     <div className="flex flex-wrap gap-3">
-                      <motion.a
+                      <a
                         href={
                           project.id === 1
                             ? encodeURI('/uploads/Rapport sponsoring Don lucas - Juillet .pdf')
@@ -445,35 +399,23 @@ const Projects = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group/btn relative inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#0077B6] to-[#0099CC] px-5 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-bold text-white shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden"
-                        whileHover={{ scale: 1.05, y: -2 }}
-                        whileTap={{ scale: 0.95 }}
                       >
-                        {/* Shimmer effect */}
-                        <motion.div
-                          className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
-                          initial={{ x: '-100%' }}
-                          whileHover={{ x: '200%' }}
-                          transition={{ duration: 0.6 }}
-                        />
                         <span className="relative z-10">Voir le rapport détaillé</span>
-                        <motion.svg
+                        <svg
                           className="relative z-10 w-4 h-4"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
-                          whileHover={{ x: 3 }}
                         >
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                        </motion.svg>
-                      </motion.a>
-                      <motion.button
+                        </svg>
+                      </a>
+                      <button
                         onClick={() => scrollToSection('contact')}
                         className="inline-flex items-center justify-center rounded-xl border-2 border-[#0077B6] bg-white px-5 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-bold text-[#0077B6] hover:bg-[#0077B6] hover:text-white transition-all duration-300"
-                        whileHover={{ scale: 1.05, y: -2 }}
-                        whileTap={{ scale: 0.95 }}
                       >
                         Discuter d&apos;un projet similaire
-                      </motion.button>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -492,33 +434,17 @@ const Projects = () => {
         </div>
 
         {/* CTA globale */}
-        <motion.div
-          className="mt-12 sm:mt-16 text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          viewport={{ once: true }}
-        >
-          <motion.button
+        <div className="mt-12 sm:mt-16 text-center">
+          <button
             onClick={() => scrollToSection('contact')}
             className="group relative inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 rounded-xl bg-gradient-to-r from-[#0077B6] to-[#0099CC] text-white font-bold text-sm sm:text-base shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden"
-            whileHover={{ scale: 1.05, y: -2 }}
-            whileTap={{ scale: 0.95 }}
           >
-            {/* Shimmer effect */}
-            <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
-              initial={{ x: '-100%' }}
-              whileHover={{ x: '200%' }}
-              transition={{ duration: 0.6 }}
-            />
             <span className="relative z-10">Me parler de votre prochain projet</span>
-            <motion.svg
+            <svg
               className="relative z-10 w-4 h-4 sm:w-5 sm:h-5"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
-              whileHover={{ x: 3 }}
             >
               <path
                 strokeLinecap="round"
@@ -526,9 +452,9 @@ const Projects = () => {
                 strokeWidth={2}
                 d="M13 7l5 5-5 5M6 12h12"
               />
-            </motion.svg>
-          </motion.button>
-        </motion.div>
+            </svg>
+          </button>
+        </div>
       </div>
     </section>
   )
