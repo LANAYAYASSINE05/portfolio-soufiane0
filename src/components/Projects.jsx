@@ -15,9 +15,9 @@ const Projects = () => {
     {
       id: 1,
       title: "Don Lucas : Campagne Social Media pour un Restaurant Espagnol",
-      category: "consideration",
-      description: "Mettre en place une campagne social media 360° (Instagram, Facebook, TikTok) pour faire de Don Lucas une référence locale, avec plus de 1,5 M de vues cumulées, 266 403 interactions et un coût par engagement d'environ 0,001 $.",
-      context: "Objectif : Asseoir la notoriété de Don Lucas à Casablanca, amplifier la visibilité du restaurant et transformer l'audience touchée en communauté active (visites profil, abonnements, réservations).",
+      category: "brand",
+      description: "Mettre en place une campagne social media 360° (Instagram, Facebook, TikTok) axée sur la notoriété et le reach pour faire de Don Lucas une référence locale, avec plus de 1,5 M de vues cumulées, 266 403 interactions et un coût par engagement d'environ 0,001 $.",
+      context: "Objectif : Maximiser la notoriété (Awareness) de Don Lucas à Casablanca, amplifier le reach et les vues pour toucher une audience large, et créer une visibilité de marque forte auprès des cibles locales.",
       strategy: "En tant que Social Media Manager & Traffic Manager, j'ai structuré un écosystème complet de campagnes Meta Ads (notoriété, interactions, visites de profil) complété par un calendrier éditorial organique. L'algorithme a été nourri en continu via des contenus axés sur l'ambiance et les plats signature, tandis que les audiences chaudes (engagers, visiteurs de profil, vues vidéo) étaient retravaillées en retargeting pour maximiser les conversions sociales.",
       results: [
         { metric: "912 842", label: "Vues Instagram", description: "Un volume de vues très élevé sur Instagram, avec plusieurs pics autour du 17, 21 et 30 juillet, signe d'une visibilité soutenue tout au long du mois." },
@@ -50,9 +50,9 @@ const Projects = () => {
     {
       id: 3,
       title: "Chez Casawi : Lancement d'une Adresse Marocaine en France",
-      category: "lead",
-      description: "Accompagner le lancement et la croissance de Chez Casawi, nouvelle adresse marocaine à Tarbes, grâce à une stratégie social media qui combine notoriété, engagement et génération de commandes.",
-      context: "Objectif : Faire connaître Chez Casawi auprès d'une audience locale en quête de cuisine marocaine authentique, développer une communauté engagée et transformer cette audience en clients (sur place et en livraison).",
+      category: "consideration",
+      description: "Accompagner le lancement et la croissance de Chez Casawi, nouvelle adresse marocaine à Tarbes, grâce à une stratégie social media orientée consideration pour susciter l'intérêt et l'intention d'achat auprès d'une audience qualifiée.",
+      context: "Objectif : Positionner Chez Casawi comme une option de choix pour une cuisine marocaine authentique, développer l'intérêt et la considération de l'audience locale, et créer un désir de découverte (visites, abonnements, interactions qualifiées).",
       strategy: "J'ai déployé un dispositif Meta Ads (notoriété, interactions, trafic vers le profil et la page) couplé à un planning éditorial gourmand : visuels de tajines, couscous et spécialités marocaines, mise en avant des avis clients et des offres. Les campagnes ont été optimisées autour des signaux d'engagement (sauvegardes, partages, clics) pour faire progresser les visites de profil, les abonnements et les commandes.",
       results: [
         { metric: "Multi-plateformes", label: "Présence digitale", description: "Construction d'un écosystème cohérent sur Instagram et Facebook, soutenu par des campagnes payantes ciblées et un contenu de marque chaleureux." },
@@ -82,15 +82,6 @@ const Projects = () => {
       icon: (
         <svg className="w-4 h-4 text-[#0077B6]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
-        </svg>
-      )
-    },
-    { 
-      key: 'lead', 
-      label: 'Lead Generation',
-      icon: (
-        <svg className="w-4 h-4 text-[#0077B6]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
         </svg>
       )
     },
@@ -309,8 +300,6 @@ const Projects = () => {
                         <span>
                           {project.category === 'brand'
                             ? 'Brand Awareness'
-                            : project.category === 'lead'
-                            ? 'Lead Generation'
                             : 'Consideration'}
                         </span>
                       </div>
