@@ -34,8 +34,8 @@ const Experience = () => {
       id: 2,
       title: "TRAFFIC MANAGER - FREELANCE",
       company: "Freelance",
-      period: "Octobre 2024 - Septembre 2025",
-      duration: "1 an",
+      period: "Actuellement",
+      duration: "En cours",
       location: "Casablanca",
       description:
         "Pilotage et optimisation des campagnes Meta Ads. Gestion des audiences, analyse des KPIs, rapports réguliers et recommandations stratégiques pour maximiser la performance.",

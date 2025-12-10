@@ -241,10 +241,7 @@ const About = () => {
                 transition={{ delay: 0.6, type: "spring" }}
                 viewport={{ once: true }}
               >
-                Junior en Community & Traffic Management, j'accompagne les marques sur deux
-                volets complémentaires : faire vivre leurs communautés au quotidien, et
-                piloter leurs campagnes publicitaires pour atteindre des objectifs concrets
-                (visibilité, trafic, conversions…).
+                Junior en Community & Traffic Management, j'aide les marques à se faire connaître, à engager leurs communautés et à attirer du trafic qualifié grâce aux réseaux sociaux et à la publicité Meta.
               </motion.p>
               <motion.p
                 className="text-base sm:text-lg text-[#666666] leading-relaxed"
@@ -253,9 +250,7 @@ const About = () => {
                 transition={{ delay: 0.7, type: "spring" }}
                 viewport={{ once: true }}
               >
-                Je m'appuie autant sur la créativité (contenus, angles, formats) que sur
-                l'analyse des chiffres pour améliorer en continu les résultats et proposer
-                des actions alignées avec la stratégie globale.
+                Je travaille avec une approche mêlant créativité et analyse des performances pour améliorer les résultats et proposer des actions efficaces et alignées avec les objectifs de chaque marque.
               </motion.p>
             </div>
           </motion.div>

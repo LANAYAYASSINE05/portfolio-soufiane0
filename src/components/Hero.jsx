@@ -125,9 +125,9 @@ const Hero = () => {
               )}
               
               {/* Main image container */}
-              <div className="relative z-10">
+              <div className="relative z-10 overflow-visible">
                 <motion.div
-                  className="relative w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto"
+                  className="relative w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto overflow-visible"
                   whileHover={{ scale: 1.05, rotate: 1 }}
                   transition={{ duration: 0.4, type: "spring" }}
                 >
@@ -181,15 +181,15 @@ const Hero = () => {
                   {/* Floating stats badges - static on mobile */}
                   {isMobile ? (
                     <>
-                      <div className="absolute -top-2 sm:-top-4 -right-2 sm:-right-4 bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-2 sm:p-3 lg:p-4 border border-[#0077B6]/20">
+                      <div className="absolute -top-2 sm:-top-4 -right-2 sm:-right-4 bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-2 sm:p-3 lg:p-4 border border-[#0077B6]/20 z-30">
                         <div className="text-center">
-                          <p className="text-lg sm:text-xl lg:text-2xl font-black text-[#0077B6]">+120%</p>
-                          <p className="text-[8px] sm:text-[9px] lg:text-[10px] text-[#666666] font-semibold">Croissance</p>
+                          <p className="text-lg sm:text-xl lg:text-2xl font-black text-[#0077B6]">+3</p>
+                          <p className="text-[8px] sm:text-[9px] lg:text-[10px] text-[#666666] font-semibold">Marques</p>
                         </div>
                       </div>
-                      <div className="absolute -bottom-2 sm:-bottom-4 -left-2 sm:-left-4 bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-2 sm:p-3 lg:p-4 border border-[#0077B6]/20">
+                      <div className="absolute -bottom-2 sm:-bottom-4 -left-2 sm:-left-4 bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-2 sm:p-3 lg:p-4 border border-[#0077B6]/20 z-30">
                         <div className="text-center">
-                          <p className="text-lg sm:text-xl lg:text-2xl font-black text-[#0077B6]">+50</p>
+                          <p className="text-lg sm:text-xl lg:text-2xl font-black text-[#0077B6]">+15</p>
                           <p className="text-[8px] sm:text-[9px] lg:text-[10px] text-[#666666] font-semibold">Campagnes</p>
                         </div>
                       </div>
@@ -197,7 +197,7 @@ const Hero = () => {
                   ) : (
                     <>
                       <motion.div
-                        className="absolute -top-2 sm:-top-4 -right-2 sm:-right-4 bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-2 sm:p-3 lg:p-4 border border-[#0077B6]/20"
+                        className="absolute -top-2 sm:-top-4 -right-2 sm:-right-4 bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-2 sm:p-3 lg:p-4 border border-[#0077B6]/20 z-30"
                         initial={{ scale: 0, rotate: -20, opacity: 0 }}
                         animate={{ 
                           scale: 1, 
@@ -224,13 +224,13 @@ const Hero = () => {
                             animate={{ scale: [1, 1.1, 1] }}
                             transition={{ duration: 2, repeat: Infinity }}
                           >
-                            +120%
+                            +3
                           </motion.p>
-                          <p className="text-[8px] sm:text-[9px] lg:text-[10px] text-[#666666] font-semibold">Croissance</p>
+                          <p className="text-[8px] sm:text-[9px] lg:text-[10px] text-[#666666] font-semibold">Marques</p>
                         </div>
                       </motion.div>
                       <motion.div
-                        className="absolute -bottom-2 sm:-bottom-4 -left-2 sm:-left-4 bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-2 sm:p-3 lg:p-4 border border-[#0077B6]/20"
+                        className="absolute -bottom-2 sm:-bottom-4 -left-2 sm:-left-4 bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-2 sm:p-3 lg:p-4 border border-[#0077B6]/20 z-30"
                         initial={{ scale: 0, rotate: 20, opacity: 0 }}
                         animate={{ 
                           scale: 1, 
@@ -257,7 +257,7 @@ const Hero = () => {
                             animate={{ scale: [1, 1.1, 1] }}
                             transition={{ duration: 2.2, repeat: Infinity }}
                           >
-                            +50
+                            +15
                           </motion.p>
                           <p className="text-[8px] sm:text-[9px] lg:text-[10px] text-[#666666] font-semibold">Campagnes</p>
                         </div>
@@ -385,8 +385,7 @@ const Hero = () => {
             >
               {[
                 { value: '+3', label: 'Marques' },
-                { value: '+50', label: 'Campagnes' },
-                { value: '+120%', label: 'Croissance' }
+                { value: '+15', label: 'Campagnes' }
               ].map((stat, index) => (
                 <motion.div
                   key={index}
