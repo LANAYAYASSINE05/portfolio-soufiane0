@@ -369,10 +369,10 @@ const Hero = () => {
                 stiffness: 100
               }}
             >
-              Junior Community & Traffic Manager, je crée des contenus visuels qui engagent
-              vos communautés et j'optimise vos campagnes media pour transformer le trafic
-              en résultats mesurables. Mon objectif : connecter votre marque aux bonnes
-              audiences et maximiser votre impact digital.
+              En tant que Junior Community & Traffic Manager, je transforme vos idées en contenus
+              visuels percutants qui fédèrent vos communautés. J'optimise vos campagnes média pour
+              convertir chaque visiteur en opportunité business. Ma mission : aligner votre marque
+              avec les bonnes audiences et amplifier votre présence digitale de manière mesurable.
             </motion.p>
 
             {/* Key Stats - Inline */}
