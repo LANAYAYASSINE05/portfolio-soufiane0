@@ -73,7 +73,7 @@ const Education = () => {
         <div className="absolute bottom-0 left-0 w-56 h-56 bg-[#0099CC]/5 rounded-full blur-3xl" />
       </motion.div>
 
-      <div className="container-custom relative z-10 px-4 sm:px-6">
+      <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         {/* Compact Header */}
         <motion.div
           className="text-center mb-12 sm:mb-16"
@@ -107,7 +107,7 @@ const Education = () => {
 
         {/* Compact Education Cards - Grid Layout */}
         <div className="max-w-5xl mx-auto mb-12 sm:mb-16">
-          <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             {education.map((edu, index) => (
               <motion.div
                 key={edu.id}

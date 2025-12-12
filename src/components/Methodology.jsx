@@ -87,7 +87,7 @@ const Methodology = () => {
         <div className="absolute bottom-0 left-0 h-80 w-80 rounded-full bg-brand-blue/5 blur-3xl" />
       </motion.div>
 
-      <div className="container-custom relative px-4 sm:px-6">
+      <div className="container-custom relative px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         {/* Titre section */}
         <motion.div
           className="text-center mb-12 sm:mb-16"
@@ -142,7 +142,7 @@ const Methodology = () => {
         {/* Timeline verticale */}
         <div className="relative max-w-4xl mx-auto">
           {/* Ligne verticale */}
-          <div className="absolute left-4 top-0 bottom-0 w-px bg-gradient-to-b from-brand-blue via-brand-blue/40 to-transparent md:left-1/2" />
+          <div className="absolute left-4 sm:left-6 top-0 bottom-0 w-px bg-gradient-to-b from-brand-blue via-brand-blue/40 to-transparent md:left-1/2" />
 
           <div className="space-y-8">
             {phases.map((phase, index) => {
@@ -179,7 +179,7 @@ const Methodology = () => {
                   {/* Carte de contenu */}
                   <div
                     className={`md:col-span-1 ${
-                      isLeft ? 'md:order-2 md:pl-4' : 'md:order-1 md:pr-4 md:text-right'
+                      isLeft ? 'md:order-2 md:pl-4 lg:pl-6' : 'md:order-1 md:pr-4 lg:pr-6 md:text-right'
                     }`}
                   >
                     <motion.div

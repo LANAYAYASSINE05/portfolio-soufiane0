@@ -64,7 +64,7 @@ const Header = () => {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
-      <div className="container-custom px-4 sm:px-6">
+      <div className="container-custom px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="flex items-center justify-between h-14 sm:h-16">
           {/* Brand */}
           <motion.div 
@@ -74,7 +74,7 @@ const Header = () => {
           >
             <button 
               onClick={() => scrollToSection('hero')}
-              className="text-xl sm:text-2xl font-bold text-[#0077B6] hover:text-[#0077B6]/80 transition-colors duration-300"
+              className="text-base sm:text-xl lg:text-2xl font-bold text-[#0077B6] hover:text-[#0077B6]/80 transition-colors duration-300"
             >
               SOUFIANE BENNANI
             </button>

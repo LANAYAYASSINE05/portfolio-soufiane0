@@ -106,7 +106,7 @@ const Experience = () => {
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#0099CC]/5 rounded-full blur-3xl" />
       </motion.div>
 
-      <div className="container-custom relative z-10 px-4 sm:px-6">
+      <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
           className="text-center mb-12 sm:mb-16"
@@ -190,9 +190,9 @@ const Experience = () => {
                     transition={{ duration: 0.3 }}
                   />
 
-                  <div className="relative z-10 flex flex-col lg:flex-row gap-6">
+                  <div className="relative z-10 flex flex-col lg:flex-row gap-4 sm:gap-6">
                     {/* Left Column - Date & Info */}
-                    <div className="flex-shrink-0 lg:w-48">
+                    <div className="flex-shrink-0 lg:w-48 w-full lg:w-auto">
                       <motion.div
                         className="inline-flex flex-col items-start gap-3 mb-4"
                         whileHover={{ scale: 1.05 }}
@@ -284,7 +284,7 @@ const Experience = () => {
                       </p>
 
                       {/* Achievements & Technologies in Grid */}
-                      <div className="grid sm:grid-cols-2 gap-5">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
                         {/* Achievements */}
                         <div>
                           <motion.p

@@ -86,8 +86,8 @@ const Hero = () => {
         )}
       </motion.div>
 
-      <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-24">
-        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center min-h-[70vh] sm:min-h-[80vh]">
+      <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto py-8 sm:py-12 md:py-16 lg:py-20">
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center min-h-[60vh] sm:min-h-[70vh] lg:min-h-[80vh]">
           {/* LEFT: Large Profile Image with Stats */}
           <motion.div
             className="relative order-2 lg:order-1"
@@ -124,147 +124,146 @@ const Hero = () => {
                 </>
               )}
               
-              {/* Main image container */}
+              {/* Decorative Element with Animated Dots */}
               <div className="relative z-10 overflow-visible">
                 <motion.div
                   className="relative w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto overflow-visible"
-                  whileHover={{ scale: 1.05, rotate: 1 }}
-                  transition={{ duration: 0.4, type: "spring" }}
+                  initial={isMobile ? false : { opacity: 0, scale: 0.9 }}
+                  animate={isMobile ? false : { opacity: 1, scale: 1 }}
+                  transition={isMobile ? {} : { delay: 0.5, duration: 0.6, type: "spring" }}
+                  whileHover={isMobile ? {} : { scale: 1.05 }}
                 >
-                  {/* Image with border - responsive and 3D effect */}
-                  <motion.div
-                    className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl sm:shadow-2xl border-4 sm:border-6 lg:border-8 border-white"
-                    initial={isMobile ? false : { opacity: 0, scale: 0.9, rotateY: -15 }}
-                    animate={isMobile ? false : { opacity: 1, scale: 1, rotateY: 0 }}
-                    transition={isMobile ? {} : { delay: 0.5, duration: 0.6, type: "spring" }}
-                    whileHover={isMobile ? {} : { 
-                      rotateY: [0, 5, -5, 0],
-                      scale: 1.05,
-                      z: 50
-                    }}
-                    style={isMobile ? {} : { transformStyle: "preserve-3d", perspective: 1000 }}
-                  >
-                    {/* Animated corner decoration - reduced on mobile */}
-                    {!isMobile && (
-                      <motion.div
-                        className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#0077B6]/20 to-transparent rounded-bl-full"
-                        animate={{ 
-                          scale: [1, 1.2, 1],
-                          opacity: [0.3, 0.6, 0.3]
-                        }}
-                        transition={{ duration: 3, repeat: Infinity }}
-                      />
-                    )}
-                    <img
-                      src="/assets/profil.png"
-                      alt="Soufiane Bennani"
-                      width="400"
-                      height="400"
-                      className="w-full h-auto object-cover relative z-10"
-                      fetchPriority="high"
-                      decoding="sync"
-                      loading="eager"
-                      style={{ contentVisibility: 'auto' }}
+                  <div className="relative w-full h-64 sm:h-80 md:h-96 lg:h-[500px]">
+                    {/* Gradient layers */}
+                    <motion.div
+                      className="absolute inset-0 bg-gradient-to-br from-[#0077B6]/20 to-[#0099CC]/20 rounded-3xl transform rotate-3"
+                      initial={{ opacity: 0, rotate: 0 }}
+                      animate={{ opacity: 1, rotate: 3 }}
+                      transition={{ duration: 0.8, delay: 0.7 }}
                     />
-                    {/* Gradient overlay - static on mobile */}
-                    {!isMobile ? (
+                    <motion.div
+                      className="absolute inset-4 bg-gradient-to-br from-[#0077B6]/30 to-[#0099CC]/30 rounded-2xl transform -rotate-3"
+                      initial={{ opacity: 0, rotate: 0 }}
+                      animate={{ opacity: 1, rotate: -3 }}
+                      transition={{ duration: 0.8, delay: 0.8 }}
+                    />
+                    
+                    {/* Animated dots */}
+                    {[
+                      { left: '20%', top: '30%', color: 'bg-[#0077B6]' },
+                      { left: '35%', top: '50%', color: 'bg-[#0099CC]' },
+                      { left: '50%', top: '70%', color: 'bg-[#0077B6]' },
+                      { left: '65%', top: '30%', color: 'bg-[#0099CC]' },
+                      { left: '80%', top: '50%', color: 'bg-[#0077B6]' },
+                      { left: '95%', top: '70%', color: 'bg-[#0099CC]' }
+                    ].map((dot, index) => (
                       <motion.div
-                        className="absolute inset-0 bg-gradient-to-t from-[#0077B6]/20 via-transparent to-transparent z-20"
-                        animate={{ opacity: [0.2, 0.3, 0.2] }}
-                        transition={{ duration: 3, repeat: Infinity }}
+                        key={index}
+                        className={`absolute w-3 h-3 ${dot.color} rounded-full`}
+                        style={{ left: dot.left, top: dot.top }}
+                        initial={{ opacity: 0, scale: 0 }}
+                        animate={{
+                          opacity: [0.6, 1, 0.6],
+                          scale: [1, 1.15, 1],
+                          y: [0, -15, 0]
+                        }}
+                        transition={{
+                          opacity: { duration: 2 + index * 0.3, repeat: Infinity, ease: "easeInOut" },
+                          scale: { duration: 2 + index * 0.3, repeat: Infinity, ease: "easeInOut" },
+                          y: { duration: 2 + index * 0.3, repeat: Infinity, ease: "easeInOut" },
+                          delay: 1 + index * 0.2
+                        }}
                       />
-                    ) : (
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#0077B6]/20 via-transparent to-transparent z-20" />
-                    )}
-                  </motion.div>
-                  
-                  {/* Floating stats badges - static on mobile */}
-                  {isMobile ? (
-                    <>
-                      <div className="absolute -top-2 sm:-top-4 -right-2 sm:-right-4 bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-2 sm:p-3 lg:p-4 border border-[#0077B6]/20 z-30">
-                        <div className="text-center">
-                          <p className="text-lg sm:text-xl lg:text-2xl font-black text-[#0077B6]">+3</p>
-                          <p className="text-[8px] sm:text-[9px] lg:text-[10px] text-[#666666] font-semibold">Marques</p>
-                        </div>
-                      </div>
-                      <div className="absolute -bottom-2 sm:-bottom-4 -left-2 sm:-left-4 bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-2 sm:p-3 lg:p-4 border border-[#0077B6]/20 z-30">
-                        <div className="text-center">
-                          <p className="text-lg sm:text-xl lg:text-2xl font-black text-[#0077B6]">+15</p>
-                          <p className="text-[8px] sm:text-[9px] lg:text-[10px] text-[#666666] font-semibold">Campagnes</p>
-                        </div>
-                      </div>
-                    </>
-                  ) : (
-                    <>
-                      <motion.div
-                        className="absolute -top-2 sm:-top-4 -right-2 sm:-right-4 bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-2 sm:p-3 lg:p-4 border border-[#0077B6]/20 z-30"
-                        initial={{ scale: 0, rotate: -20, opacity: 0 }}
-                        animate={{ 
-                          scale: 1, 
-                          rotate: 0,
-                          opacity: 1,
-                          y: [0, -5, 0]
-                        }}
-                        transition={{ 
-                          delay: 0.8, 
-                          type: "spring",
-                          stiffness: 200,
-                          damping: 15,
-                          y: { duration: 2, repeat: Infinity, ease: "easeInOut" }
-                        }}
-                        whileHover={{ 
-                          scale: 1.15, 
-                          rotate: 8,
-                          boxShadow: "0 20px 40px rgba(0, 119, 182, 0.3)"
-                        }}
-                      >
-                        <div className="text-center">
-                          <motion.p
-                            className="text-lg sm:text-xl lg:text-2xl font-black text-[#0077B6]"
-                            animate={{ scale: [1, 1.1, 1] }}
-                            transition={{ duration: 2, repeat: Infinity }}
-                          >
-                            +3
-                          </motion.p>
-                          <p className="text-[8px] sm:text-[9px] lg:text-[10px] text-[#666666] font-semibold">Marques</p>
-                        </div>
-                      </motion.div>
-                      <motion.div
-                        className="absolute -bottom-2 sm:-bottom-4 -left-2 sm:-left-4 bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-2 sm:p-3 lg:p-4 border border-[#0077B6]/20 z-30"
-                        initial={{ scale: 0, rotate: 20, opacity: 0 }}
-                        animate={{ 
-                          scale: 1, 
-                          rotate: 0,
-                          opacity: 1,
-                          y: [0, 5, 0]
-                        }}
-                        transition={{ 
-                          delay: 1, 
-                          type: "spring",
-                          stiffness: 200,
-                          damping: 15,
-                          y: { duration: 2.5, repeat: Infinity, ease: "easeInOut" }
-                        }}
-                        whileHover={{ 
-                          scale: 1.15, 
-                          rotate: -8,
-                          boxShadow: "0 20px 40px rgba(0, 119, 182, 0.3)"
-                        }}
-                      >
-                        <div className="text-center">
-                          <motion.p
-                            className="text-lg sm:text-xl lg:text-2xl font-black text-[#0077B6]"
-                            animate={{ scale: [1, 1.1, 1] }}
-                            transition={{ duration: 2.2, repeat: Infinity }}
-                          >
-                            +15
-                          </motion.p>
-                          <p className="text-[8px] sm:text-[9px] lg:text-[10px] text-[#666666] font-semibold">Campagnes</p>
-                        </div>
-                      </motion.div>
-                    </>
-                  )}
+                    ))}
+                  </div>
                 </motion.div>
+                
+                {/* Floating stats badges - static on mobile */}
+                {isMobile ? (
+                  <>
+                    <div className="absolute -top-2 sm:-top-4 -right-2 sm:-right-4 bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-2 sm:p-3 lg:p-4 border border-[#0077B6]/20 z-30">
+                      <div className="text-center">
+                        <p className="text-lg sm:text-xl lg:text-2xl font-black text-[#0077B6]">+3</p>
+                        <p className="text-[8px] sm:text-[9px] lg:text-[10px] text-[#666666] font-semibold">Marques</p>
+                      </div>
+                    </div>
+                    <div className="absolute -bottom-2 sm:-bottom-4 -left-2 sm:-left-4 bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-2 sm:p-3 lg:p-4 border border-[#0077B6]/20 z-30">
+                      <div className="text-center">
+                        <p className="text-lg sm:text-xl lg:text-2xl font-black text-[#0077B6]">+15</p>
+                        <p className="text-[8px] sm:text-[9px] lg:text-[10px] text-[#666666] font-semibold">Campagnes</p>
+                      </div>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <motion.div
+                      className="absolute -top-2 sm:-top-4 -right-2 sm:-right-4 bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-2 sm:p-3 lg:p-4 border border-[#0077B6]/20 z-30"
+                      initial={{ scale: 0, rotate: -20, opacity: 0 }}
+                      animate={{ 
+                        scale: 1, 
+                        rotate: 0,
+                        opacity: 1,
+                        y: [0, -5, 0]
+                      }}
+                      transition={{ 
+                        delay: 0.8, 
+                        type: "spring",
+                        stiffness: 200,
+                        damping: 15,
+                        y: { duration: 2, repeat: Infinity, ease: "easeInOut" }
+                      }}
+                      whileHover={{ 
+                        scale: 1.15, 
+                        rotate: 8,
+                        boxShadow: "0 20px 40px rgba(0, 119, 182, 0.3)"
+                      }}
+                    >
+                      <div className="text-center">
+                        <motion.p
+                          className="text-lg sm:text-xl lg:text-2xl font-black text-[#0077B6]"
+                          animate={{ scale: [1, 1.1, 1] }}
+                          transition={{ duration: 2, repeat: Infinity }}
+                        >
+                          +3
+                        </motion.p>
+                        <p className="text-[8px] sm:text-[9px] lg:text-[10px] text-[#666666] font-semibold">Marques</p>
+                      </div>
+                    </motion.div>
+                    <motion.div
+                      className="absolute -bottom-2 sm:-bottom-4 -left-2 sm:-left-4 bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-2 sm:p-3 lg:p-4 border border-[#0077B6]/20 z-30"
+                      initial={{ scale: 0, rotate: 20, opacity: 0 }}
+                      animate={{ 
+                        scale: 1, 
+                        rotate: 0,
+                        opacity: 1,
+                        y: [0, 5, 0]
+                      }}
+                      transition={{ 
+                        delay: 1, 
+                        type: "spring",
+                        stiffness: 200,
+                        damping: 15,
+                        y: { duration: 2.5, repeat: Infinity, ease: "easeInOut" }
+                      }}
+                      whileHover={{ 
+                        scale: 1.15, 
+                        rotate: -8,
+                        boxShadow: "0 20px 40px rgba(0, 119, 182, 0.3)"
+                      }}
+                    >
+                      <div className="text-center">
+                        <motion.p
+                          className="text-lg sm:text-xl lg:text-2xl font-black text-[#0077B6]"
+                          animate={{ scale: [1, 1.1, 1] }}
+                          transition={{ duration: 2.2, repeat: Infinity }}
+                        >
+                          +15
+                        </motion.p>
+                        <p className="text-[8px] sm:text-[9px] lg:text-[10px] text-[#666666] font-semibold">Campagnes</p>
+                      </div>
+                    </motion.div>
+                  </>
+                )}
               </div>
             </div>
           </motion.div>
@@ -315,7 +314,7 @@ const Hero = () => {
                 Portfolio
               </motion.p>
               <motion.h1
-                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-[1.1]"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-black leading-[1.1]"
                 initial={isMobile ? false : { opacity: 0, y: 30 }}
                 animate={isMobile ? false : { opacity: 1, y: 0 }}
                 transition={isMobile ? {} : { 
@@ -342,7 +341,7 @@ const Hero = () => {
                   BENNANI
                 </motion.span>
                 <motion.span
-                  className="block mt-2 sm:mt-3 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold bg-gradient-to-r from-[#0077B6] via-[#0099CC] to-[#0077B6] bg-clip-text text-transparent bg-[length:200%_auto]"
+                  className="block mt-2 sm:mt-3 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold bg-gradient-to-r from-[#0077B6] via-[#0099CC] to-[#0077B6] bg-clip-text text-transparent bg-[length:200%_auto]"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ 
                     opacity: 1,
@@ -361,7 +360,7 @@ const Hero = () => {
 
             {/* Description */}
             <motion.p
-              className="text-sm sm:text-base md:text-lg text-[#666666] leading-relaxed max-w-xl mx-auto lg:mx-0"
+              className="text-sm sm:text-base md:text-lg text-[#666666] leading-relaxed max-w-xl mx-auto lg:mx-0 px-2 sm:px-0"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ 
@@ -456,33 +455,54 @@ const Hero = () => {
             </motion.div>
 
             {/* Quote */}
-            <motion.div
-              className="relative pl-4 sm:pl-6 border-l-3 sm:border-l-4 border-[#0077B6] max-w-xl mx-auto lg:mx-0"
-              initial={{ opacity: 0, x: -20, scale: 0.95 }}
-              animate={{ opacity: 1, x: 0, scale: 1 }}
-              transition={{ 
-                delay: 2,
-                type: "spring",
-                stiffness: 100
-              }}
-              whileHover={{ x: 5, scale: 1.02 }}
-            >
-              <motion.p
-                className="text-sm sm:text-base text-[#333333] italic leading-relaxed"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 2.2 }}
+            <div className="relative bg-gradient-to-r from-white/90 to-gray-50/90 backdrop-blur-sm border border-primary/20 rounded-2xl p-4 sm:p-6 lg:p-8 shadow-lg">
+              <motion.div
+                className="text-center"
+                initial={{ scale: 0.9 }}
+                animate={{ scale: 1 }}
+                transition={{ duration: 0.6, delay: 1 }}
               >
-                "Renforcer les communautés, piloter le trafic,{" "}
-                <motion.span
-                  className="text-[#0077B6] font-bold not-italic inline-block"
-                  animate={{ scale: [1, 1.05, 1] }}
-                  transition={{ duration: 2, repeat: Infinity }}
+                {/* First Line */}
+                <motion.div
+                  className="mb-4"
+                  initial={{ opacity: 0, x: -30 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8, delay: 1.2 }}
                 >
-                  créer un impact digital durable.
-                </motion.span>"
-              </motion.p>
-            </motion.div>
+                  <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-[#333333]">
+                    Engagement{' '}
+                    <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                      renforcé
+                    </span>
+                    ,
+                  </span>
+                </motion.div>
+                
+                {/* Divider */}
+                <motion.div
+                  className="w-24 h-1 bg-gradient-to-r from-primary via-accent to-primary rounded-full mx-auto mb-4"
+                  initial={{ scaleX: 0 }}
+                  animate={{ scaleX: 1 }}
+                  transition={{ duration: 0.8, delay: 1.6 }}
+                />
+                
+                {/* Second Line */}
+                <motion.div
+                  className="mb-4"
+                  initial={{ opacity: 0, x: -30 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8, delay: 1.8 }}
+                >
+                  <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-[#333333]">
+                    campagnes{' '}
+                    <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
+                      performantes
+                    </span>
+                    .
+                  </span>
+                </motion.div>
+              </motion.div>
+            </div>
 
             {/* CTA Buttons */}
             <motion.div

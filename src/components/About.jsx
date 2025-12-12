@@ -50,10 +50,10 @@ const About = () => {
           transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
         />
       </motion.div>
-      <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
+      <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         {/* Titre section - Centered with accent */}
         <motion.div
-          className="mx-auto max-w-4xl text-center mb-16 sm:mb-20"
+          className="mx-auto max-w-4xl text-center mb-12 sm:mb-16 md:mb-20"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -68,7 +68,7 @@ const About = () => {
           >
             À PROPOS
           </motion.span>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-[#333333] leading-[1.1] mt-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-black text-[#333333] leading-[1.1] mt-4 px-2 sm:px-0">
             Qui se cache derrière le{' '}
             <span className="relative inline-block">
               <span className="bg-gradient-to-r from-[#0077B6] via-[#0099CC] to-[#0077B6] bg-clip-text text-transparent">
@@ -145,7 +145,7 @@ const About = () => {
                   alt="Soufiane Bennani"
                   width="192"
                   height="192"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover max-w-full"
                   loading="lazy"
                   decoding="async"
                 />
@@ -256,7 +256,7 @@ const About = () => {
           </motion.div>
 
           {/* Process Steps - Horizontal Cards */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-12">
             {[
               {
                 title: 'Comprendre',
@@ -362,7 +362,7 @@ const About = () => {
             <h4 className="text-xl font-black text-[#333333] mb-6 text-center">
               Points clés
             </h4>
-            <div className="grid sm:grid-cols-3 gap-4 sm:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {[
                 "Création de contenus & plateformes publicitaires",
                 "Suivi des KPIs (CPC, CPM, CTR, conversion)",

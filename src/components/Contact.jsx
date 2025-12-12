@@ -177,7 +177,7 @@ const Contact = () => {
         />
       </motion.div>
 
-      <div className="container-custom px-4 sm:px-6 relative z-10">
+      <div className="container-custom px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative z-10">
         {/* Creative Header */}
         <motion.div
           className="text-center mb-12 sm:mb-16"
@@ -229,7 +229,7 @@ const Contact = () => {
         </motion.div>
 
         {/* Main Content - Split Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
           {/* Left Column - Contact Info with Floating Cards */}
           <motion.div
             className="space-y-6"
@@ -419,7 +419,7 @@ const Contact = () => {
 
           {/* Right Column - Contact Form */}
           <motion.div
-            className="relative rounded-3xl bg-gradient-to-br from-white via-[#ECF6FF]/30 to-white border-2 border-[#0077B6]/10 p-8 sm:p-10 shadow-2xl hover:shadow-3xl transition-all duration-300 overflow-hidden"
+            className="relative rounded-3xl bg-gradient-to-br from-white via-[#ECF6FF]/30 to-white border-2 border-[#0077B6]/10 p-6 sm:p-8 md:p-10 shadow-2xl hover:shadow-3xl transition-all duration-300 overflow-hidden"
             initial={{ opacity: 0, x: 50, rotateY: 15 }}
             whileInView={{ opacity: 1, x: 0, rotateY: 0 }}
             transition={{ duration: 0.8, type: "spring" }}

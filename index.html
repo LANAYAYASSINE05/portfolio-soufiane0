@@ -31,14 +31,22 @@
       [data-section] { content-visibility: auto; contain-intrinsic-size: auto 500px; }
       /* Completely disable animations on mobile for performance */
       @media (max-width: 768px) {
-        *, *::before, *::after { 
+        /* Exclude WhatsApp button from animation disabling */
+        .whatsapp-button, .whatsapp-button * {
+          animation: revert !important;
+          transition: revert !important;
+          transform: revert !important;
+          will-change: auto !important;
+        }
+        /* Original rules for other elements */
+        *:not(.whatsapp-button):not(.whatsapp-button *)::before,
+        *:not(.whatsapp-button):not(.whatsapp-button *)::after { 
           animation: none !important;
           transition: none !important;
           transform: none !important;
           will-change: auto !important;
         }
-        /* Prevent layout shifts */
-        [data-motion] { transform: none !important; }
+        [data-motion]:not(.whatsapp-button) { transform: none !important; }
       }
       /* Optimize image rendering and prevent layout shifts */
       img { 

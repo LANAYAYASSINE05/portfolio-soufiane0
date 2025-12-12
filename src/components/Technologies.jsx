@@ -247,7 +247,7 @@ const Technologies = () => {
         />
       </motion.div>
 
-      <div className="container-custom relative z-10 px-4 sm:px-6">
+      <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         {/* Creative Header */}
         <motion.div
           className="text-center mb-12 sm:mb-16"
@@ -362,7 +362,7 @@ const Technologies = () => {
               </div>
 
               {/* Technologies in Creative Grid - Staggered Layout */}
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 sm:gap-4 md:gap-6">
                 {category.items.map((tech, index) => (
                   <motion.div
                     key={tech.name}

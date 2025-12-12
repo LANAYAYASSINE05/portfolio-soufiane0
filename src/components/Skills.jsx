@@ -136,7 +136,7 @@ const Skills = () => {
         <div className="absolute bottom-0 left-0 w-56 h-56 bg-[#0099CC]/5 rounded-full blur-3xl" />
       </motion.div>
 
-      <div className="container-custom relative z-10 px-4 sm:px-6">
+      <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
           className="text-center mb-12 sm:mb-16"
@@ -275,7 +275,7 @@ const Skills = () => {
               <h3 className="text-xl sm:text-2xl font-black text-[#333333]">Soft Skills</h3>
             </div>
 
-            <div className="grid sm:grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {softSkills.map((skill, index) => (
                 <motion.div
                   key={skill.title}

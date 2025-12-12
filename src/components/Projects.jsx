@@ -142,7 +142,7 @@ const Projects = () => {
         />
       </motion.div>
 
-      <div className="container-custom relative z-10 px-4 sm:px-6">
+      <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         {/* Creative Header */}
         <motion.div
           className="text-center mb-12 sm:mb-16"
@@ -273,7 +273,7 @@ const Projects = () => {
 
                 <div className="relative z-10 flex flex-col lg:flex-row">
                   {/* Image Section - Adapted Size */}
-                  <div className="relative w-full lg:w-1/3 xl:w-2/5 h-64 sm:h-72 lg:h-auto lg:min-h-[400px] overflow-hidden flex items-center justify-center">
+                  <div className="relative w-full lg:w-1/2 xl:w-2/5 h-64 sm:h-72 lg:h-auto lg:min-h-[400px] overflow-hidden flex items-center justify-center">
                     <div
                       className={`absolute inset-0 ${
                         project.id === 1
@@ -288,14 +288,43 @@ const Projects = () => {
                       alt={project.title}
                       width="600"
                       height="400"
-                      className="relative z-10 w-full h-full object-contain p-6 sm:p-8 lg:p-10"
+                      className="relative z-10 w-full h-full object-contain p-4 sm:p-6 md:p-8 lg:p-10 max-w-full"
                       loading="lazy"
                       decoding="async"
                       fetchPriority="low"
                       style={{ maxHeight: '100%', maxWidth: '100%', willChange: 'auto' }}
                     />
+                    
+                    {/* Animated dots overlay */}
+                    {[
+                      { left: '20%', top: '30%', color: 'bg-[#0077B6]' },
+                      { left: '35%', top: '50%', color: 'bg-[#0099CC]' },
+                      { left: '50%', top: '70%', color: 'bg-[#0077B6]' },
+                      { left: '65%', top: '30%', color: 'bg-[#0099CC]' },
+                      { left: '80%', top: '50%', color: 'bg-[#0077B6]' },
+                      { left: '95%', top: '70%', color: 'bg-[#0099CC]' }
+                    ].map((dot, dotIndex) => (
+                      <motion.div
+                        key={dotIndex}
+                        className={`absolute w-3 h-3 ${dot.color} rounded-full z-20`}
+                        style={{ left: dot.left, top: dot.top }}
+                        initial={{ opacity: 0, scale: 0 }}
+                        animate={{
+                          opacity: [0.6, 1, 0.6],
+                          scale: [1, 1.15, 1],
+                          y: [0, -15, 0]
+                        }}
+                        transition={{
+                          opacity: { duration: 2 + dotIndex * 0.3, repeat: Infinity, ease: "easeInOut" },
+                          scale: { duration: 2 + dotIndex * 0.3, repeat: Infinity, ease: "easeInOut" },
+                          y: { duration: 2 + dotIndex * 0.3, repeat: Infinity, ease: "easeInOut" },
+                          delay: dotIndex * 0.2
+                        }}
+                      />
+                    ))}
+                    
                     {/* Badge catégorie */}
-                    <div className="absolute left-4 top-4 z-20">
+                    <div className="absolute left-4 top-4 z-30">
                       <div className="rounded-full bg-gradient-to-r from-[#0077B6] to-[#0099CC] px-4 py-1.5 text-xs font-bold text-white shadow-lg relative overflow-hidden">
                         <span>
                           {project.category === 'brand'
@@ -307,7 +336,7 @@ const Projects = () => {
                   </div>
 
                   {/* Content Section */}
-                  <div className="w-full lg:w-2/3 xl:w-3/5 p-5 sm:p-6 lg:p-8">
+                  <div className="w-full lg:w-1/2 xl:w-3/5 p-4 sm:p-5 md:p-6 lg:p-8">
                     <h3 className="text-xl sm:text-2xl font-black text-[#333333] mb-2 group-hover:text-[#0077B6] transition-colors">
                       {project.title}
                     </h3>
@@ -335,7 +364,7 @@ const Projects = () => {
                         <span className="w-6 h-0.5 bg-[#0077B6]" />
                         Résultats clés
                       </motion.p>
-                      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                      <div className="grid gap-3 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
                         {project.results.slice(0, 5).map((result, i) => (
                           <div
                             key={i}

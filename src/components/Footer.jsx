@@ -11,9 +11,9 @@ const Footer = () => {
 
   return (
     <footer className="bg-gradient-to-br from-[#ECF6FF] via-white to-[#ECF6FF] border-t border-[#0077B6]/20">
-      <div className="container-custom px-4 sm:px-6">
+      <div className="container-custom px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="py-8 sm:py-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12">
             {/* Brand Section */}
             <motion.div
               className="lg:col-span-2"
@@ -27,7 +27,7 @@ const Footer = () => {
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.2 }}
               >
-                SOUFIANNE BENNANI
+                SOUFIANE BENNANI
               </motion.h3>
               <p className="text-[#555555] mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
                 Community Manager, Traffic Manager spécialisé dans l'acquisition digitale et l'optimisation des campagnes publicitaires. 
@@ -173,7 +173,7 @@ const Footer = () => {
                 transition={{ duration: 0.6, delay: 0.6 }}
                 viewport={{ once: true }}
               >
-                © 2025 SOUFIANNE BENNANI. Tous droits réservés.
+                © 2025 SOUFIANE BENNANI. Tous droits réservés.
               </motion.p>
             </div>
           </motion.div>
